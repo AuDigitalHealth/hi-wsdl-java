@@ -4,7 +4,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.3-SNAPSHOT</version>
     <name>HI Compiled WSDL library</name>
     <description>Java classes for HI B2B client development</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
@@ -38,7 +38,7 @@
             scm:git:https://github.com/AuDigitalHealth/hi-wsdl-java.git
         </developerConnection>
         <url>https://github.com/AuDigitalHealth/hi-wsdl-java.git</url>
-        <tag>hi-wsdl-1.6.2</tag>
+        <tag>hi-wsdl-1.6.1</tag>
     </scm>
 
     <distributionManagement>
