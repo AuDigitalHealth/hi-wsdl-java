@@ -38,7 +38,7 @@
             scm:git:https://github.com/AuDigitalHealth/hi-wsdl-java.git
         </developerConnection>
         <url>https://github.com/AuDigitalHealth/hi-wsdl-java.git</url>
-        <tag>hi-wsdl-1.6.1</tag>
+        <tag>hi-wsdl-1.6.2</tag>
     </scm>
 
     <distributionManagement>
