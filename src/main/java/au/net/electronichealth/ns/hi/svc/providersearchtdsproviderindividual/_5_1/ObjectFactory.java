@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.hi.svc.providersearchtdsproviderindividual._5_1;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

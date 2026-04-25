@@ -1,7 +1,7 @@
 
 package au.gov.medicareaustralia.ns.provider.schema._2013._06._22.elements;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

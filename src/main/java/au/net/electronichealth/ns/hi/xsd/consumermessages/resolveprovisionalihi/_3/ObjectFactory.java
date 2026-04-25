@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.resolveprovisionalihi._3;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

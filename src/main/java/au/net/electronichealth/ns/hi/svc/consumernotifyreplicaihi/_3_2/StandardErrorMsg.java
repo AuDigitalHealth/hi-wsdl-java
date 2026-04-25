@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.hi.svc.consumernotifyreplicaihi._3_2;
 
-import javax.xml.ws.WebFault;
+import jakarta.xml.ws.WebFault;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 
 

@@ -1,15 +1,15 @@
 
 package au.net.electronichealth.ns.hi.svc.providerreadproviderorganisation._3_2;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebResult;
-import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.ws.Action;
-import javax.xml.ws.FaultAction;
-import javax.xml.ws.Holder;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebResult;
+import jakarta.jws.WebService;
+import jakarta.jws.soap.SOAPBinding;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.ws.Action;
+import jakarta.xml.ws.FaultAction;
+import jakarta.xml.ws.Holder;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ProductType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.SignatureContainerType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.TimestampType;

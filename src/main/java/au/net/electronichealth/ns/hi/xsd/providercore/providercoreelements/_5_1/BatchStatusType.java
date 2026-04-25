@@ -1,8 +1,8 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.providercoreelements._5_1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**

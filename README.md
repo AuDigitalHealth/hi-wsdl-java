@@ -23,7 +23,7 @@ policy:
   registration apply).
 - HI Service overview for developers: [Services Australia – HI Service for software developers](https://www.servicesaustralia.gov.au/healthcare-identifier-hi-service-for-software-developers).
 
-After you unzip the toolkit, either:
+After you unzip the toolkit, copy or stage the licensed schema files locally:
 
 1. Copy the toolkit’s `xml/schema` folder to **`schema`** at the root of this repo
    (so `schema/mca/...` exists next to `pom.xml`), **or**
@@ -34,8 +34,8 @@ After you unzip the toolkit, either:
    use **`mvn -Pstage-mca-schemas-from-b2b-client generate-sources`**.
    The copied tree is ignored by Git (see `.gitignore`).
 
-With `schema/` in place, **`wsimport`** can resolve imports when regenerating
-JAX-WS/JAXB bindings from the HI WSDLs.
+With `schema/` in place, Jakarta XML Web Services tooling can resolve imports
+when regenerating Jakarta XML WS / Jakarta XML Binding source from the HI WSDLs.
 
 Setup
 =====
@@ -71,20 +71,21 @@ Pre-Requisites
 
 Java Development Kit (JDK)
 ------------------------------------
-1.  Download and install JDK 8 Update 271 or later:
-    URL: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+1.  Download and install JDK 11 or later:
+    URL: https://adoptium.net/temurin/releases/?version=11
 
 2.  Unpack the JDK distribution into a directory of your choice.
 
     This directory will be your <JDK_HOME>and will be used in this document
     to refer to the root directory of the JDK installation.
 
-    <JRE_HOME> will be used in this document to refer to <JDK_HOME>/jre.
-
 3.  Create a JAVA_HOME environment variable pointing to the <JDK_HOME>
     directory in Step 2.
 
 4.  Add <JDK_HOME>/bin to the system path.
+
+5.  Build and test with Maven:
+    `mvn clean test`
 
 
 Licensing
