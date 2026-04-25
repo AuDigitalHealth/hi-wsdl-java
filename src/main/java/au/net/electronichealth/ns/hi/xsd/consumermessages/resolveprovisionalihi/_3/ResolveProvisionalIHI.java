@@ -1,0 +1,548 @@
+
+package au.net.electronichealth.ns.hi.xsd.consumermessages.resolveprovisionalihi._3;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.DateAccuracyIndicatorType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.IndividualNameUsageType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffixType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3.SourceOfDeathNotificationType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3.ElectronicCommunicationType;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}ihiNumber"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirth"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirthAccuracyIndicator"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}birthPlurality" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}birthOrder" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfDeath" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfDeathAccuracyIndicator" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}sourceOfDeathNotification" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0}electronicCommunication" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}nameTitle" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" maxOccurs="2" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}nameSuffix" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}usage"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.0}conditionalUse" minOccurs="0"/>
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}address" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "ihiNumber",
+    "dateOfBirth",
+    "dateOfBirthAccuracyIndicator",
+    "sex",
+    "birthPlurality",
+    "birthOrder",
+    "dateOfDeath",
+    "dateOfDeathAccuracyIndicator",
+    "sourceOfDeathNotification",
+    "electronicCommunication",
+    "nameTitle",
+    "familyName",
+    "givenName",
+    "nameSuffix",
+    "usage",
+    "conditionalUse",
+    "address"
+})
+@XmlRootElement(name = "resolveProvisionalIHI")
+public class ResolveProvisionalIHI {
+
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "anyURI")
+    protected String ihiNumber;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar dateOfBirth;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
+    protected DateAccuracyIndicatorType dateOfBirthAccuracyIndicator;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
+    protected SexType sex;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String birthPlurality;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String birthOrder;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar dateOfDeath;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
+    @XmlSchemaType(name = "string")
+    protected DateAccuracyIndicatorType dateOfDeathAccuracyIndicator;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "token")
+    protected SourceOfDeathNotificationType sourceOfDeathNotification;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0")
+    protected List<ElectronicCommunicationType> electronicCommunication;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
+    protected String nameTitle;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
+    protected String familyName;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
+    protected List<String> givenName;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
+    @XmlSchemaType(name = "string")
+    protected NameSuffixType nameSuffix;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
+    protected IndividualNameUsageType usage;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.0")
+    protected String conditionalUse;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected AddressType address;
+
+    /**
+     * Gets the value of the ihiNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIhiNumber() {
+        return ihiNumber;
+    }
+
+    /**
+     * Sets the value of the ihiNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIhiNumber(String value) {
+        this.ihiNumber = value;
+    }
+
+    /**
+     * Gets the value of the dateOfBirth property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    /**
+     * Sets the value of the dateOfBirth property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDateOfBirth(XMLGregorianCalendar value) {
+        this.dateOfBirth = value;
+    }
+
+    /**
+     * Gets the value of the dateOfBirthAccuracyIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DateAccuracyIndicatorType }
+     *     
+     */
+    public DateAccuracyIndicatorType getDateOfBirthAccuracyIndicator() {
+        return dateOfBirthAccuracyIndicator;
+    }
+
+    /**
+     * Sets the value of the dateOfBirthAccuracyIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DateAccuracyIndicatorType }
+     *     
+     */
+    public void setDateOfBirthAccuracyIndicator(DateAccuracyIndicatorType value) {
+        this.dateOfBirthAccuracyIndicator = value;
+    }
+
+    /**
+     * Gets the value of the sex property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SexType }
+     *     
+     */
+    public SexType getSex() {
+        return sex;
+    }
+
+    /**
+     * Sets the value of the sex property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SexType }
+     *     
+     */
+    public void setSex(SexType value) {
+        this.sex = value;
+    }
+
+    /**
+     * Gets the value of the birthPlurality property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBirthPlurality() {
+        return birthPlurality;
+    }
+
+    /**
+     * Sets the value of the birthPlurality property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBirthPlurality(String value) {
+        this.birthPlurality = value;
+    }
+
+    /**
+     * Gets the value of the birthOrder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBirthOrder() {
+        return birthOrder;
+    }
+
+    /**
+     * Sets the value of the birthOrder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBirthOrder(String value) {
+        this.birthOrder = value;
+    }
+
+    /**
+     * Gets the value of the dateOfDeath property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDateOfDeath() {
+        return dateOfDeath;
+    }
+
+    /**
+     * Sets the value of the dateOfDeath property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDateOfDeath(XMLGregorianCalendar value) {
+        this.dateOfDeath = value;
+    }
+
+    /**
+     * Gets the value of the dateOfDeathAccuracyIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DateAccuracyIndicatorType }
+     *     
+     */
+    public DateAccuracyIndicatorType getDateOfDeathAccuracyIndicator() {
+        return dateOfDeathAccuracyIndicator;
+    }
+
+    /**
+     * Sets the value of the dateOfDeathAccuracyIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DateAccuracyIndicatorType }
+     *     
+     */
+    public void setDateOfDeathAccuracyIndicator(DateAccuracyIndicatorType value) {
+        this.dateOfDeathAccuracyIndicator = value;
+    }
+
+    /**
+     * Gets the value of the sourceOfDeathNotification property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SourceOfDeathNotificationType }
+     *     
+     */
+    public SourceOfDeathNotificationType getSourceOfDeathNotification() {
+        return sourceOfDeathNotification;
+    }
+
+    /**
+     * Sets the value of the sourceOfDeathNotification property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SourceOfDeathNotificationType }
+     *     
+     */
+    public void setSourceOfDeathNotification(SourceOfDeathNotificationType value) {
+        this.sourceOfDeathNotification = value;
+    }
+
+    /**
+     * Gets the value of the electronicCommunication property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the electronicCommunication property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getElectronicCommunication().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ElectronicCommunicationType }
+     * 
+     * 
+     */
+    public List<ElectronicCommunicationType> getElectronicCommunication() {
+        if (electronicCommunication == null) {
+            electronicCommunication = new ArrayList<ElectronicCommunicationType>();
+        }
+        return this.electronicCommunication;
+    }
+
+    /**
+     * Gets the value of the nameTitle property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNameTitle() {
+        return nameTitle;
+    }
+
+    /**
+     * Sets the value of the nameTitle property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNameTitle(String value) {
+        this.nameTitle = value;
+    }
+
+    /**
+     * Gets the value of the familyName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    /**
+     * Sets the value of the familyName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFamilyName(String value) {
+        this.familyName = value;
+    }
+
+    /**
+     * Gets the value of the givenName property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the givenName property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getGivenName().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getGivenName() {
+        if (givenName == null) {
+            givenName = new ArrayList<String>();
+        }
+        return this.givenName;
+    }
+
+    /**
+     * Gets the value of the nameSuffix property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link NameSuffixType }
+     *     
+     */
+    public NameSuffixType getNameSuffix() {
+        return nameSuffix;
+    }
+
+    /**
+     * Sets the value of the nameSuffix property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NameSuffixType }
+     *     
+     */
+    public void setNameSuffix(NameSuffixType value) {
+        this.nameSuffix = value;
+    }
+
+    /**
+     * Gets the value of the usage property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link IndividualNameUsageType }
+     *     
+     */
+    public IndividualNameUsageType getUsage() {
+        return usage;
+    }
+
+    /**
+     * Sets the value of the usage property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link IndividualNameUsageType }
+     *     
+     */
+    public void setUsage(IndividualNameUsageType value) {
+        this.usage = value;
+    }
+
+    /**
+     * Gets the value of the conditionalUse property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getConditionalUse() {
+        return conditionalUse;
+    }
+
+    /**
+     * Sets the value of the conditionalUse property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setConditionalUse(String value) {
+        this.conditionalUse = value;
+    }
+
+    /**
+     * Gets the value of the address property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AddressType }
+     *     
+     */
+    public AddressType getAddress() {
+        return address;
+    }
+
+    /**
+     * Sets the value of the address property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AddressType }
+     *     
+     */
+    public void setAddress(AddressType value) {
+        this.address = value;
+    }
+
+}

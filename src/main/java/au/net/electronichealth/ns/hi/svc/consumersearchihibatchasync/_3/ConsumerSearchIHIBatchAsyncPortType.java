@@ -1,0 +1,139 @@
+package au.net.electronichealth.ns.hi.svc.consumersearchihibatchasync._3;
+
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.DeleteSearchIHIBatch;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.DeleteSearchIHIBatchResponse;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.GetSearchIHIBatchStatus;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.GetSearchIHIBatchStatusResponse;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.RetrieveSearchIHIBatch;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.RetrieveSearchIHIBatchResponse;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.SubmitSearchIHIBatch;
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.SubmitSearchIHIBatchResponse;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ProductType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.SignatureContainerType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.TimestampType;
+import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.QualifiedId;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.ws.Action;
+import javax.xml.ws.FaultAction;
+import javax.xml.ws.Holder;
+
+
+@WebService(name = "ConsumerSearchIHIBatchAsyncPortType", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0")
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
+@XmlSeeAlso({
+        au.net.electronichealth.ns.hi.consumermessages.searchihi._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.svc.consumersearchihibatchasync._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.common.addresscore._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.common.individualnamecore._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.consumercore.address._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.consumercore.consumercoreelements._3.ObjectFactory.class,
+        hi_override.org.w3.xmldsig.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.ObjectFactory.class,
+        au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3.ObjectFactory.class
+})
+public interface ConsumerSearchIHIBatchAsyncPortType {
+
+    @WebMethod
+    @WebResult(name = "submitSearchIHIBatchResponse", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "response")
+    @Action(input = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/submitSearchIHIBatchRequest",
+            output = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/submitSearchIHIBatchResponse",
+            fault = {
+                    @FaultAction(className = StandardErrorMsg.class,
+                            value = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/submitSearchIHIBatch/Fault/standardError")
+            })
+    SubmitSearchIHIBatchResponse submitSearchIHIBatch(
+            @WebParam(name = "submitSearchIHIBatch", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "request")
+            SubmitSearchIHIBatch request,
+            @WebParam(name = "product", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "productHeader")
+            Holder<ProductType> productHeader,
+            @WebParam(name = "timestamp", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "timestampHeader")
+            TimestampType timestampHeader,
+            @WebParam(name = "signature", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "signatureHeader")
+            Holder<SignatureContainerType> signatureHeader,
+            @WebParam(name = "user", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "userHeader")
+            QualifiedId userHeader,
+            @WebParam(name = "hpio", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "hpioHeader")
+            QualifiedId hpioHeader)
+            throws StandardErrorMsg;
+
+    @WebMethod
+    @WebResult(name = "retrieveSearchIHIBatchResponse", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "response")
+    @Action(input = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/retrieveSearchIHIBatchRequest",
+            output = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/retrieveSearchIHIBatchResponse",
+            fault = {
+                    @FaultAction(className = StandardErrorMsg.class,
+                            value = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPort/retrieveSearchIHIBatch/Fault/standardError")
+            })
+    RetrieveSearchIHIBatchResponse retrieveSearchIHIBatch(
+            @WebParam(name = "retrieveSearchIHIBatch", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "request")
+            RetrieveSearchIHIBatch request,
+            @WebParam(name = "product", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "productHeader")
+            Holder<ProductType> productHeader,
+            @WebParam(name = "timestamp", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "timestampHeader")
+            TimestampType timestampHeader,
+            @WebParam(name = "signature", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "signatureHeader")
+            Holder<SignatureContainerType> signatureHeader,
+            @WebParam(name = "user", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "userHeader")
+            QualifiedId userHeader)
+            throws StandardErrorMsg;
+
+    @WebMethod
+    @WebResult(name = "getSearchIHIBatchStatusResponse", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "response")
+    @Action(input = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/getSearchIHIBatchStatusRequest",
+            output = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/getSearchIHIBatchStatusResponse",
+            fault = {
+                    @FaultAction(className = StandardErrorMsg.class,
+                            value = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/getSearchIHIBatchStatus/Fault/standardError")
+            })
+    GetSearchIHIBatchStatusResponse getSearchIHIBatchStatus(
+            @WebParam(name = "getSearchIHIBatchStatus", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "request")
+            GetSearchIHIBatchStatus request,
+            @WebParam(name = "product", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "productHeader")
+            Holder<ProductType> productHeader,
+            @WebParam(name = "timestamp", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "timestampHeader")
+            TimestampType timestampHeader,
+            @WebParam(name = "signature", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "signatureHeader")
+            Holder<SignatureContainerType> signatureHeader,
+            @WebParam(name = "user", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "userHeader")
+            QualifiedId userHeader)
+            throws StandardErrorMsg;
+
+    @WebMethod
+    @WebResult(name = "deleteSearchIHIBatchResponse", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "response")
+    @Action(input = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/deleteSearchIHIBatchRequest",
+            output = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/deleteSearchIHIBatchResponse",
+            fault = {
+                    @FaultAction(className = StandardErrorMsg.class,
+                            value = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0/ConsumerSearchIHIBatchAsyncPortType/deleteSearchIHIBatch/Fault/standardError")
+            })
+    DeleteSearchIHIBatchResponse deleteSearchIHIBatch(
+            @WebParam(name = "deleteSearchIHIBatch", targetNamespace = "http://ns.electronichealth.net.au/hi/svc/ConsumerSearchIHIBatchAsync/3.0", partName = "request")
+            DeleteSearchIHIBatch request,
+            @WebParam(name = "product", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "productHeader")
+            Holder<ProductType> productHeader,
+            @WebParam(name = "timestamp", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "timestampHeader")
+            TimestampType timestampHeader,
+            @WebParam(name = "signature", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true,
+                    mode = WebParam.Mode.INOUT, partName = "signatureHeader")
+            Holder<SignatureContainerType> signatureHeader,
+            @WebParam(name = "user", targetNamespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", header = true, partName = "userHeader")
+            QualifiedId userHeader)
+            throws StandardErrorMsg;
+
+}

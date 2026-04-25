@@ -1,3 +1,5 @@
 /target/
 /.idea/
 *.iml
+# Staged MCA XSD tree (toolkit extract or profile copy); do not commit licensed schemas.
+/schema/
