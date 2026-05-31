@@ -16,16 +16,16 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.DateAccur
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DateAndAccuracyType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="accuracyIndicator" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}DateAccuracyIndicatorType"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="DateAndAccuracyType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         <element name="accuracyIndicator" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}DateAccuracyIndicatorType"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

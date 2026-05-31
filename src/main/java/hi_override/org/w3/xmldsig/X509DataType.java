@@ -19,22 +19,22 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="X509DataType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence maxOccurs="unbounded">
- *         &lt;choice>
- *           &lt;element name="X509IssuerSerial" type="{http://www.w3.org/2000/09/xmldsig#}X509IssuerSerialType"/>
- *           &lt;element name="X509SKI" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *           &lt;element name="X509SubjectName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *           &lt;element name="X509Certificate" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *           &lt;element name="X509CRL" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *           &lt;any processContents='lax' namespace='##other'/>
- *         &lt;/choice>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="X509DataType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence maxOccurs="unbounded">
+ *         <choice>
+ *           <element name="X509IssuerSerial" type="{http://www.w3.org/2000/09/xmldsig#}X509IssuerSerialType"/>
+ *           <element name="X509SKI" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *           <element name="X509SubjectName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *           <element name="X509Certificate" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *           <element name="X509CRL" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *           <any processContents='lax' namespace='##other'/>
+ *         </choice>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

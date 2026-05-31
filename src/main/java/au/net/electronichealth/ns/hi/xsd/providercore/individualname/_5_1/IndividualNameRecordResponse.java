@@ -14,16 +14,16 @@ import au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2.Indivi
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="IndividualNameRecordResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
- *         &lt;element name="individualName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/3.2.0}IndividualName"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="IndividualNameRecordResponse">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
+ *         <element name="individualName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/3.2.0}IndividualName"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

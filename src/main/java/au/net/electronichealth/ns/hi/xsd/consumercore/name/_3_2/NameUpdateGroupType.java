@@ -13,16 +13,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="NameUpdateGroupType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.2.0}currentName"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.2.0}updateName"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="NameUpdateGroupType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.2.0}currentName"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Name/3.2.0}updateName"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

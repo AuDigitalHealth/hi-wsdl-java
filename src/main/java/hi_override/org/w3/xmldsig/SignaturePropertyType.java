@@ -22,17 +22,17 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SignaturePropertyType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice maxOccurs="unbounded">
- *         &lt;any processContents='lax' namespace='##other'/>
- *       &lt;/choice>
- *       &lt;attribute name="Target" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="SignaturePropertyType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice maxOccurs="unbounded">
+ *         <any processContents='lax' namespace='##other'/>
+ *       </choice>
+ *       <attribute name="Target" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *       <attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

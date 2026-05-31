@@ -23,27 +23,27 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.International
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}hpiiNumber" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0}registrationId" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}status" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.0.0}onlyNameIndicator" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0}dateOfBirth" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}australianAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}internationalAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}hpiiNumber" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0}registrationId" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}status" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.0.0}onlyNameIndicator" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0}dateOfBirth" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}australianAddress" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}internationalAddress" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

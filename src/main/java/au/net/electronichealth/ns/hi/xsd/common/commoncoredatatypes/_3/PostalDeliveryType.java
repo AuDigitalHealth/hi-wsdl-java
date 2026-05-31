@@ -12,22 +12,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="PostalDeliveryType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Care PO"/>
- *     &lt;enumeration value="CMA"/>
- *     &lt;enumeration value="CMB"/>
- *     &lt;enumeration value="GPO Box"/>
- *     &lt;enumeration value="Locked Bag"/>
- *     &lt;enumeration value="MS"/>
- *     &lt;enumeration value="PO Box"/>
- *     &lt;enumeration value="POR"/>
- *     &lt;enumeration value="Private Bag"/>
- *     &lt;enumeration value="RSD"/>
- *     &lt;enumeration value="RMB"/>
- *     &lt;enumeration value="RMS"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="PostalDeliveryType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Care PO"/>
+ *     <enumeration value="CMA"/>
+ *     <enumeration value="CMB"/>
+ *     <enumeration value="GPO Box"/>
+ *     <enumeration value="Locked Bag"/>
+ *     <enumeration value="MS"/>
+ *     <enumeration value="PO Box"/>
+ *     <enumeration value="POR"/>
+ *     <enumeration value="Private Bag"/>
+ *     <enumeration value="RSD"/>
+ *     <enumeration value="RMB"/>
+ *     <enumeration value="RMS"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

@@ -20,17 +20,17 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="KeyValueType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}DSAKeyValue"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RSAKeyValue"/>
- *         &lt;any processContents='lax' namespace='##other'/>
- *       &lt;/choice>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="KeyValueType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}DSAKeyValue"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}RSAKeyValue"/>
+ *         <any processContents='lax' namespace='##other'/>
+ *       </choice>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

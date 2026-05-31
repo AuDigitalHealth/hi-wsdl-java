@@ -11,22 +11,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="StreetSuffixType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="CN"/>
- *     &lt;enumeration value="E"/>
- *     &lt;enumeration value="EX"/>
- *     &lt;enumeration value="LR"/>
- *     &lt;enumeration value="N"/>
- *     &lt;enumeration value="NE"/>
- *     &lt;enumeration value="NW"/>
- *     &lt;enumeration value="S"/>
- *     &lt;enumeration value="SE"/>
- *     &lt;enumeration value="SW"/>
- *     &lt;enumeration value="UP"/>
- *     &lt;enumeration value="W"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="StreetSuffixType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="CN"/>
+ *     <enumeration value="E"/>
+ *     <enumeration value="EX"/>
+ *     <enumeration value="LR"/>
+ *     <enumeration value="N"/>
+ *     <enumeration value="NE"/>
+ *     <enumeration value="NW"/>
+ *     <enumeration value="S"/>
+ *     <enumeration value="SE"/>
+ *     <enumeration value="SW"/>
+ *     <enumeration value="UP"/>
+ *     <enumeration value="W"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

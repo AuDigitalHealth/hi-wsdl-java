@@ -14,18 +14,18 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.CountryTy
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="InternationalAddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalStateProvince"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}country"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalPostcode"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddressLine"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="InternationalAddressType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalStateProvince"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}country"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalPostcode"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddressLine"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

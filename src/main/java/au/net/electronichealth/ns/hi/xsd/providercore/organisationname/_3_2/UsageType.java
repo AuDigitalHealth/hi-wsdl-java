@@ -11,18 +11,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="UsageType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="S"/>
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="A"/>
- *     &lt;enumeration value="E"/>
- *     &lt;enumeration value="X"/>
- *     &lt;enumeration value="Y"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="UsageType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="U"/>
+ *     <enumeration value="S"/>
+ *     <enumeration value="B"/>
+ *     <enumeration value="L"/>
+ *     <enumeration value="A"/>
+ *     <enumeration value="E"/>
+ *     <enumeration value="X"/>
+ *     <enumeration value="Y"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

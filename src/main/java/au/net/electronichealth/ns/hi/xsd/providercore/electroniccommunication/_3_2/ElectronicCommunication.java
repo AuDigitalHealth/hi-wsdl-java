@@ -16,18 +16,18 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ElectronicCommunication">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}medium"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}details"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}usage"/>
- *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ElectronicCommunication">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}medium"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}details"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}usage"/>
+ *         <element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

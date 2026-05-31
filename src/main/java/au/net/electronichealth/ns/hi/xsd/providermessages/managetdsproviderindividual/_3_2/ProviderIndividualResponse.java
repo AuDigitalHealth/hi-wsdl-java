@@ -19,23 +19,23 @@ import au.net.electronichealth.ns.hi.xsd.providercore.certificate._3_2.Certifica
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="providerIndividualResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType" minOccurs="0"/>
- *         &lt;element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType" minOccurs="0"/>
- *         &lt;element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/>
- *         &lt;element name="individualNameResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="addressResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="providerTypeResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="electronicCommunicationResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/Certificate/3.2.0}certificateResponse" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="providerIndividualResponse">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType" minOccurs="0"/>
+ *         <element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType" minOccurs="0"/>
+ *         <element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/>
+ *         <element name="individualNameResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="addressResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="providerTypeResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="electronicCommunicationResponses" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/Certificate/3.2.0}certificateResponse" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

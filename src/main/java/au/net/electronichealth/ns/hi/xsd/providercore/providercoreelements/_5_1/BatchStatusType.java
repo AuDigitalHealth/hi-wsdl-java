@@ -11,15 +11,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="BatchStatusType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="RECEIVED"/>
- *     &lt;enumeration value="PROCESSING"/>
- *     &lt;enumeration value="COMPLETED"/>
- *     &lt;enumeration value="RETRIEVED"/>
- *     &lt;enumeration value="ERROR"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="BatchStatusType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="RECEIVED"/>
+ *     <enumeration value="PROCESSING"/>
+ *     <enumeration value="COMPLETED"/>
+ *     <enumeration value="RETRIEVED"/>
+ *     <enumeration value="ERROR"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

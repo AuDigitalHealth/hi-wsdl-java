@@ -19,23 +19,23 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PGPDataType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;sequence>
- *           &lt;element name="PGPKeyID" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *           &lt;element name="PGPKeyPacket" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
- *           &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;/sequence>
- *         &lt;sequence>
- *           &lt;element name="PGPKeyPacket" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *           &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;/sequence>
- *       &lt;/choice>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="PGPDataType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice>
+ *         <sequence>
+ *           <element name="PGPKeyID" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *           <element name="PGPKeyPacket" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+ *           <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
+ *         </sequence>
+ *         <sequence>
+ *           <element name="PGPKeyPacket" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
+ *           <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
+ *         </sequence>
+ *       </choice>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

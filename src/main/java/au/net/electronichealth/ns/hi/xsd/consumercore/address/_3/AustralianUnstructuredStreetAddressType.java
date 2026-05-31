@@ -15,19 +15,19 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AustralianUnstructuredStreetAddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}addressLineOne"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}addressLineTwo" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}suburb"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="AustralianUnstructuredStreetAddressType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}addressLineOne"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}addressLineTwo" minOccurs="0"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}suburb"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

@@ -1,105 +1,81 @@
-# HI WSDL Library
+# HI WSDL library (Java 11 / Jakarta)
 
-Introduction
-============
+Maven artifact **`au.gov.nehta:hi-wsdl`** — HI B2B **WSDL resources** and **pre-generated Jakarta JAX-WS / JAXB types** for Healthcare Identifiers (HI) client development.
 
-This library provides the artefacts required to support Health Identifier (HI) B2B clients.
+For hand-written facade clients, TLS, and signing, use **[hi-b2b-client-java](https://github.com/AuDigitalHealth/hi-b2b-client-java)**. This repository supplies the **generated type layer** only.
 
-Authoritative WSDL / XSD source (compliance and capability)
-===========================================================
+## Dependency
 
-This repository ships WSDL files under `src/main/resources`. Those interfaces use
-`schemaLocation` references such as `../../../schema/mca/...` relative to each WSDL
-file, i.e. they resolve to **`schema/mca/...`** at this project root,
-matching the layout inside the licensed
-**Healthcare Identifiers Integration Toolkit** (MCA `xml/schema` tree).
+```xml
+<dependency>
+  <groupId>au.gov.nehta</groupId>
+  <artifactId>hi-wsdl</artifactId>
+  <version>1.7.0-SNAPSHOT</version>
+</dependency>
+```
 
-**You must obtain the official, current WSDL/XSD pack from the Australian Digital
-Health Agency**, not from third-party copies, for conformance and redistribution
-policy:
+Runtime (transitive in this repo): Eclipse **`jaxws-rt`** 4.x. Align Jakarta XML Web Services versions with **`hi-b2b-client`** if both are on the classpath.
 
-- [Healthcare Identifiers Integration Toolkit](https://developer.digitalhealth.gov.au/resources/healthcare-identifiers-integration-toolkit-v1-2)
-  on the **Digital Health Developer Portal** (licence acceptance and developer
-  registration apply).
-- HI Service overview for developers: [Services Australia – HI Service for software developers](https://www.servicesaustralia.gov.au/healthcare-identifier-hi-service-for-software-developers).
+## What is in the JAR
 
-After you unzip the toolkit, copy or stage the licensed schema files locally:
+| Content | Location in repo |
+| ------- | ---------------- |
+| HI service WSDL (classpath) | `src/main/resources/HI_*.wsdl` |
+| Jakarta generated stubs | `src/main/java/` |
+| XMLDSig JAXB override | `src/main/java/hi_override/` |
 
-1. Copy the toolkit’s `xml/schema` folder to **`schema`** at the root of this repo
-   (so `schema/mca/...` exists next to `pom.xml`), **or**
-2. In a monorepo that already contains the MCA tree under `../wsdls/xml/schema`,
-   build once with **`mvn -Pstage-mca-schemas generate-sources`** (see `pom.xml`).
-   That profile copies `../wsdls/xml/schema` into `./schema` when that path exists.
-   If schemas live next to **`hi-b2b-client-java`** instead (`../hi-b2b-client-java/wsdls/xml/schema`),
-   use **`mvn -Pstage-mca-schemas-from-b2b-client generate-sources`**.
-   The copied tree is ignored by Git (see `.gitignore`).
+The published JAR includes WSDL on the classpath root (for example `/HI_ConsumerSearchIHI-3.0.wsdl`). Generated **`Service`** classes reference those locations.
 
-With `schema/` in place, Jakarta XML Web Services tooling can resolve imports
-when regenerating Jakarta XML WS / Jakarta XML Binding source from the HI WSDLs.
+## Licensed MCA schemas (regeneration only)
 
-Setup
-=====
+WSDL files reference **`schema/mca/...`** at the repository root (toolkit layout). The **MCA XSD tree is not in Git** — obtain it from the official pack when **regenerating** types from WSDL:
 
--   To build and test the distributable package, an appropriate Java IDE or
-    build environment must be installed.
+- [Healthcare Identifiers Integration Toolkit](https://developer.digitalhealth.gov.au/resources/healthcare-identifiers-integration-toolkit-v1-2) (Digital Health Developer Portal)
+- [HI Service for software developers](https://www.servicesaustralia.gov.au/healthcare-identifier-hi-service-for-software-developers) (Services Australia)
 
--   WSDL files are included in:
-    `src/main/resources`
+Copy the toolkit **`xml/schema`** folder to **`schema/`** next to **`pom.xml`** (see **`schema/readme.txt`**). A normal **`mvn verify`** on committed sources does **not** require **`schema/`**.
 
-    Generated Java source files can be found in:
-    `src/main/java`
+Confirm your organisation’s redistribution terms for HI WSDL before mirroring this repository.
 
--   For detailed API documentation, refer to the included Javadoc package.
+## Build from source
 
-Solution
-========
+Prerequisites: **JDK 11+**, **Maven 3.6+**. Generated Java is **committed**; default build does not run **`wsimport`**. CI runs the same **`mvn verify`** on every push/PR (see **`.github/workflows/ci.yml`**).
 
-The package consists of these components:
+```text
+mvn -B "-Dgpg.skip=true" clean verify
+```
 
-    -   `hi-wsdl-<version>.jar`
-        Contains the required classes and WSDL resources for B2B client
-        development, deployment, and invocation.
+Or **`build.ps1`**, **`build.sh`**, **`build.bat`**.
 
-    -   `hi-wsdl-<version>-docs.jar`
-        Contains Javadoc for generated code.
+Install to the local repository:
 
-    -   `hi-wsdl-<version>-sources.jar`
-        Contains generated Java source files.
+```text
+mvn -B "-Dgpg.skip=true" clean install
+```
 
-Pre-Requisites
-==============
+## Relationship to hi-b2b-client-java
 
-Java Development Kit (JDK)
-------------------------------------
-1.  Download and install JDK 11 or later:
-    URL: https://adoptium.net/temurin/releases/?version=11
+| | **hi-wsdl-java** (this repo) | **hi-b2b-client-java** |
+| --- | --- | --- |
+| Artifact | `hi-wsdl` | `hi-b2b-client` |
+| Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.hi.*`) |
+| Codegen | Pre-generated, committed | In-repo **`wsimport`** (26 executions) |
+| WSDL in this repo | `src/main/resources` (shipped in JAR) | Licensed tree under `wsdls/xml/` (not in public Git) |
 
-2.  Unpack the JDK distribution into a directory of your choice.
+Current **`hi-b2b-client-java`** builds its own generated types and does **not** depend on **`hi-wsdl`**. Use **`hi-wsdl`** when you need HI types and classpath WSDL without the full client library.
 
-    This directory will be your <JDK_HOME>and will be used in this document
-    to refer to the root directory of the JDK installation.
+## Documentation
 
-3.  Create a JAVA_HOME environment variable pointing to the <JDK_HOME>
-    directory in Step 2.
+| Document | Audience |
+| -------- | -------- |
+| **README.md** (this file) | Integrators |
+| **CONTRIBUTING.md** | Contributors building from source |
+| **MAINTAINERS.md** | Release and codegen alignment |
+| **SECURITY.md** | Security reporting and secrets hygiene |
+| **CHANGELOG.md** | Release history |
+| **LICENSE.txt** | Apache License 2.0 + ADHA terms |
+| **schema/readme.txt** | Licensed MCA XSD staging (regeneration only) |
 
-4.  Add <JDK_HOME>/bin to the system path.
+## License
 
-5.  Build and test with Maven:
-    `mvn clean test`
-
-
-Licensing
-=========
-Copyright 2012 NEHTA
-
-Copyright 2021 ADHA
-
-Licensed under the NEHTA/ADHA Open Source (Apache) License; you may not use this
-file except in compliance with the License. A copy of the License is in the
-'LICENSE.txt' file, which should be provided with this work.
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.
+Apache License 2.0. See **LICENSE.txt**.

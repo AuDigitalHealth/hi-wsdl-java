@@ -14,18 +14,18 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityT
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ServiceMessageType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="code" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="severity" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}SeverityType"/>
- *         &lt;element name="reason" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="details" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}detail" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ServiceMessageType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="code" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="severity" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}SeverityType"/>
+ *         <element name="reason" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="details" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}detail" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

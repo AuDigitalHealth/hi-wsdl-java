@@ -18,13 +18,13 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SignatureValueType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
- *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * <complexType name="SignatureValueType">
+ *   <simpleContent>
+ *     <extension base="<http://www.w3.org/2001/XMLSchema>base64Binary">
+ *       <attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *     </extension>
+ *   </simpleContent>
+ * </complexType>
  * </pre>
  * 
  * 

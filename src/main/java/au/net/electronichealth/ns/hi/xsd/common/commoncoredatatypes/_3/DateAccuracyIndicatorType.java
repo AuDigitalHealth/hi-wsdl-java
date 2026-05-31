@@ -11,38 +11,38 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="DateAccuracyIndicatorType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;length value="3"/>
- *     &lt;enumeration value="AAA"/>
- *     &lt;enumeration value="AAE"/>
- *     &lt;enumeration value="AAU"/>
- *     &lt;enumeration value="AEA"/>
- *     &lt;enumeration value="AEE"/>
- *     &lt;enumeration value="AEU"/>
- *     &lt;enumeration value="AUA"/>
- *     &lt;enumeration value="AUE"/>
- *     &lt;enumeration value="AUU"/>
- *     &lt;enumeration value="EAA"/>
- *     &lt;enumeration value="EAE"/>
- *     &lt;enumeration value="EAU"/>
- *     &lt;enumeration value="EEA"/>
- *     &lt;enumeration value="EEE"/>
- *     &lt;enumeration value="EEU"/>
- *     &lt;enumeration value="EUA"/>
- *     &lt;enumeration value="EUE"/>
- *     &lt;enumeration value="EUU"/>
- *     &lt;enumeration value="UAA"/>
- *     &lt;enumeration value="UAE"/>
- *     &lt;enumeration value="UAU"/>
- *     &lt;enumeration value="UEA"/>
- *     &lt;enumeration value="UEE"/>
- *     &lt;enumeration value="UEU"/>
- *     &lt;enumeration value="UUA"/>
- *     &lt;enumeration value="UUE"/>
- *     &lt;enumeration value="UUU"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="DateAccuracyIndicatorType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <length value="3"/>
+ *     <enumeration value="AAA"/>
+ *     <enumeration value="AAE"/>
+ *     <enumeration value="AAU"/>
+ *     <enumeration value="AEA"/>
+ *     <enumeration value="AEE"/>
+ *     <enumeration value="AEU"/>
+ *     <enumeration value="AUA"/>
+ *     <enumeration value="AUE"/>
+ *     <enumeration value="AUU"/>
+ *     <enumeration value="EAA"/>
+ *     <enumeration value="EAE"/>
+ *     <enumeration value="EAU"/>
+ *     <enumeration value="EEA"/>
+ *     <enumeration value="EEE"/>
+ *     <enumeration value="EEU"/>
+ *     <enumeration value="EUA"/>
+ *     <enumeration value="EUE"/>
+ *     <enumeration value="EUU"/>
+ *     <enumeration value="UAA"/>
+ *     <enumeration value="UAE"/>
+ *     <enumeration value="UAU"/>
+ *     <enumeration value="UEA"/>
+ *     <enumeration value="UEE"/>
+ *     <enumeration value="UEU"/>
+ *     <enumeration value="UUA"/>
+ *     <enumeration value="UUE"/>
+ *     <enumeration value="UUU"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

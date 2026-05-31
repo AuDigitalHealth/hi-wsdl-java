@@ -14,18 +14,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Address">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="australianAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AustralianAddressType" minOccurs="0"/>
- *         &lt;element name="internationalAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}InternationalAddressType" minOccurs="0"/>
- *         &lt;element name="addressPurpose" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AddressPurposeAndDateType"/>
- *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="Address">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="australianAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AustralianAddressType" minOccurs="0"/>
+ *         <element name="internationalAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}InternationalAddressType" minOccurs="0"/>
+ *         <element name="addressPurpose" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AddressPurposeAndDateType"/>
+ *         <element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

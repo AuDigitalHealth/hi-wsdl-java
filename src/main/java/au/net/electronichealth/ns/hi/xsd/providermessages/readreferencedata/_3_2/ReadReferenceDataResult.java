@@ -17,16 +17,16 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMes
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="elementReferenceValues" type="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadReferenceData/3.2.0}ElementReferenceValuesType" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="elementReferenceValues" type="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadReferenceData/3.2.0}ElementReferenceValuesType" maxOccurs="unbounded"/>
+ *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

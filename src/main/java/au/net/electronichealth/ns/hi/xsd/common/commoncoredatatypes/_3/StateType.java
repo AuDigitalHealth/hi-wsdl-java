@@ -11,18 +11,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="StateType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="ACT"/>
- *     &lt;enumeration value="NSW"/>
- *     &lt;enumeration value="NT"/>
- *     &lt;enumeration value="QLD"/>
- *     &lt;enumeration value="SA"/>
- *     &lt;enumeration value="TAS"/>
- *     &lt;enumeration value="VIC"/>
- *     &lt;enumeration value="WA"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="StateType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="ACT"/>
+ *     <enumeration value="NSW"/>
+ *     <enumeration value="NT"/>
+ *     <enumeration value="QLD"/>
+ *     <enumeration value="SA"/>
+ *     <enumeration value="TAS"/>
+ *     <enumeration value="VIC"/>
+ *     <enumeration value="WA"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

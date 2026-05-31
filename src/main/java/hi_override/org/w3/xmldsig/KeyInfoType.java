@@ -25,23 +25,23 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="KeyInfoType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice maxOccurs="unbounded">
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyName"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyValue"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RetrievalMethod"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}X509Data"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}PGPData"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}SPKIData"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}MgmtData"/>
- *         &lt;any processContents='lax' namespace='##other'/>
- *       &lt;/choice>
- *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="KeyInfoType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice maxOccurs="unbounded">
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}KeyName"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}KeyValue"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}RetrievalMethod"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}X509Data"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}PGPData"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}SPKIData"/>
+ *         <element ref="{http://www.w3.org/2000/09/xmldsig#}MgmtData"/>
+ *         <any processContents='lax' namespace='##other'/>
+ *       </choice>
+ *       <attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

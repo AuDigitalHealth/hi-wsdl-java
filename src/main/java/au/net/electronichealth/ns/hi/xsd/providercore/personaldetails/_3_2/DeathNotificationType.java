@@ -14,16 +14,16 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DeathNotificationType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="dateOfDeath" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/>
- *         &lt;element name="sourceOfDeathNotification" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}SourceOfDeathNotificationType"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="DeathNotificationType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="dateOfDeath" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/>
+ *         <element name="sourceOfDeathNotification" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}SourceOfDeathNotificationType"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

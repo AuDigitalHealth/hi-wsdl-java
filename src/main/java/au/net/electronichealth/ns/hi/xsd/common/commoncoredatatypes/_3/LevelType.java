@@ -11,25 +11,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="LevelType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="FL"/>
- *     &lt;enumeration value="G"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="LG"/>
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="OD"/>
- *     &lt;enumeration value="P"/>
- *     &lt;enumeration value="PTHS"/>
- *     &lt;enumeration value="PLF"/>
- *     &lt;enumeration value="PLZA"/>
- *     &lt;enumeration value="PDM"/>
- *     &lt;enumeration value="RT"/>
- *     &lt;enumeration value="SB"/>
- *     &lt;enumeration value="UG"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="LevelType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="B"/>
+ *     <enumeration value="FL"/>
+ *     <enumeration value="G"/>
+ *     <enumeration value="L"/>
+ *     <enumeration value="LG"/>
+ *     <enumeration value="M"/>
+ *     <enumeration value="OD"/>
+ *     <enumeration value="P"/>
+ *     <enumeration value="PTHS"/>
+ *     <enumeration value="PLF"/>
+ *     <enumeration value="PLZA"/>
+ *     <enumeration value="PDM"/>
+ *     <enumeration value="RT"/>
+ *     <enumeration value="SB"/>
+ *     <enumeration value="UG"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

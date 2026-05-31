@@ -11,15 +11,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="AddressPurposeType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="R"/>
- *     &lt;enumeration value="T"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="AddressPurposeType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="B"/>
+ *     <enumeration value="M"/>
+ *     <enumeration value="U"/>
+ *     <enumeration value="R"/>
+ *     <enumeration value="T"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

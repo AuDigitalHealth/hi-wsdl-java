@@ -1,0 +1,21 @@
+* text=auto eol=lf
+
+*.class binary
+*.dll binary
+*.ear binary
+*.jar binary
+*.jks binary
+*.keystore binary
+*.pdf binary
+*.png binary
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.war binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+
+*.bat text eol=crlf
+*.cmd text eol=crlf

@@ -14,16 +14,16 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AddressRecordResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
- *         &lt;element name="address" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}Address"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="AddressRecordResponse">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
+ *         <element name="address" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}Address"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

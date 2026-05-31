@@ -14,16 +14,16 @@ import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ElectronicCommunicationRecordResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
- *         &lt;element name="electronicCommunication" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0}ElectronicCommunication"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ElectronicCommunicationRecordResponse">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="tdsReference" type="{http://ns.medicareaustralia.gov.au/provider/schema/2013/06/22/elements}TdsReferenceIdentifierType" minOccurs="0"/>
+ *         <element name="electronicCommunication" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0}ElectronicCommunication"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

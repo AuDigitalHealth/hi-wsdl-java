@@ -11,12 +11,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="SourceOfDeathNotificationType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;length value="1"/>
- *     &lt;enumeration value="H"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="SourceOfDeathNotificationType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *     <length value="1"/>
+ *     <enumeration value="H"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

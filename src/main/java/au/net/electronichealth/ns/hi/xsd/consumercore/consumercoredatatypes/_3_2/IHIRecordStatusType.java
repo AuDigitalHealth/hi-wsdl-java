@@ -12,13 +12,13 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="IHIRecordStatusType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Provisional"/>
- *     &lt;enumeration value="Unverified"/>
- *     &lt;enumeration value="Verified"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="IHIRecordStatusType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *     <enumeration value="Provisional"/>
+ *     <enumeration value="Unverified"/>
+ *     <enumeration value="Verified"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

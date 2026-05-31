@@ -11,58 +11,58 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="UnitType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="ANT"/>
- *     &lt;enumeration value="APT"/>
- *     &lt;enumeration value="ATM"/>
- *     &lt;enumeration value="BBQ"/>
- *     &lt;enumeration value="BTSD"/>
- *     &lt;enumeration value="BLDG"/>
- *     &lt;enumeration value="BNGW"/>
- *     &lt;enumeration value="CAGE"/>
- *     &lt;enumeration value="CARP"/>
- *     &lt;enumeration value="CARS"/>
- *     &lt;enumeration value="CLUB"/>
- *     &lt;enumeration value="COOL"/>
- *     &lt;enumeration value="CTGE"/>
- *     &lt;enumeration value="DUP"/>
- *     &lt;enumeration value="FY"/>
- *     &lt;enumeration value="F"/>
- *     &lt;enumeration value="GRGE"/>
- *     &lt;enumeration value="HALL"/>
- *     &lt;enumeration value="HSE"/>
- *     &lt;enumeration value="KSK"/>
- *     &lt;enumeration value="LSE"/>
- *     &lt;enumeration value="LBBY"/>
- *     &lt;enumeration value="LOFT"/>
- *     &lt;enumeration value="LOT"/>
- *     &lt;enumeration value="MSNT"/>
- *     &lt;enumeration value="MB"/>
- *     &lt;enumeration value="OFF"/>
- *     &lt;enumeration value="PTHS"/>
- *     &lt;enumeration value="RESV"/>
- *     &lt;enumeration value="RM"/>
- *     &lt;enumeration value="SHED"/>
- *     &lt;enumeration value="SHOP"/>
- *     &lt;enumeration value="SIGN"/>
- *     &lt;enumeration value="SITE"/>
- *     &lt;enumeration value="SL"/>
- *     &lt;enumeration value="STOR"/>
- *     &lt;enumeration value="STR"/>
- *     &lt;enumeration value="STU"/>
- *     &lt;enumeration value="SUBS"/>
- *     &lt;enumeration value="SE"/>
- *     &lt;enumeration value="TNCY"/>
- *     &lt;enumeration value="TWR"/>
- *     &lt;enumeration value="TNHS"/>
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="VLLA"/>
- *     &lt;enumeration value="WARD"/>
- *     &lt;enumeration value="WE"/>
- *     &lt;enumeration value="WKSH"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="UnitType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="ANT"/>
+ *     <enumeration value="APT"/>
+ *     <enumeration value="ATM"/>
+ *     <enumeration value="BBQ"/>
+ *     <enumeration value="BTSD"/>
+ *     <enumeration value="BLDG"/>
+ *     <enumeration value="BNGW"/>
+ *     <enumeration value="CAGE"/>
+ *     <enumeration value="CARP"/>
+ *     <enumeration value="CARS"/>
+ *     <enumeration value="CLUB"/>
+ *     <enumeration value="COOL"/>
+ *     <enumeration value="CTGE"/>
+ *     <enumeration value="DUP"/>
+ *     <enumeration value="FY"/>
+ *     <enumeration value="F"/>
+ *     <enumeration value="GRGE"/>
+ *     <enumeration value="HALL"/>
+ *     <enumeration value="HSE"/>
+ *     <enumeration value="KSK"/>
+ *     <enumeration value="LSE"/>
+ *     <enumeration value="LBBY"/>
+ *     <enumeration value="LOFT"/>
+ *     <enumeration value="LOT"/>
+ *     <enumeration value="MSNT"/>
+ *     <enumeration value="MB"/>
+ *     <enumeration value="OFF"/>
+ *     <enumeration value="PTHS"/>
+ *     <enumeration value="RESV"/>
+ *     <enumeration value="RM"/>
+ *     <enumeration value="SHED"/>
+ *     <enumeration value="SHOP"/>
+ *     <enumeration value="SIGN"/>
+ *     <enumeration value="SITE"/>
+ *     <enumeration value="SL"/>
+ *     <enumeration value="STOR"/>
+ *     <enumeration value="STR"/>
+ *     <enumeration value="STU"/>
+ *     <enumeration value="SUBS"/>
+ *     <enumeration value="SE"/>
+ *     <enumeration value="TNCY"/>
+ *     <enumeration value="TWR"/>
+ *     <enumeration value="TNHS"/>
+ *     <enumeration value="U"/>
+ *     <enumeration value="VLLA"/>
+ *     <enumeration value="WARD"/>
+ *     <enumeration value="WE"/>
+ *     <enumeration value="WKSH"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

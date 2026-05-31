@@ -13,17 +13,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="EndpointLocatorService">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="serviceIdentity" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}ServiceIdentityType" minOccurs="0"/>
- *         &lt;element name="serviceAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}ServiceAddressType" minOccurs="0"/>
- *         &lt;element name="securityCertificateReference" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}SecurityCertificateReferenceType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="EndpointLocatorService">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="serviceIdentity" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}ServiceIdentityType" minOccurs="0"/>
+ *         <element name="serviceAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}ServiceAddressType" minOccurs="0"/>
+ *         <element name="securityCertificateReference" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}SecurityCertificateReferenceType" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

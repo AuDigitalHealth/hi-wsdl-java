@@ -12,14 +12,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="SeverityType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Fatal"/>
- *     &lt;enumeration value="Error"/>
- *     &lt;enumeration value="Warning"/>
- *     &lt;enumeration value="Informational"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="SeverityType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Fatal"/>
+ *     <enumeration value="Error"/>
+ *     <enumeration value="Warning"/>
+ *     <enumeration value="Informational"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

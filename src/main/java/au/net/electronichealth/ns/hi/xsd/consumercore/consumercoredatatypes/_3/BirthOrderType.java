@@ -12,19 +12,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="BirthOrderType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;length value="1"/>
- *     &lt;enumeration value="1"/>
- *     &lt;enumeration value="2"/>
- *     &lt;enumeration value="3"/>
- *     &lt;enumeration value="4"/>
- *     &lt;enumeration value="5"/>
- *     &lt;enumeration value="6"/>
- *     &lt;enumeration value="8"/>
- *     &lt;enumeration value="9"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * <simpleType name="BirthOrderType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *     <length value="1"/>
+ *     <enumeration value="1"/>
+ *     <enumeration value="2"/>
+ *     <enumeration value="3"/>
+ *     <enumeration value="4"/>
+ *     <enumeration value="5"/>
+ *     <enumeration value="6"/>
+ *     <enumeration value="8"/>
+ *     <enumeration value="9"/>
+ *   </restriction>
+ * </simpleType>
  * </pre>
  * 
  */

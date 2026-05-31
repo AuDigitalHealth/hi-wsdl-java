@@ -14,18 +14,18 @@ import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.Qualified
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ProductType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/>
- *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ProductType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/>
+ *         <element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

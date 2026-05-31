@@ -13,18 +13,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="LinkedIndividualType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
- *         &lt;element name="role" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}RoleType" minOccurs="0"/>
- *         &lt;element name="familyName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}FamilyNameType" minOccurs="0"/>
- *         &lt;element name="givenName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}GivenNameType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="LinkedIndividualType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
+ *         <element name="role" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}RoleType" minOccurs="0"/>
+ *         <element name="familyName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}FamilyNameType" minOccurs="0"/>
+ *         <element name="givenName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}GivenNameType" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

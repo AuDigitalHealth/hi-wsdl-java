@@ -14,17 +14,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="LinkDetailsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
- *         &lt;element name="requestType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Link/3.2.0}RequestType"/>
- *         &lt;element name="linkType" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="LinkDetailsType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
+ *         <element name="requestType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Link/3.2.0}RequestType"/>
+ *         <element name="linkType" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

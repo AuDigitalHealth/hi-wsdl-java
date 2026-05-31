@@ -22,21 +22,21 @@ import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.Provider
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType"/>
- *         &lt;element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType"/>
- *         &lt;element name="personalDetails" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}PersonalDetails"/>
- *         &lt;element name="individualNameRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.1.0}IndividualNameRecordResponse" maxOccurs="unbounded"/>
- *         &lt;element name="addressRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/5.1.0}AddressRecordResponse" maxOccurs="unbounded"/>
- *         &lt;element name="electronicCommunicationRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/5.1.0}ElectronicCommunicationRecordResponse" maxOccurs="unbounded"/>
- *         &lt;element name="providerTypeRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.1.1}ProviderTypeRecordResponse" maxOccurs="unbounded"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType"/>
+ *         <element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType"/>
+ *         <element name="personalDetails" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}PersonalDetails"/>
+ *         <element name="individualNameRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.1.0}IndividualNameRecordResponse" maxOccurs="unbounded"/>
+ *         <element name="addressRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/5.1.0}AddressRecordResponse" maxOccurs="unbounded"/>
+ *         <element name="electronicCommunicationRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/5.1.0}ElectronicCommunicationRecordResponse" maxOccurs="unbounded"/>
+ *         <element name="providerTypeRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.1.1}ProviderTypeRecordResponse" maxOccurs="unbounded"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

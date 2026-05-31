@@ -1,5 +1,27 @@
 /target/
 /.idea/
 *.iml
-# Staged MCA XSD tree (toolkit extract or profile copy); do not commit licensed schemas.
-/schema/
+
+# Local secrets (never commit populated copies)
+/local.properties
+local.properties
+/settings.xml
+settings.xml
+
+# Licensed MCA XSD staging for wsimport regeneration only (see schema/readme.txt)
+/schema/*
+!/schema/readme.txt
+
+/certs/
+*.jks
+*.keystore
+*.p12
+
+# Editor / agent / OS noise (not part of the published tree)
+.DS_Store
+Thumbs.db
+*.swp
+*.orig
+*~
+.vscode/
+hi-wsdl-java.code-workspace

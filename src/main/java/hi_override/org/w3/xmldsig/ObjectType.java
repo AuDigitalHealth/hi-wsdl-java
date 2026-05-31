@@ -22,18 +22,18 @@ import org.w3c.dom.Element;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ObjectType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence maxOccurs="unbounded" minOccurs="0">
- *         &lt;any processContents='lax'/>
- *       &lt;/sequence>
- *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="MimeType" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="Encoding" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ObjectType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence maxOccurs="unbounded" minOccurs="0">
+ *         <any processContents='lax'/>
+ *       </sequence>
+ *       <attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *       <attribute name="MimeType" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       <attribute name="Encoding" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 

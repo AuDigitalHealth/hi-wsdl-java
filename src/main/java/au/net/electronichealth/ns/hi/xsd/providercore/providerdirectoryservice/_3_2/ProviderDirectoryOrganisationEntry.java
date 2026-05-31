@@ -16,23 +16,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ProviderDirectoryOrganisationEntry">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="nameExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
- *         &lt;element name="addressExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
- *         &lt;element name="electronicCommunicationExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="organisationServiceExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="endpointLocatorServiceExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/>
- *         &lt;element name="display" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="displayPrivateDetails" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType name="ProviderDirectoryOrganisationEntry">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="nameExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
+ *         <element name="addressExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
+ *         <element name="electronicCommunicationExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="organisationServiceExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="endpointLocatorServiceExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/>
+ *         <element name="display" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         <element name="displayPrivateDetails" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         <element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 
