@@ -62,20 +62,12 @@
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
-        <archetype.encoding>${encoding}</archetype.encoding>
         <skipTests>false</skipTests>
         <!-- Eclipse EE4J XML Web Services: align jaxws-rt / jaxws-tools. jaxws-maven-plugin 4.0.3+ requires JDK 17 to run wsimport - keep plugin at 4.0.2 on JDK 11. -->
         <jaxws.rt.version>4.0.4</jaxws.rt.version>
         <jakarta.jws.api.version>3.0.0</jakarta.jws.api.version>
         <jakarta.xml.bind.api.version>4.0.2</jakarta.xml.bind.api.version>
         <jakarta.xml.ws.api.version>4.0.2</jakarta.xml.ws.api.version>
-        <hi.wsdl.codegen.skip>true</hi.wsdl.codegen.skip>
-        <hi.wsdl.codegen.clean>false</hi.wsdl.codegen.clean>
-        <groovy.version>4.0.32</groovy.version>
-        <gmavenplus.plugin.version>4.3.1</gmavenplus.plugin.version>
-        <jaxws.maven.plugin.version>4.0.2</jaxws.maven.plugin.version>
-        <jaxb.xjc.version>4.0.4</jaxb.xjc.version>
     </properties>
 
     <!-- Compile: Jakarta JAX-WS/JAXB/JWS APIs. Runtime: jaxws-rt (Jakarta XML-WS RI). JUnit is test-scoped only. -->
@@ -143,7 +135,6 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.12.0</version>
                 <configuration>
-                    <verbose>true</verbose>
                     <doclint>none</doclint>
                     <encoding>${encoding}</encoding>
                 </configuration>
@@ -235,12 +226,14 @@
     </build>
 
     <profiles>
-        <!-- Maintainer: mvn -B -Pregenerate-sources -Dhi.wsdl.codegen.clean=true generate-sources process-sources -->
+        <!-- Maintainer: mvn -B clean -Pregenerate-sources generate-sources process-sources -->
         <!-- Optional commit sync: add -Dhi.wsdl.sync.generated=true -->
         <profile>
             <id>regenerate-sources</id>
             <properties>
-                <hi.wsdl.codegen.skip>false</hi.wsdl.codegen.skip>
+                <groovy.version>4.0.32</groovy.version>
+                <gmavenplus.plugin.version>4.3.1</gmavenplus.plugin.version>
+                <jaxws.maven.plugin.version>4.0.2</jaxws.maven.plugin.version>
                 <jaxb.xjc.version>4.0.7</jaxb.xjc.version>
             </properties>
             <build>
@@ -251,45 +244,10 @@
                         <version>${gmavenplus.plugin.version}</version>
                         <executions>
                             <execution>
-                                <id>clean-wsimport-codegen</id>
-                                <phase>generate-sources</phase>
-                                <goals><goal>execute</goal></goals>
-                                <configuration>
-                                    <skipScriptExecution>${hi.wsdl.codegen.skip}</skipScriptExecution>
-                                    <scripts>
-                                        <script><![CDATA[
-                                            def clean = project.properties.getProperty('hi.wsdl.codegen.clean', 'false')
-                                            if (!'true'.equalsIgnoreCase(clean.trim())) {
-                                                return
-                                            }
-                                            def bd = project.build.directory as File
-                                            def partsBase = new File(bd, 'generated-sources/wsimport-parts')
-                                            if (partsBase.isDirectory()) {
-                                                partsBase.eachDir { File sub -> sub.deleteDir() }
-                                                partsBase.deleteDir()
-                                            }
-                                            def destBase = new File(bd, 'jaxws/dest')
-                                            if (destBase.isDirectory()) {
-                                                destBase.eachDir { File sub -> sub.deleteDir() }
-                                            }
-                                            def merged = new File(bd, 'generated-sources/wsimport')
-                                            if (merged.isDirectory()) {
-                                                merged.deleteDir()
-                                            }
-                                            def jaxwsDir = new File(bd, 'jaxws')
-                                            if (jaxwsDir.isDirectory()) {
-                                                jaxwsDir.deleteDir()
-                                            }
-                                        ]]></script>
-                                    </scripts>
-                                </configuration>
-                            </execution>
-                            <execution>
                                 <id>merge-wsimport</id>
                                 <phase>process-sources</phase>
                                 <goals><goal>execute</goal></goals>
                                 <configuration>
-                                    <skipScriptExecution>${hi.wsdl.codegen.skip}</skipScriptExecution>
                                     <scripts>
                                         <script><![CDATA[
                                             def bd = project.build.directory as File
@@ -347,7 +305,6 @@
                                                 }
                                                 log.info('Synced generated sources to src/main/java')
                                             }
-                                            project.getCompileSourceRoots().findAll { String p -> p.contains('wsimport-parts') }.each { project.removeCompileSourceRoot(it) }
                                         ]]></script>
                                     </scripts>
                                 </configuration>
@@ -357,12 +314,6 @@
                             <dependency>
                                 <groupId>org.apache.groovy</groupId>
                                 <artifactId>groovy</artifactId>
-                                <version>${groovy.version}</version>
-                                <scope>runtime</scope>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.apache.groovy</groupId>
-                                <artifactId>groovy-ant</artifactId>
                                 <version>${groovy.version}</version>
                                 <scope>runtime</scope>
                             </dependency>
@@ -383,14 +334,8 @@
                                 <artifactId>jaxb-xjc</artifactId>
                                 <version>${jaxb.xjc.version}</version>
                             </dependency>
-                            <dependency>
-                                <groupId>org.glassfish.jaxb</groupId>
-                                <artifactId>jaxb-runtime</artifactId>
-                                <version>${jaxb.xjc.version}</version>
-                            </dependency>
                         </dependencies>
                         <configuration>
-                            <skip>${hi.wsdl.codegen.skip}</skip>
                             <xnocompile>true</xnocompile>
                             <extension>true</extension>
                             <quiet>true</quiet>
@@ -729,7 +674,6 @@
                                 <phase>initialize</phase>
                                 <goals><goal>enforce</goal></goals>
                                 <configuration>
-                                    <skip>${hi.wsdl.codegen.skip}</skip>
                                     <rules>
                                         <requireFilesExist>
                                             <files>

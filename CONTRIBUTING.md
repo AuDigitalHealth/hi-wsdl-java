@@ -45,7 +45,7 @@ Generated Java under **`src/main/java`** is **committed**. Regeneration is maint
 Regenerate committed types (requires **`schema/mca/`** and **`schema/w3c/`** locally):
 
 ```text
-mvn -B -Pregenerate-sources -Dhi.wsdl.codegen.clean=true generate-sources process-sources -Dhi.wsdl.sync.generated=true
+mvn -B clean -Pregenerate-sources generate-sources process-sources -Dhi.wsdl.sync.generated=true
 mvn -B "-Dgpg.skip=true" clean verify
 ```
 
