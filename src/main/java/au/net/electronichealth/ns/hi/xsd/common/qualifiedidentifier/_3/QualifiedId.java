@@ -9,22 +9,22 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for QualifiedId complex type.
+ * &lt;p&gt;Java class for QualifiedId complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="QualifiedId">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="qualifier" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
- *         <element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="QualifiedId"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="qualifier" type="{http://www.w3.org/2001/XMLSchema}anyURI"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

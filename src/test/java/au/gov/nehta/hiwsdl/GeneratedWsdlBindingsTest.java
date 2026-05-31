@@ -181,6 +181,9 @@ public class GeneratedWsdlBindingsTest {
         WebServiceClient client = type.getAnnotation(WebServiceClient.class);
         assertNotNull(type.getName(), client);
         URL wsdl = type.getResource(client.wsdlLocation());
+        if (wsdl == null) {
+            wsdl = Thread.currentThread().getContextClassLoader().getResource(client.wsdlLocation());
+        }
         assertNotNull(client.wsdlLocation(), wsdl);
 
         Constructor<?> constructor = type.getConstructor(URL.class, QName.class);

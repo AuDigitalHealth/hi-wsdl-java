@@ -1,32 +1,32 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.QualifiedId;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.QualifiedId;
 
 
 /**
- * <p>Java class for ProductType complex type.
+ * &lt;p&gt;Java class for ProductType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="ProductType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/>
- *         <element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="ProductType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/&gt;
+ *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

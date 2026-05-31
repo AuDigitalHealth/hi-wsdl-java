@@ -1,45 +1,46 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.LevelGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.PostalDeliveryGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.UnitGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetSuffixType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SearchAustralianAddressType complex type.
+ * &lt;p&gt;Java class for SearchAustralianAddressType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="SearchAustralianAddressType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}unitGroup" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}levelGroup" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}addressSiteName" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetNumber" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}lotNumber" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetName" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetType" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetSuffix" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postalDeliveryGroup" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}suburb"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="SearchAustralianAddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}unitGroup" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}levelGroup" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}addressSiteName" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}lotNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetName" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetType" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}streetSuffix" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postalDeliveryGroup" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}suburb"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -73,14 +74,17 @@ public class SearchAustralianAddressType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String streetName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StreetType streetType;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StreetSuffixType streetSuffix;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected PostalDeliveryGroupType postalDeliveryGroup;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String suburb;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String postcode;

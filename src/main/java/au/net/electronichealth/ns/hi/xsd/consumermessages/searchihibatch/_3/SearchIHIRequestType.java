@@ -1,30 +1,30 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3;
 
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihi._3.SearchIHI;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.consumermessages.searchihi._3.SearchIHI;
 
 
 /**
- * <p>Java class for SearchIHIRequestType complex type.
+ * &lt;p&gt;Java class for SearchIHIRequestType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="SearchIHIRequestType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHI/3.0}searchIHI"/>
- *         <element name="requestIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0}UniqueIdentifierType"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="SearchIHIRequestType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHI/3.0}searchIHI"/&gt;
+ *         &lt;element name="requestIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0}UniqueIdentifierType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -35,13 +35,17 @@ import au.net.electronichealth.ns.hi.consumermessages.searchihi._3.SearchIHI;
 })
 public class SearchIHIRequestType {
 
+    /**
+     * Search IHI Request
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHI/3.0", required = true)
     protected SearchIHI searchIHI;
     @XmlElement(required = true)
     protected String requestIdentifier;
 
     /**
-     * Gets the value of the searchIHI property.
+     * Search IHI Request
      * 
      * @return
      *     possible object is
@@ -59,6 +63,7 @@ public class SearchIHIRequestType {
      *     allowed object is
      *     {@link SearchIHI }
      *     
+     * @see #getSearchIHI()
      */
     public void setSearchIHI(SearchIHI value) {
         this.searchIHI = value;

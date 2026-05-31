@@ -8,9 +8,9 @@ local.properties
 /settings.xml
 settings.xml
 
-# Licensed MCA XSD staging for wsimport regeneration only (see schema/readme.txt)
-/schema/*
-!/schema/readme.txt
+# Licensed HI WSDL/XSD tree for wsimport regeneration (see wsdls/readme.txt)
+/wsdls/*
+!/wsdls/readme.txt
 
 /certs/
 *.jks

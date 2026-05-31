@@ -6,18 +6,19 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SourceOfDeathNotificationType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * <simpleType name="SourceOfDeathNotificationType">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     <length value="1"/>
- *     <enumeration value="H"/>
- *   </restriction>
- * </simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for SourceOfDeathNotificationType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="SourceOfDeathNotificationType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;length value="1"/&gt;
+ *     &lt;enumeration value="H"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "SourceOfDeathNotificationType", namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreDatatypes/3.2.0")

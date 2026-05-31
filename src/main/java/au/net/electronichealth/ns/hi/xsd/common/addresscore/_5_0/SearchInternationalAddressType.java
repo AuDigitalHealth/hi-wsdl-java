@@ -5,28 +5,27 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.CountryType;
 
 
 /**
- * <p>Java class for SearchInternationalAddressType complex type.
+ * &lt;p&gt;Java class for SearchInternationalAddressType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="SearchInternationalAddressType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalAddressLine" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalStateProvince" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalPostcode" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}country"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="SearchInternationalAddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalAddressLine" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalStateProvince" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}internationalPostcode" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}country"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -46,7 +45,7 @@ public class SearchInternationalAddressType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String internationalPostcode;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
-    protected CountryType country;
+    protected String country;
 
     /**
      * Gets the value of the internationalAddressLine property.
@@ -125,10 +124,10 @@ public class SearchInternationalAddressType {
      * 
      * @return
      *     possible object is
-     *     {@link CountryType }
+     *     {@link String }
      *     
      */
-    public CountryType getCountry() {
+    public String getCountry() {
         return country;
     }
 
@@ -137,10 +136,10 @@ public class SearchInternationalAddressType {
      * 
      * @param value
      *     allowed object is
-     *     {@link CountryType }
+     *     {@link String }
      *     
      */
-    public void setCountry(CountryType value) {
+    public void setCountry(String value) {
         this.country = value;
     }
 

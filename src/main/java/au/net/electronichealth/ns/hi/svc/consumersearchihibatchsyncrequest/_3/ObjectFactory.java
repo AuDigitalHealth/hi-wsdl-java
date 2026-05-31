@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.svc.consumersearchihibatchsyncrequest._3 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -30,19 +30,23 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchIHIBatchResponse }
-     * 
-     */
-    public SearchIHIBatchResponse createSearchIHIBatchResponse() {
-        return new SearchIHIBatchResponse();
-    }
-
-    /**
      * Create an instance of {@link SearchIHIBatchSync }
      * 
+     * @return
+     *     the new instance of {@link SearchIHIBatchSync }
      */
     public SearchIHIBatchSync createSearchIHIBatchSync() {
         return new SearchIHIBatchSync();
+    }
+
+    /**
+     * Create an instance of {@link SearchIHIBatchResponse }
+     * 
+     * @return
+     *     the new instance of {@link SearchIHIBatchResponse }
+     */
+    public SearchIHIBatchResponse createSearchIHIBatchResponse() {
+        return new SearchIHIBatchResponse();
     }
 
 }

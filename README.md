@@ -33,7 +33,7 @@ WSDL files reference **`schema/mca/...`** at the repository root (toolkit layout
 - [Healthcare Identifiers Integration Toolkit](https://developer.digitalhealth.gov.au/resources/healthcare-identifiers-integration-toolkit-v1-2) (Digital Health Developer Portal)
 - [HI Service for software developers](https://www.servicesaustralia.gov.au/healthcare-identifier-hi-service-for-software-developers) (Services Australia)
 
-Copy the toolkit **`xml/schema`** folder to **`schema/`** next to **`pom.xml`** (see **`schema/readme.txt`**). A normal **`mvn verify`** on committed sources does **not** require **`schema/`**.
+Copy the licensed toolkit **`xml`** tree to **`wsdls/xml/`** in this repository (see **`wsdls/readme.txt`**). A normal **`mvn verify`** on committed sources does **not** require a local licensed tree.
 
 Confirm your organisation’s redistribution terms for HI WSDL before mirroring this repository.
 
@@ -59,10 +59,10 @@ mvn -B "-Dgpg.skip=true" clean install
 | --- | --- | --- |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 | Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.hi.*`) |
-| Codegen | Pre-generated, committed | In-repo **`wsimport`** (26 executions) |
-| WSDL in this repo | `src/main/resources` (shipped in JAR) | Licensed tree under `wsdls/xml/` (not in public Git) |
+| Codegen | Pre-generated, committed; **`-Pregenerate-sources`** matches hi-b2b **26** wsimport executions | In-repo **`wsimport`** (26 executions) |
+| WSDL in this repo | `src/main/resources/HI_*.wsdl` (shipped in JAR); regen tree **`wsdls/xml`** | Licensed tree under `wsdls/xml/` (not in public Git) |
 
-Current **`hi-b2b-client-java`** builds its own generated types and does **not** depend on **`hi-wsdl`**. Use **`hi-wsdl`** when you need HI types and classpath WSDL without the full client library.
+**hi-b2b-client-java** default build runs in-repo **`wsimport`**. Optional **`-Phi-wsdl-artifact`** on that client uses **`hi-wsdl`** instead (install this artifact to `~/.m2` first). Use **`hi-wsdl`** alone when you need HI types and classpath WSDL without the full client library.
 
 ## Documentation
 
@@ -74,7 +74,14 @@ Current **`hi-b2b-client-java`** builds its own generated types and does **not**
 | **SECURITY.md** | Security reporting and secrets hygiene |
 | **CHANGELOG.md** | Release history |
 | **LICENSE.txt** | Apache License 2.0 + ADHA terms |
-| **schema/readme.txt** | Licensed MCA XSD staging (regeneration only) |
+| **wsdls/readme.txt** | Licensed WSDL tree staging (regeneration only) |
+
+## Related repositories
+
+| Repository | Role |
+| ---------- | ---- |
+| [hi-b2b-client-java](https://github.com/AuDigitalHealth/hi-b2b-client-java) | HI facade clients; default in-repo **`wsimport`**, or **`-Phi-wsdl-artifact`** to use this JAR |
+| [mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java) | MHR facades (separate domain) |
 
 ## License
 

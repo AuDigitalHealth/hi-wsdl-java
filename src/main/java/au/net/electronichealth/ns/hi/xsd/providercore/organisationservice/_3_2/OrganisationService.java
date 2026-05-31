@@ -1,35 +1,35 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**
- * <p>Java class for OrganisationService complex type.
+ * &lt;p&gt;Java class for OrganisationService complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="OrganisationService">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="organisationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}OrganisationType"/>
- *         <element name="organisationServiceType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceType"/>
- *         <element name="organisationServiceUnit" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceUnitType" minOccurs="0"/>
- *         <element name="organisationServiceComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceCommentsType" minOccurs="0"/>
- *         <element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/>
- *         <element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="OrganisationService"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="organisationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}OrganisationType"/&gt;
+ *         &lt;element name="organisationServiceType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceType"/&gt;
+ *         &lt;element name="organisationServiceUnit" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceUnitType" minOccurs="0"/&gt;
+ *         &lt;element name="organisationServiceComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceCommentsType" minOccurs="0"/&gt;
+ *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/&gt;
+ *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

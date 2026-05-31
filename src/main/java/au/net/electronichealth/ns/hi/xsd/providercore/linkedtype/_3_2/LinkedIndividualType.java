@@ -4,28 +4,29 @@ package au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for LinkedIndividualType complex type.
+ * &lt;p&gt;Java class for LinkedIndividualType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="LinkedIndividualType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
- *         <element name="role" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}RoleType" minOccurs="0"/>
- *         <element name="familyName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}FamilyNameType" minOccurs="0"/>
- *         <element name="givenName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}GivenNameType" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="LinkedIndividualType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/&gt;
+ *         &lt;element name="role" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}RoleType" minOccurs="0"/&gt;
+ *         &lt;element name="familyName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}FamilyNameType" minOccurs="0"/&gt;
+ *         &lt;element name="givenName" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}GivenNameType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -39,6 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class LinkedIndividualType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     protected String role;
     protected String familyName;

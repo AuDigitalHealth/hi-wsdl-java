@@ -7,22 +7,22 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for EndpointLocatorServiceRecord complex type.
+ * &lt;p&gt;Java class for EndpointLocatorServiceRecord complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="EndpointLocatorServiceRecord">
- *   <complexContent>
- *     <extension base="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}EndpointLocatorService">
- *       <sequence>
- *         <element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/>
- *         <element name="externalIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" minOccurs="0"/>
- *       </sequence>
- *     </extension>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="EndpointLocatorServiceRecord"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}EndpointLocatorService"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/&gt;
+ *         &lt;element name="externalIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

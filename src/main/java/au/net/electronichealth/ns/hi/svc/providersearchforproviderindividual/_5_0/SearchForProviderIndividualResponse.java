@@ -1,30 +1,30 @@
 
 package au.net.electronichealth.ns.hi.svc.providersearchforproviderindividual._5_0;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividualResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividualResult;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.
 @XmlRootElement(name = "searchForProviderIndividualResponse")
 public class SearchForProviderIndividualResponse {
 
+    /**
+     * Search for Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0", required = true)
     protected SearchForProviderIndividualResult searchForProviderIndividualResult;
 
     /**
-     * Gets the value of the searchForProviderIndividualResult property.
+     * Search for Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchForProviderIndividualResponse {
      *     allowed object is
      *     {@link SearchForProviderIndividualResult }
      *     
+     * @see #getSearchForProviderIndividualResult()
      */
     public void setSearchForProviderIndividualResult(SearchForProviderIndividualResult value) {
         this.searchForProviderIndividualResult = value;

@@ -6,23 +6,24 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for BatchResponseStatusType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * <simpleType name="BatchResponseStatusType">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     <enumeration value="RECEIVED"/>
- *     <enumeration value="PROCESSING"/>
- *     <enumeration value="COMPLETED"/>
- *     <enumeration value="RETRIEVED"/>
- *     <enumeration value="DELETED"/>
- *     <enumeration value="NOTFOUND"/>
- *     <enumeration value="ERROR"/>
- *   </restriction>
- * </simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for BatchResponseStatusType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="BatchResponseStatusType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="RECEIVED"/&gt;
+ *     &lt;enumeration value="PROCESSING"/&gt;
+ *     &lt;enumeration value="COMPLETED"/&gt;
+ *     &lt;enumeration value="RETRIEVED"/&gt;
+ *     &lt;enumeration value="DELETED"/&gt;
+ *     &lt;enumeration value="NOTFOUND"/&gt;
+ *     &lt;enumeration value="ERROR"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "BatchResponseStatusType")

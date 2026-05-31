@@ -3,10 +3,6 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunication;
 import au.net.electronichealth.ns.hi.xsd.providercore.endpoint._3_2.EndpointLocatorService;
@@ -15,34 +11,39 @@ import au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2.LinkedProv
 import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._3_2.OrganisationDetails;
 import au.net.electronichealth.ns.hi.xsd.providercore.organisationname._3_2.OrganisationName;
 import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.OrganisationService;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for OrganisationProviderDirectoryEntryType complex type.
+ * &lt;p&gt;Java class for OrganisationProviderDirectoryEntryType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="OrganisationProviderDirectoryEntryType">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="hpioNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpioNumberType"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0}organisationName"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/3.2.0}organisationDetails" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}organisationService" maxOccurs="unbounded"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}address"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0}electronicCommunication" maxOccurs="unbounded" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}endpointLocatorService" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="linkedProviders" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/LinkedType/3.2.0}LinkedProviderType" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="linkedOrganisations" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/LinkedType/3.2.0}LinkedOrganisationType" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/>
- *         <element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="OrganisationProviderDirectoryEntryType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="hpioNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpioNumberType"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0}organisationName"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/3.2.0}organisationDetails" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}organisationService" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}address"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0}electronicCommunication" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0}endpointLocatorService" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="linkedProviders" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/LinkedType/3.2.0}LinkedProviderType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="linkedOrganisations" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/LinkedType/3.2.0}LinkedOrganisationType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/&gt;
+ *         &lt;element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -63,6 +64,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.O
 public class OrganisationProviderDirectoryEntryType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0", required = true)
     protected OrganisationName organisationName;
@@ -156,28 +158,31 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the organisationService property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationService property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationService property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisationService().add(newItem);
+     * getOrganisationService().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationService }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationService property.
      */
     public List<OrganisationService> getOrganisationService() {
         if (organisationService == null) {
-            organisationService = new ArrayList<OrganisationService>();
+            organisationService = new ArrayList<>();
         }
         return this.organisationService;
     }
@@ -209,28 +214,31 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the electronicCommunication property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunication property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunication property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getElectronicCommunication().add(newItem);
+     * getElectronicCommunication().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ElectronicCommunication }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunication property.
      */
     public List<ElectronicCommunication> getElectronicCommunication() {
         if (electronicCommunication == null) {
-            electronicCommunication = new ArrayList<ElectronicCommunication>();
+            electronicCommunication = new ArrayList<>();
         }
         return this.electronicCommunication;
     }
@@ -238,28 +246,31 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the endpointLocatorService property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorService property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the endpointLocatorService property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEndpointLocatorService().add(newItem);
+     * getEndpointLocatorService().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EndpointLocatorService }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the endpointLocatorService property.
      */
     public List<EndpointLocatorService> getEndpointLocatorService() {
         if (endpointLocatorService == null) {
-            endpointLocatorService = new ArrayList<EndpointLocatorService>();
+            endpointLocatorService = new ArrayList<>();
         }
         return this.endpointLocatorService;
     }
@@ -267,28 +278,31 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the linkedProviders property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedProviders property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the linkedProviders property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getLinkedProviders().add(newItem);
+     * getLinkedProviders().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LinkedProviderType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the linkedProviders property.
      */
     public List<LinkedProviderType> getLinkedProviders() {
         if (linkedProviders == null) {
-            linkedProviders = new ArrayList<LinkedProviderType>();
+            linkedProviders = new ArrayList<>();
         }
         return this.linkedProviders;
     }
@@ -296,28 +310,31 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the linkedOrganisations property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedOrganisations property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the linkedOrganisations property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getLinkedOrganisations().add(newItem);
+     * getLinkedOrganisations().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LinkedOrganisationType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the linkedOrganisations property.
      */
     public List<LinkedOrganisationType> getLinkedOrganisations() {
         if (linkedOrganisations == null) {
-            linkedOrganisations = new ArrayList<LinkedOrganisationType>();
+            linkedOrganisations = new ArrayList<>();
         }
         return this.linkedOrganisations;
     }

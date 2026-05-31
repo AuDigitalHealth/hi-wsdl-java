@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.svc.consumerresolveprovisionalihi._3_0 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -32,6 +32,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ResolveProvisionalIHI }
      * 
+     * @return
+     *     the new instance of {@link ResolveProvisionalIHI }
      */
     public ResolveProvisionalIHI createResolveProvisionalIHI() {
         return new ResolveProvisionalIHI();
@@ -40,6 +42,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ResolveProvisionalIHIResponse }
      * 
+     * @return
+     *     the new instance of {@link ResolveProvisionalIHIResponse }
      */
     public ResolveProvisionalIHIResponse createResolveProvisionalIHIResponse() {
         return new ResolveProvisionalIHIResponse();

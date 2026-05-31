@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.consumermessages.notifyduplicateihi._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -32,6 +32,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NotifyDuplicateIHIResult }
      * 
+     * @return
+     *     the new instance of {@link NotifyDuplicateIHIResult }
      */
     public NotifyDuplicateIHIResult createNotifyDuplicateIHIResult() {
         return new NotifyDuplicateIHIResult();
@@ -40,6 +42,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NotifyDuplicateIHI }
      * 
+     * @return
+     *     the new instance of {@link NotifyDuplicateIHI }
      */
     public NotifyDuplicateIHI createNotifyDuplicateIHI() {
         return new NotifyDuplicateIHI();
@@ -48,6 +52,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NotifyDuplicateIHIResponse }
      * 
+     * @return
+     *     the new instance of {@link NotifyDuplicateIHIResponse }
      */
     public NotifyDuplicateIHIResponse createNotifyDuplicateIHIResponse() {
         return new NotifyDuplicateIHIResponse();

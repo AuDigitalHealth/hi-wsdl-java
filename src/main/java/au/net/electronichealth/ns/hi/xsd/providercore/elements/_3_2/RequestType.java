@@ -6,18 +6,19 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for RequestType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * <simpleType name="RequestType">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     <enumeration value="A"/>
- *     <enumeration value="R"/>
- *   </restriction>
- * </simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for RequestType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="RequestType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="A"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "RequestType")

@@ -9,24 +9,24 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Address complex type.
+ * &lt;p&gt;Java class for Address complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType name="Address">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="australianAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AustralianAddressType" minOccurs="0"/>
- *         <element name="internationalAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}InternationalAddressType" minOccurs="0"/>
- *         <element name="addressPurpose" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AddressPurposeAndDateType"/>
- *         <element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="Address"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="australianAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AustralianAddressType" minOccurs="0"/&gt;
+ *         &lt;element name="internationalAddress" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}InternationalAddressType" minOccurs="0"/&gt;
+ *         &lt;element name="addressPurpose" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/3.2.0}AddressPurposeAndDateType"/&gt;
+ *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

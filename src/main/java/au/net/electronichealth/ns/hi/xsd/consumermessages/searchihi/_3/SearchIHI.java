@@ -1,6 +1,14 @@
 
-package au.net.electronichealth.ns.hi.consumermessages.searchihi._3;
+package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihi._3;
 
+import javax.xml.datatype.XMLGregorianCalendar;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalseType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianPostalAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianStreetAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianUnstructuredStreetAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.InternationalAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3.ElectronicCommunicationType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -9,41 +17,37 @@ import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalseType;
-import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianPostalAddressType;
-import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianStreetAddressType;
-import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.InternationalAddressType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}ihiNumber" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareCardNumber" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareIRN" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}dvaFileNumber" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirth"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianPostalAddress" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/>
- *         <element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}history" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}ihiNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareCardNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareIRN" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}dvaFileNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirth"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianPostalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianUnstructuredStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0}electronicCommunication" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}history" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -60,25 +64,32 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.InternationalAd
     "australianPostalAddress",
     "australianStreetAddress",
     "internationalAddress",
+    "australianUnstructuredStreetAddress",
+    "electronicCommunication",
     "history"
 })
 @XmlRootElement(name = "searchIHI")
 public class SearchIHI {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "anyURI")
     protected String ihiNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
     protected String medicareCardNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "integer")
     protected Integer medicareIRN;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
     protected String dvaFileNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfBirth;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected SexType sex;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
     protected String familyName;
@@ -90,7 +101,12 @@ public class SearchIHI {
     protected AustralianStreetAddressType australianStreetAddress;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
     protected InternationalAddressType internationalAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected AustralianUnstructuredStreetAddressType australianUnstructuredStreetAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0")
+    protected ElectronicCommunicationType electronicCommunication;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "string")
     protected TrueFalseType history;
 
     /**
@@ -355,6 +371,54 @@ public class SearchIHI {
      */
     public void setInternationalAddress(InternationalAddressType value) {
         this.internationalAddress = value;
+    }
+
+    /**
+     * Gets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public AustralianUnstructuredStreetAddressType getAustralianUnstructuredStreetAddress() {
+        return australianUnstructuredStreetAddress;
+    }
+
+    /**
+     * Sets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public void setAustralianUnstructuredStreetAddress(AustralianUnstructuredStreetAddressType value) {
+        this.australianUnstructuredStreetAddress = value;
+    }
+
+    /**
+     * Gets the value of the electronicCommunication property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ElectronicCommunicationType }
+     *     
+     */
+    public ElectronicCommunicationType getElectronicCommunication() {
+        return electronicCommunication;
+    }
+
+    /**
+     * Sets the value of the electronicCommunication property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ElectronicCommunicationType }
+     *     
+     */
+    public void setElectronicCommunication(ElectronicCommunicationType value) {
+        this.electronicCommunication = value;
     }
 
     /**

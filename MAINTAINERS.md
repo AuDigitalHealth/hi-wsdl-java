@@ -23,8 +23,10 @@ Maven coordinates:
 | `src/main/resources/` | HI `HI_*.wsdl` (classpath root; packaged in JAR) |
 | `src/main/java/` | Committed generated types + `hi_override` XMLDSig |
 | `src/test/java/au/gov/nehta/hiwsdl/` | Offline binding smoke tests |
-| `schema/readme.txt` | Licensed XSD staging instructions (tracked) |
-| `schema/mca/`, `schema/w3c/` | Local licensed XSD for regeneration (**gitignored**) |
+| `wsdls/readme.txt` | Licensed WSDL tree staging instructions (tracked) |
+| `wsdls/xml/` | Local licensed WSDL/XSD for regeneration (**gitignored**) |
+| `scripts/generate-wsimport-executions.py` | Extract 26 wsimport executions from **hi-b2b-client-java** |
+| `scripts/write-pom.py` | Refresh `-Pregenerate-sources` block in **`pom.xml`** |
 | `.github/workflows/ci.yml` | GitHub Actions **`mvn verify`** on push/PR |
 
 ---
@@ -42,7 +44,7 @@ Generated **`Service`** stubs cover the same **26** primary HI B2B interfaces us
 - **Java 11**, **`jakarta.*`** APIs only in **`src/main/java`** (no `javax.xml.bind` / `javax.xml.ws`).
 - **`jaxws-rt`** **4.0.4** (runtime scope in POM).
 - Generated sources are **committed**; root POM has **no** default **`wsimport`** execution.
-- Regeneration: **`-Pregenerate-sources`** in **`pom.xml`** (26 inline **`wsimport`** executions, WSDL from **`src/main/resources`**, licensed XSD under **`schema/mca`** and **`schema/w3c`**). **`jaxb-xjc` 4.0.7** on the plugin classpath produces valid schema-fragment Javadoc (no post-processing). Sync to Git with **`-Dhi.wsdl.sync.generated=true`**.
+- Regeneration: **`-Pregenerate-sources`** — sync **`pom.xml`** from **hi-b2b-client-java** via **`scripts/write-pom.py`** (after **`scripts/generate-wsimport-executions.py`**, with **`HI_B2B_CLIENT_POM`** pointing at a hi-b2b checkout if not a sibling). WSDL from **`hi.wsdl.tree.root`** (default **`wsdls/xml/`**). Sync classpath WSDL with **`scripts/sync-wsdl-resources.*`**. Commit types with **`-Dhi.wsdl.sync.generated=true`**.
 - **`maven-gpg-plugin`**: skipped unless **`-Dgpg.skip=false`** (releases).
 
 Align **`jaxws-rt`** with **hi-b2b-client-java** when bumping toolchain versions.

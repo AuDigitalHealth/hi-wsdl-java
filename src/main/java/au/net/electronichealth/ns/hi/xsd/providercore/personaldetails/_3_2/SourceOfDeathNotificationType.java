@@ -6,22 +6,23 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SourceOfDeathNotificationType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * <simpleType name="SourceOfDeathNotificationType">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     <enumeration value="D"/>
- *     <enumeration value="P"/>
- *     <enumeration value="R"/>
- *     <enumeration value="T"/>
- *     <enumeration value="O"/>
- *     <enumeration value="U"/>
- *   </restriction>
- * </simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for SourceOfDeathNotificationType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="SourceOfDeathNotificationType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="D"/&gt;
+ *     &lt;enumeration value="P"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *     &lt;enumeration value="T"/&gt;
+ *     &lt;enumeration value="O"/&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "SourceOfDeathNotificationType")

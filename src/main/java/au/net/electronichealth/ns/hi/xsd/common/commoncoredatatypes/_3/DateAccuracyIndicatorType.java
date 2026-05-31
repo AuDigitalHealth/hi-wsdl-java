@@ -6,44 +6,45 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for DateAccuracyIndicatorType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * <simpleType name="DateAccuracyIndicatorType">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     <length value="3"/>
- *     <enumeration value="AAA"/>
- *     <enumeration value="AAE"/>
- *     <enumeration value="AAU"/>
- *     <enumeration value="AEA"/>
- *     <enumeration value="AEE"/>
- *     <enumeration value="AEU"/>
- *     <enumeration value="AUA"/>
- *     <enumeration value="AUE"/>
- *     <enumeration value="AUU"/>
- *     <enumeration value="EAA"/>
- *     <enumeration value="EAE"/>
- *     <enumeration value="EAU"/>
- *     <enumeration value="EEA"/>
- *     <enumeration value="EEE"/>
- *     <enumeration value="EEU"/>
- *     <enumeration value="EUA"/>
- *     <enumeration value="EUE"/>
- *     <enumeration value="EUU"/>
- *     <enumeration value="UAA"/>
- *     <enumeration value="UAE"/>
- *     <enumeration value="UAU"/>
- *     <enumeration value="UEA"/>
- *     <enumeration value="UEE"/>
- *     <enumeration value="UEU"/>
- *     <enumeration value="UUA"/>
- *     <enumeration value="UUE"/>
- *     <enumeration value="UUU"/>
- *   </restriction>
- * </simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for DateAccuracyIndicatorType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="DateAccuracyIndicatorType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;length value="3"/&gt;
+ *     &lt;enumeration value="AAA"/&gt;
+ *     &lt;enumeration value="AAE"/&gt;
+ *     &lt;enumeration value="AAU"/&gt;
+ *     &lt;enumeration value="AEA"/&gt;
+ *     &lt;enumeration value="AEE"/&gt;
+ *     &lt;enumeration value="AEU"/&gt;
+ *     &lt;enumeration value="AUA"/&gt;
+ *     &lt;enumeration value="AUE"/&gt;
+ *     &lt;enumeration value="AUU"/&gt;
+ *     &lt;enumeration value="EAA"/&gt;
+ *     &lt;enumeration value="EAE"/&gt;
+ *     &lt;enumeration value="EAU"/&gt;
+ *     &lt;enumeration value="EEA"/&gt;
+ *     &lt;enumeration value="EEE"/&gt;
+ *     &lt;enumeration value="EEU"/&gt;
+ *     &lt;enumeration value="EUA"/&gt;
+ *     &lt;enumeration value="EUE"/&gt;
+ *     &lt;enumeration value="EUU"/&gt;
+ *     &lt;enumeration value="UAA"/&gt;
+ *     &lt;enumeration value="UAE"/&gt;
+ *     &lt;enumeration value="UAU"/&gt;
+ *     &lt;enumeration value="UEA"/&gt;
+ *     &lt;enumeration value="UEE"/&gt;
+ *     &lt;enumeration value="UEU"/&gt;
+ *     &lt;enumeration value="UUA"/&gt;
+ *     &lt;enumeration value="UUE"/&gt;
+ *     &lt;enumeration value="UUU"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "DateAccuracyIndicatorType", namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0")

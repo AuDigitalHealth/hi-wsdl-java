@@ -235,6 +235,7 @@
                 <gmavenplus.plugin.version>4.3.1</gmavenplus.plugin.version>
                 <jaxws.maven.plugin.version>4.0.2</jaxws.maven.plugin.version>
                 <jaxb.xjc.version>4.0.7</jaxb.xjc.version>
+                <hi.wsdl.tree.root>${project.basedir}/wsdls/xml</hi.wsdl.tree.root>
             </properties>
             <build>
                 <plugins>
@@ -280,7 +281,7 @@
                                         'wsimport-consumer-update-ihi',
                                         'wsimport-consumer-create-verified-ihi',
                                         'wsimport-provider-manage-tds-provider-individual',
-                                        'wsimport-provider-search-tds-provider-individual'
+                                        'wsimport-provider-search-tds-provider-individual',
                                             ]
                                             names.each { String part ->
                                                 def dir = new File(base, part)
@@ -294,7 +295,11 @@
                                                     }
                                                 }
                                             }
-                                            if ('true'.equalsIgnoreCase(project.properties.getProperty('hi.wsdl.sync.generated', 'false').trim())) {
+                                            def syncFlag = project.properties.getProperty('hi.wsdl.sync.generated')
+                                            if (syncFlag == null || syncFlag.trim().isEmpty()) {
+                                                syncFlag = session.userProperties.getProperty('hi.wsdl.sync.generated', 'false')
+                                            }
+                                            if ('true'.equalsIgnoreCase(String.valueOf(syncFlag).trim())) {
                                                 def srcMain = new File(project.basedir, 'src/main/java')
                                                 out.eachFileRecurse(groovy.io.FileType.FILES) { File f ->
                                                     if (!f.name.endsWith('.java')) return
@@ -304,6 +309,9 @@
                                                     f.withInputStream { ins -> target.withOutputStream { os -> os << ins } }
                                                 }
                                                 log.info('Synced generated sources to src/main/java')
+                                            }
+                                            if (base.isDirectory()) {
+                                                base.deleteDir()
                                             }
                                         ]]></script>
                                     </scripts>
@@ -349,319 +357,318 @@
                             </vmArgs>
                         </configuration>
                         <executions>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-search-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-search-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-search-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-search-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerSearchIHI-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerSearchIHI-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-search-ihi-batch-sync</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-search-ihi-batch-sync</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-search-ihi-batch-sync</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-search-ihi-batch-sync</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerSearchIHIBatchSync-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerSearchIHIBatchSync-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-batch-async-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-batch-async-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-batch-async-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-batch-async-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130622</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderBatchAsyncSearchForProviderIndividual-5.1.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderBatchAsyncSearchForProviderIndividual-5.1.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-batch-async-organisation</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-batch-async-organisation</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-batch-async-organisation</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-batch-async-organisation</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130622</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderBatchAsyncSearchForProviderOrganisation-5.1.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderBatchAsyncSearchForProviderOrganisation-5.1.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-search-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-search-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-search-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-search-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130401</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderSearchForProviderIndividual-5.0.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderSearchForProviderIndividual-5.0.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-search-organisation</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-search-organisation</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-search-organisation</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-search-organisation</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130401</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderSearchForProviderOrganisation-5.0.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderSearchForProviderOrganisation-5.0.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-manage-org</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-manage-org</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-manage-org</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-manage-org</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderManageProviderOrganisation-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderManageProviderOrganisation-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-manage-directory-entry</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-manage-directory-entry</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-manage-directory-entry</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-manage-directory-entry</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderManageProviderDirectoryEntry-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderManageProviderDirectoryEntry-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-hpio-directory</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-hpio-directory</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-hpio-directory</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-hpio-directory</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderSearchHIProviderDirectoryForOrganisation-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderSearchHIProviderDirectoryForOrganisation-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-read-reference-data</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-read-reference-data</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-read-reference-data</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-read-reference-data</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderReadReferenceData-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderReadReferenceData-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-read-org</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-read-org</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-read-org</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-read-org</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderReadProviderOrganisation-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderReadProviderOrganisation-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-manage-admin-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-manage-admin-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-manage-admin-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-manage-admin-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderManageProviderAdministrativeIndividual-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderManageProviderAdministrativeIndividual-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-read-admin-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-read-admin-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-read-admin-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-read-admin-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderReadProviderAdministrativeIndividual-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderReadProviderAdministrativeIndividual-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-hpii-directory</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-hpii-directory</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-hpii-directory</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-hpii-directory</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderSearchHIProviderDirectoryForIndividual-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderSearchHIProviderDirectoryForIndividual-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-search-ihi-batch-async</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-search-ihi-batch-async</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-search-ihi-batch-async</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-search-ihi-batch-async</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerSearchIHIBatchAsync-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerSearchIHIBatchAsync-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-create-provisional-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-create-provisional-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-create-provisional-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-create-provisional-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerCreateProvisionalIHI-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerCreateProvisionalIHI-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-merge-provisional-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-merge-provisional-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-merge-provisional-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-merge-provisional-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerMergeProvisionalIHI-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerMergeProvisionalIHI-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-update-provisional-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-update-provisional-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-update-provisional-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-update-provisional-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100731</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerUpdateProvisionalIHI-3.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerUpdateProvisionalIHI-3.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-create-unverified-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-create-unverified-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-create-unverified-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-create-unverified-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100821</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerCreateUnverifiedIHI-3.0.2.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerCreateUnverifiedIHI-3.0.2.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-resolve-provisional-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-resolve-provisional-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-resolve-provisional-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-resolve-provisional-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100821</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerResolveProvisionalIHI-3.0.2.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerResolveProvisionalIHI-3.0.2.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-notify-duplicate-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-notify-duplicate-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-notify-duplicate-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-notify-duplicate-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerNotifyDuplicateIHI-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerNotifyDuplicateIHI-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-notify-replica-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-notify-replica-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-notify-replica-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-notify-replica-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerNotifyReplicaIHI-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerNotifyReplicaIHI-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-update-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-update-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-update-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-update-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20100930</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerUpdateIHI-3.2.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerUpdateIHI-3.2.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-consumer-create-verified-ihi</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-consumer-create-verified-ihi</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-consumer-create-verified-ihi</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-consumer-create-verified-ihi</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/consumer/20111201</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ConsumerCreateVerifiedIHI-4.0.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ConsumerCreateVerifiedIHI-4.0.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-manage-tds-provider-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-manage-tds-provider-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-manage-tds-provider-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-manage-tds-provider-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130622</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderManageTdsProviderIndividual-5.1.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderManageTdsProviderIndividual-5.1.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-                    <execution>
+<execution>
                         <id>wsimport-provider-search-tds-provider-individual</id>
                         <goals><goal>wsimport</goal></goals>
                         <configuration>
                             <destDir>${project.build.directory}/jaxws/dest/wsimport-provider-search-tds-provider-individual</destDir>
                             <staleFile>${project.build.directory}/jaxws/stale-wsimport-provider-search-tds-provider-individual</staleFile>
                             <sourceDestDir>${project.build.directory}/generated-sources/wsimport-parts/wsimport-provider-search-tds-provider-individual</sourceDestDir>
-                            <wsdlDirectory>${project.basedir}/src/main/resources</wsdlDirectory>
+                            <wsdlDirectory>${hi.wsdl.tree.root}/wsdl/provider/20130622</wsdlDirectory>
                             <wsdlFiles><wsdlFile>HI_ProviderSearchTdsProviderIndividual-5.1.0.wsdl</wsdlFile></wsdlFiles>
                             <wsdlLocation>HI_ProviderSearchTdsProviderIndividual-5.1.0.wsdl</wsdlLocation>
                         </configuration>
                     </execution>
-
                         </executions>
                     </plugin>
                     <plugin>
@@ -670,17 +677,16 @@
                         <version>3.5.0</version>
                         <executions>
                             <execution>
-                                <id>require-mca-schema-tree</id>
+                                <id>require-licensed-wsdl-tree</id>
                                 <phase>initialize</phase>
                                 <goals><goal>enforce</goal></goals>
                                 <configuration>
                                     <rules>
                                         <requireFilesExist>
                                             <files>
-                                                <file>${project.basedir}/schema/mca</file>
-                                                <file>${project.basedir}/schema/w3c/xmldsig-core-schema.xsd</file>
+                                                <file>${hi.wsdl.tree.root}/wsdl/consumer/20100731/HI_ConsumerSearchIHI-3.0.wsdl</file>
                                             </files>
-                                            <message>Regeneration requires licensed XSD under schema/mca and schema/w3c (see schema/readme.txt).</message>
+                                            <message>Regeneration requires the licensed HI WSDL/XSD tree (wsdl/ and schema/ under hi.wsdl.tree.root). Default: wsdls/xml in this repo; override with -Dhi.wsdl.tree.root or env HI_WSDL_TREE_ROOT (same layout as hi-b2b-client-java).</message>
                                         </requireFilesExist>
                                     </rules>
                                 </configuration>

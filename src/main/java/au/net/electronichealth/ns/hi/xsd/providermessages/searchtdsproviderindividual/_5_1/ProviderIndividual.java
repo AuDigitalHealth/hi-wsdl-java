@@ -3,41 +3,41 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchtdsproviderindi
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.providercore.address._5_1.AddressRecordResponse;
+import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._5_1.ElectronicCommunicationRecordResponse;
+import au.net.electronichealth.ns.hi.xsd.providercore.individualname._5_1.IndividualNameRecordResponse;
+import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.PersonalDetails;
+import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.ProviderTypeRecordResponse;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._5_1.AddressRecordResponse;
-import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._5_1.ElectronicCommunicationRecordResponse;
-import au.net.electronichealth.ns.hi.xsd.providercore.individualname._5_1.IndividualNameRecordResponse;
-import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.PersonalDetails;
-import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.ProviderTypeRecordResponse;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType"/>
- *         <element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType"/>
- *         <element name="personalDetails" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}PersonalDetails"/>
- *         <element name="individualNameRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.1.0}IndividualNameRecordResponse" maxOccurs="unbounded"/>
- *         <element name="addressRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/5.1.0}AddressRecordResponse" maxOccurs="unbounded"/>
- *         <element name="electronicCommunicationRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/5.1.0}ElectronicCommunicationRecordResponse" maxOccurs="unbounded"/>
- *         <element name="providerTypeRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.1.1}ProviderTypeRecordResponse" maxOccurs="unbounded"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="hpiiNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}HpiiNumberType"/&gt;
+ *         &lt;element name="status" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}StatusType"/&gt;
+ *         &lt;element name="personalDetails" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0}PersonalDetails"/&gt;
+ *         &lt;element name="individualNameRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.1.0}IndividualNameRecordResponse" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="addressRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Address/5.1.0}AddressRecordResponse" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="electronicCommunicationRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/5.1.0}ElectronicCommunicationRecordResponse" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="providerTypeRecord" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.1.1}ProviderTypeRecordResponse" maxOccurs="unbounded"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -145,28 +145,31 @@ public class ProviderIndividual {
     /**
      * Gets the value of the individualNameRecord property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualNameRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the individualNameRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getIndividualNameRecord().add(newItem);
+     * getIndividualNameRecord().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link IndividualNameRecordResponse }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the individualNameRecord property.
      */
     public List<IndividualNameRecordResponse> getIndividualNameRecord() {
         if (individualNameRecord == null) {
-            individualNameRecord = new ArrayList<IndividualNameRecordResponse>();
+            individualNameRecord = new ArrayList<>();
         }
         return this.individualNameRecord;
     }
@@ -174,28 +177,31 @@ public class ProviderIndividual {
     /**
      * Gets the value of the addressRecord property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the addressRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAddressRecord().add(newItem);
+     * getAddressRecord().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressRecordResponse }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the addressRecord property.
      */
     public List<AddressRecordResponse> getAddressRecord() {
         if (addressRecord == null) {
-            addressRecord = new ArrayList<AddressRecordResponse>();
+            addressRecord = new ArrayList<>();
         }
         return this.addressRecord;
     }
@@ -203,28 +209,31 @@ public class ProviderIndividual {
     /**
      * Gets the value of the electronicCommunicationRecord property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getElectronicCommunicationRecord().add(newItem);
+     * getElectronicCommunicationRecord().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ElectronicCommunicationRecordResponse }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunicationRecord property.
      */
     public List<ElectronicCommunicationRecordResponse> getElectronicCommunicationRecord() {
         if (electronicCommunicationRecord == null) {
-            electronicCommunicationRecord = new ArrayList<ElectronicCommunicationRecordResponse>();
+            electronicCommunicationRecord = new ArrayList<>();
         }
         return this.electronicCommunicationRecord;
     }
@@ -232,28 +241,31 @@ public class ProviderIndividual {
     /**
      * Gets the value of the providerTypeRecord property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the providerTypeRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the providerTypeRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getProviderTypeRecord().add(newItem);
+     * getProviderTypeRecord().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProviderTypeRecordResponse }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the providerTypeRecord property.
      */
     public List<ProviderTypeRecordResponse> getProviderTypeRecord() {
         if (providerTypeRecord == null) {
-            providerTypeRecord = new ArrayList<ProviderTypeRecordResponse>();
+            providerTypeRecord = new ArrayList<>();
         }
         return this.providerTypeRecord;
     }

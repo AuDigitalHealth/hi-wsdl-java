@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3;
 
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
-import javax.xml.namespace.QName;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ElectronicCommunication_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", "electronicCommunication");
-    private final static QName _Details_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", "details");
+    private static final QName _ElectronicCommunication_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", "electronicCommunication");
+    private static final QName _Details_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", "details");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
@@ -37,27 +37,37 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ElectronicCommunicationType }
      * 
+     * @return
+     *     the new instance of {@link ElectronicCommunicationType }
      */
     public ElectronicCommunicationType createElectronicCommunicationType() {
         return new ElectronicCommunicationType();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", name = "electronicCommunication")
     public JAXBElement<ElectronicCommunicationType> createElectronicCommunication(ElectronicCommunicationType value) {
-        return new JAXBElement<ElectronicCommunicationType>(_ElectronicCommunication_QNAME, ElectronicCommunicationType.class, null, value);
+        return new JAXBElement<>(_ElectronicCommunication_QNAME, ElectronicCommunicationType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0", name = "details")
     public JAXBElement<String> createDetails(String value) {
-        return new JAXBElement<String>(_Details_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Details_QNAME, String.class, null, value);
     }
 
 }
