@@ -27,7 +27,7 @@ Follow **`documentation-standards.mdc`**. Integrator docs use **version numbers*
 
 ## This checkout
 
-**`1.6.5-SNAPSHOT`**: Java **11**, **Jakarta** committed types, **14** services (standard HI B2B), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package.
+**`1.7.0-SNAPSHOT`**: Java **11**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package.
 
 ## Build
 

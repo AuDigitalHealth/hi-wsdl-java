@@ -1,34 +1,6 @@
-# Maven
 /target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-
-# Java
-*.class
-*.log
-hs_err_pid*
-
-# IDE / editor
 /.idea/
 *.iml
-*.ipr
-*.iws
-.vscode/
-.classpath
-.project
-.settings/
-bin/
-hi-wsdl-java.code-workspace
-
-# OS
-.DS_Store
-Thumbs.db
-*.swp
-*.orig
-*~
 
 # Local secrets (never commit populated copies)
 /local.properties
@@ -44,3 +16,12 @@ settings.xml
 *.jks
 *.keystore
 *.p12
+
+# Editor / agent / OS noise (not part of the published tree)
+.DS_Store
+Thumbs.db
+*.swp
+*.orig
+*~
+.vscode/
+hi-wsdl-java.code-workspace

@@ -98,25 +98,31 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the electronicCommunicationExternalId property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationExternalId property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getElectronicCommunicationExternalId().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getElectronicCommunicationExternalId().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunicationExternalId property.
      */
     public List<Integer> getElectronicCommunicationExternalId() {
         if (electronicCommunicationExternalId == null) {
-            electronicCommunicationExternalId = new ArrayList<Integer>();
+            electronicCommunicationExternalId = new ArrayList<>();
         }
         return this.electronicCommunicationExternalId;
     }
@@ -124,25 +130,31 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the providerTypeExternalId property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the providerTypeExternalId property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the providerTypeExternalId property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getProviderTypeExternalId().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getProviderTypeExternalId().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the providerTypeExternalId property.
      */
     public List<Integer> getProviderTypeExternalId() {
         if (providerTypeExternalId == null) {
-            providerTypeExternalId = new ArrayList<Integer>();
+            providerTypeExternalId = new ArrayList<>();
         }
         return this.providerTypeExternalId;
     }

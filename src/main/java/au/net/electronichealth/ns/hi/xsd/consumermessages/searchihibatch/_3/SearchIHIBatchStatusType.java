@@ -1,11 +1,12 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessageType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessageType;
 
 
 /**
@@ -40,6 +41,7 @@ public class SearchIHIBatchStatusType {
     @XmlElement(required = true)
     protected String batchIdentifier;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected BatchResponseStatusType status;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
     protected ServiceMessageType serviceMessage;

@@ -3,17 +3,18 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradminis
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AddressRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.certificate._3_2.CertificateType;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunicationRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2.IndividualNameRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.DeathNotificationType;
 import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.PersonalDetails;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -54,6 +55,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.Perso
 @XmlRootElement(name = "manageProviderAdministrativeIndividual")
 public class ManageProviderAdministrativeIndividual {
 
+    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0")
     protected PersonalDetails personalDetails;
@@ -119,25 +121,31 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the individualNameRecord property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualNameRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the individualNameRecord property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getIndividualNameRecord().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getIndividualNameRecord().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link IndividualNameRecord }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the individualNameRecord property.
      */
     public List<IndividualNameRecord> getIndividualNameRecord() {
         if (individualNameRecord == null) {
-            individualNameRecord = new ArrayList<IndividualNameRecord>();
+            individualNameRecord = new ArrayList<>();
         }
         return this.individualNameRecord;
     }
@@ -145,25 +153,31 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the addressRecord property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the addressRecord property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getAddressRecord().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getAddressRecord().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressRecord }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the addressRecord property.
      */
     public List<AddressRecord> getAddressRecord() {
         if (addressRecord == null) {
-            addressRecord = new ArrayList<AddressRecord>();
+            addressRecord = new ArrayList<>();
         }
         return this.addressRecord;
     }
@@ -171,25 +185,31 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the electronicCommunicationRecord property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationRecord property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationRecord property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getElectronicCommunicationRecord().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getElectronicCommunicationRecord().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ElectronicCommunicationRecord }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunicationRecord property.
      */
     public List<ElectronicCommunicationRecord> getElectronicCommunicationRecord() {
         if (electronicCommunicationRecord == null) {
-            electronicCommunicationRecord = new ArrayList<ElectronicCommunicationRecord>();
+            electronicCommunicationRecord = new ArrayList<>();
         }
         return this.electronicCommunicationRecord;
     }

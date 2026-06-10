@@ -1,14 +1,15 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressCriteriaType;
+import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressCriteriaType;
+import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._3_2.OrganisationDetails;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressCriteriaType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressCriteriaType;
-import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._3_2.OrganisationDetails;
 
 
 /**
@@ -53,6 +54,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._3_2.O
 @XmlRootElement(name = "searchHIProviderDirectoryForOrganisation")
 public class SearchHIProviderDirectoryForOrganisation {
 
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     protected String name;
     protected String organisationType;

@@ -1,12 +1,13 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_0;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 
 
 /**
@@ -40,6 +41,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMes
 public class SearchForProviderOrganisationResult {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0")
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0")
     protected String status;

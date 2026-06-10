@@ -3,12 +3,12 @@ package au.net.electronichealth.ns.hi.svc.providerbatchasyncsearchforproviderorg
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._5_1.BatchSearchForProviderOrganisationCriteriaType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._5_1.BatchSearchForProviderOrganisationCriteriaType;
 
 
 /**
@@ -43,25 +43,31 @@ public class SubmitSearchForProviderOrganisation {
     /**
      * Gets the value of the batchSearchForProviderOrganisationCriteria property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the batchSearchForProviderOrganisationCriteria property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the batchSearchForProviderOrganisationCriteria property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getBatchSearchForProviderOrganisationCriteria().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getBatchSearchForProviderOrganisationCriteria().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BatchSearchForProviderOrganisationCriteriaType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the batchSearchForProviderOrganisationCriteria property.
      */
     public List<BatchSearchForProviderOrganisationCriteriaType> getBatchSearchForProviderOrganisationCriteria() {
         if (batchSearchForProviderOrganisationCriteria == null) {
-            batchSearchForProviderOrganisationCriteria = new ArrayList<BatchSearchForProviderOrganisationCriteriaType>();
+            batchSearchForProviderOrganisationCriteria = new ArrayList<>();
         }
         return this.batchSearchForProviderOrganisationCriteria;
     }

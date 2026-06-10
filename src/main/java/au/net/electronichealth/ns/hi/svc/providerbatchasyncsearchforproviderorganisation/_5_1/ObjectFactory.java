@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.svc.providerbatchasyncsearchforproviderorganisation._5_1 package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -30,24 +30,10 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RetrieveSearchForProviderOrganisation }
-     * 
-     */
-    public RetrieveSearchForProviderOrganisation createRetrieveSearchForProviderOrganisation() {
-        return new RetrieveSearchForProviderOrganisation();
-    }
-
-    /**
-     * Create an instance of {@link RetrieveSearchForProviderOrganisationResponse }
-     * 
-     */
-    public RetrieveSearchForProviderOrganisationResponse createRetrieveSearchForProviderOrganisationResponse() {
-        return new RetrieveSearchForProviderOrganisationResponse();
-    }
-
-    /**
      * Create an instance of {@link SubmitSearchForProviderOrganisation }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchForProviderOrganisation }
      */
     public SubmitSearchForProviderOrganisation createSubmitSearchForProviderOrganisation() {
         return new SubmitSearchForProviderOrganisation();
@@ -56,9 +42,31 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SubmitSearchForProviderOrganisationResponse }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchForProviderOrganisationResponse }
      */
     public SubmitSearchForProviderOrganisationResponse createSubmitSearchForProviderOrganisationResponse() {
         return new SubmitSearchForProviderOrganisationResponse();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderOrganisation }
+     * 
+     * @return
+     *     the new instance of {@link RetrieveSearchForProviderOrganisation }
+     */
+    public RetrieveSearchForProviderOrganisation createRetrieveSearchForProviderOrganisation() {
+        return new RetrieveSearchForProviderOrganisation();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderOrganisationResponse }
+     * 
+     * @return
+     *     the new instance of {@link RetrieveSearchForProviderOrganisationResponse }
+     */
+    public RetrieveSearchForProviderOrganisationResponse createRetrieveSearchForProviderOrganisationResponse() {
+        return new RetrieveSearchForProviderOrganisationResponse();
     }
 
 }

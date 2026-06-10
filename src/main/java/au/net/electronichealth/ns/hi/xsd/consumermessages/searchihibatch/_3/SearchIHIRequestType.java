@@ -1,11 +1,11 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3;
 
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihi._3.SearchIHI;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.consumermessages.searchihi._3.SearchIHI;
 
 
 /**
@@ -35,13 +35,17 @@ import au.net.electronichealth.ns.hi.consumermessages.searchihi._3.SearchIHI;
 })
 public class SearchIHIRequestType {
 
+    /**
+     * Search IHI Request
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHI/3.0", required = true)
     protected SearchIHI searchIHI;
     @XmlElement(required = true)
     protected String requestIdentifier;
 
     /**
-     * Gets the value of the searchIHI property.
+     * Search IHI Request
      * 
      * @return
      *     possible object is
@@ -59,6 +63,7 @@ public class SearchIHIRequestType {
      *     allowed object is
      *     {@link SearchIHI }
      *     
+     * @see #getSearchIHI()
      */
     public void setSearchIHI(SearchIHI value) {
         this.searchIHI = value;

@@ -38,8 +38,10 @@ import jakarta.xml.bind.annotation.XmlType;
 public class LinkDetailsType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected RequestType requestType;
     @XmlSchemaType(name = "anyURI")
     protected String linkType;

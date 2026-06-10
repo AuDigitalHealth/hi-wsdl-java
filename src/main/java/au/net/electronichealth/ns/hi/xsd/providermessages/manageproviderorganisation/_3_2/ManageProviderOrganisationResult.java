@@ -3,14 +3,15 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganis
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
+import au.net.electronichealth.ns.hi.xsd.providercore.certificate._3_2.CertificateResponseType;
+import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsResponseType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
-import au.net.electronichealth.ns.hi.xsd.providercore.certificate._3_2.CertificateResponseType;
-import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsResponseType;
 
 
 /**
@@ -56,6 +57,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsRespo
 public class ManageProviderOrganisationResult {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     @XmlElement(required = true)
     protected String status;
@@ -120,25 +122,31 @@ public class ManageProviderOrganisationResult {
     /**
      * Gets the value of the organisationNameResponses property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationNameResponses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationNameResponses property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getOrganisationNameResponses().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getOrganisationNameResponses().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationNameResponses property.
      */
     public List<DetailsResponseType> getOrganisationNameResponses() {
         if (organisationNameResponses == null) {
-            organisationNameResponses = new ArrayList<DetailsResponseType>();
+            organisationNameResponses = new ArrayList<>();
         }
         return this.organisationNameResponses;
     }
@@ -146,25 +154,31 @@ public class ManageProviderOrganisationResult {
     /**
      * Gets the value of the organisationServiceResponses property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationServiceResponses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationServiceResponses property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getOrganisationServiceResponses().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getOrganisationServiceResponses().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationServiceResponses property.
      */
     public List<DetailsResponseType> getOrganisationServiceResponses() {
         if (organisationServiceResponses == null) {
-            organisationServiceResponses = new ArrayList<DetailsResponseType>();
+            organisationServiceResponses = new ArrayList<>();
         }
         return this.organisationServiceResponses;
     }
@@ -172,25 +186,31 @@ public class ManageProviderOrganisationResult {
     /**
      * Gets the value of the addressResponses property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressResponses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the addressResponses property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getAddressResponses().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getAddressResponses().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the addressResponses property.
      */
     public List<DetailsResponseType> getAddressResponses() {
         if (addressResponses == null) {
-            addressResponses = new ArrayList<DetailsResponseType>();
+            addressResponses = new ArrayList<>();
         }
         return this.addressResponses;
     }
@@ -198,25 +218,31 @@ public class ManageProviderOrganisationResult {
     /**
      * Gets the value of the electronicCommunicationResponses property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationResponses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationResponses property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getElectronicCommunicationResponses().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getElectronicCommunicationResponses().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunicationResponses property.
      */
     public List<DetailsResponseType> getElectronicCommunicationResponses() {
         if (electronicCommunicationResponses == null) {
-            electronicCommunicationResponses = new ArrayList<DetailsResponseType>();
+            electronicCommunicationResponses = new ArrayList<>();
         }
         return this.electronicCommunicationResponses;
     }
@@ -248,25 +274,31 @@ public class ManageProviderOrganisationResult {
     /**
      * Gets the value of the endpointLocatorServiceResponses property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorServiceResponses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the endpointLocatorServiceResponses property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getEndpointLocatorServiceResponses().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getEndpointLocatorServiceResponses().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the endpointLocatorServiceResponses property.
      */
     public List<DetailsResponseType> getEndpointLocatorServiceResponses() {
         if (endpointLocatorServiceResponses == null) {
-            endpointLocatorServiceResponses = new ArrayList<DetailsResponseType>();
+            endpointLocatorServiceResponses = new ArrayList<>();
         }
         return this.endpointLocatorServiceResponses;
     }

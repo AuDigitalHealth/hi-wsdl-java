@@ -3,13 +3,13 @@ package au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2;
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffixType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffixType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameTitleType;
 
 
 /**
@@ -51,12 +51,13 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameTitle
 public class IndividualName {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
-    protected List<NameTitleType> nameTitle;
+    protected List<String> nameTitle;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
     protected List<String> givenName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
     protected String familyName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
+    @XmlSchemaType(name = "string")
     protected List<NameSuffixType> nameSuffix;
     @XmlElement(required = true)
     protected NameUsageType nameUsage;
@@ -65,25 +66,31 @@ public class IndividualName {
     /**
      * Gets the value of the nameTitle property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nameTitle property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the nameTitle property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getNameTitle().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getNameTitle().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link NameTitleType }
+     * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the nameTitle property.
      */
-    public List<NameTitleType> getNameTitle() {
+    public List<String> getNameTitle() {
         if (nameTitle == null) {
-            nameTitle = new ArrayList<NameTitleType>();
+            nameTitle = new ArrayList<>();
         }
         return this.nameTitle;
     }
@@ -91,25 +98,31 @@ public class IndividualName {
     /**
      * Gets the value of the givenName property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the givenName property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the givenName property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getGivenName().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getGivenName().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the givenName property.
      */
     public List<String> getGivenName() {
         if (givenName == null) {
-            givenName = new ArrayList<String>();
+            givenName = new ArrayList<>();
         }
         return this.givenName;
     }
@@ -141,25 +154,31 @@ public class IndividualName {
     /**
      * Gets the value of the nameSuffix property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nameSuffix property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the nameSuffix property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getNameSuffix().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getNameSuffix().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link NameSuffixType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the nameSuffix property.
      */
     public List<NameSuffixType> getNameSuffix() {
         if (nameSuffix == null) {
-            nameSuffix = new ArrayList<NameSuffixType>();
+            nameSuffix = new ArrayList<>();
         }
         return this.nameSuffix;
     }

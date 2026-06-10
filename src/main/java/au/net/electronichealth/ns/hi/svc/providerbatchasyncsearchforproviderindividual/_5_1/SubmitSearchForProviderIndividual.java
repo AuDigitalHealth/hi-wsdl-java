@@ -3,12 +3,12 @@ package au.net.electronichealth.ns.hi.svc.providerbatchasyncsearchforproviderind
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.BatchSearchForProviderIndividualCriteriaType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.BatchSearchForProviderIndividualCriteriaType;
 
 
 /**
@@ -43,25 +43,31 @@ public class SubmitSearchForProviderIndividual {
     /**
      * Gets the value of the batchSearchForProviderIndividualCriteria property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the batchSearchForProviderIndividualCriteria property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the batchSearchForProviderIndividualCriteria property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getBatchSearchForProviderIndividualCriteria().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getBatchSearchForProviderIndividualCriteria().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BatchSearchForProviderIndividualCriteriaType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the batchSearchForProviderIndividualCriteria property.
      */
     public List<BatchSearchForProviderIndividualCriteriaType> getBatchSearchForProviderIndividualCriteria() {
         if (batchSearchForProviderIndividualCriteria == null) {
-            batchSearchForProviderIndividualCriteria = new ArrayList<BatchSearchForProviderIndividualCriteriaType>();
+            batchSearchForProviderIndividualCriteria = new ArrayList<>();
         }
         return this.batchSearchForProviderIndividualCriteria;
     }

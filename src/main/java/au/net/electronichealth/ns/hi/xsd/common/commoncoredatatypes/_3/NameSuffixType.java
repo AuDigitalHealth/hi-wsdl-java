@@ -1,11 +1,15 @@
+
 package au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3;
 
 import jakarta.xml.bind.annotation.XmlEnum;
 import jakarta.xml.bind.annotation.XmlType;
 
+
 /**
+ * 
+ * 
  * &lt;p&gt;Java class for NameSuffixType&lt;/p&gt;.
- *
+ * 
  * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * &lt;pre&gt;{&#064;code
  * &lt;simpleType name="NameSuffixType"&gt;
@@ -67,6 +71,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * }&lt;/pre&gt;
+ * 
  */
 @XmlType(name = "NameSuffixType", namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0")
 @XmlEnum
@@ -75,271 +80,325 @@ public enum NameSuffixType {
 
     /**
      * Bravery Medal
+     * 
      */
     BM,
 
     /**
      * British Empire Medal
+     * 
      */
     BEM,
 
     /**
      * Commissioner of Declarations
+     * 
      */
     COMDC,
 
     /**
      * Companion of Honour
+     * 
      */
     CH,
 
     /**
      * Companion of the Order of Australia
+     * 
      */
     AC,
 
     /**
      * Cross of Valour
+     * 
      */
     CV,
 
     /**
      * Dame Commander of the Order of Saint Michael and Saint George
+     * 
      */
     DCMG,
 
     /**
      * Dame Commander of the Order of the Bath
+     * 
      */
     DCB,
 
     /**
      * Dame Commander of the Order of the British Empire
+     * 
      */
     DBE,
 
     /**
      * Dame Commander of the Royal Victorian Order
+     * 
      */
     DCVO,
 
     /**
      * Dame of the Order of Australia
+     * 
      */
     AD,
 
     /**
      * Distinguished Flying Medal
+     * 
      */
     DFM,
 
     /**
      * Distinguished Service Cross
+     * 
      */
     DSC,
 
     /**
      * Distinguished Service Medal
+     * 
      */
     DSM,
 
     /**
      * Eighth
+     * 
      */
     VIII,
 
     /**
      * Esquire
+     * 
      */
     ESQ,
 
     /**
      * Fifth
+     * 
      */
     V,
 
     /**
      * First
+     * 
      */
     I,
 
     /**
      * Fourth
+     * 
      */
     IV,
 
     /**
      * George Cross
+     * 
      */
     GC,
 
     /**
      * Junior
+     * 
      */
     JNR,
 
     /**
      * Justice of the Peace
+     * 
      */
     JP,
 
     /**
      * Knight Bachelor
+     * 
      */
     KB,
 
     /**
      * Knight Commander of the Order of Saint Michael and Saint George
+     * 
      */
     KCMG,
 
     /**
      * Knight Commander of the Order of the Bath
+     * 
      */
     KCB,
 
     /**
      * Knight Commander of the Order of the British Empire
+     * 
      */
     KBE,
 
     /**
      * Knight Commander of the Royal Victorian Order
+     * 
      */
     KCVO,
 
     /**
      * Knight of the Order of Australia
+     * 
      */
     AK,
 
     /**
      * Knight of the Garter
+     * 
      */
     KG,
 
     /**
      * Knight of the Thistle
+     * 
      */
     KT,
 
     /**
      * MD
+     * 
      */
     MD,
 
     /**
-     * Medal of the Order of Australia
+     * Medal of the Order of Australia-Order of St John
+     * 
      */
     OAM,
 
     /**
      * Member of Parliament
+     * 
      */
     MP,
 
     /**
      * Member of the House of Assembly
+     * 
      */
     MHA,
 
     /**
      * Member of the House of Representatives
+     * 
      */
     MHR,
 
     /**
      * Member of the Legislative Assembly
+     * 
      */
     MLA,
 
     /**
      * Member of the Legislative Council
+     * 
      */
     MLC,
 
     /**
      * Member of the Order of Australia
+     * 
      */
     AM,
 
     /**
      * Member of the Order of the British Empire
+     * 
      */
     MBE,
 
     /**
      * Military Cross
+     * 
      */
     MC,
 
     /**
      * Ninth
+     * 
      */
     IX,
 
     /**
      * Officer Commanding
+     * 
      */
     OC,
 
     /**
      * Officer of the Order of Australia
+     * 
      */
     AO,
 
     /**
      * Officer of the Order of the British Empire
+     * 
      */
     OBE,
 
     /**
      * Order of Merit
+     * 
      */
     OM,
 
     /**
      * Queens Counsel
+     * 
      */
     QC,
 
     /**
      * Second
+     * 
      */
     II,
 
     /**
      * Senior
+     * 
      */
     SNR,
 
     /**
      * Seventh
+     * 
      */
     VII,
 
     /**
      * Sixth
+     * 
      */
     VI,
 
     /**
      * Star of Courage
+     * 
      */
     SC,
 
     /**
      * Tenth
+     * 
      */
     X,
 
     /**
      * Third
+     * 
      */
     III,
 
     /**
      * Victoria Cross
+     * 
      */
     VC;
 
@@ -350,4 +409,5 @@ public enum NameSuffixType {
     public static NameSuffixType fromValue(String v) {
         return valueOf(v);
     }
+
 }

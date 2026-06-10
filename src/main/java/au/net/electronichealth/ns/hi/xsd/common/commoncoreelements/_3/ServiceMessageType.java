@@ -1,11 +1,12 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityType;
 
 
 /**
@@ -42,6 +43,7 @@ public class ServiceMessageType {
     @XmlElement(required = true)
     protected String code;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected SeverityType severity;
     @XmlElement(required = true)
     protected String reason;

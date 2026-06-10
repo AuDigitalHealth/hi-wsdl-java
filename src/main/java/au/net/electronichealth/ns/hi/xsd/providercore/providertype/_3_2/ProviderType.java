@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.providertype._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**

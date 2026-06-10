@@ -6,6 +6,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * 
+ * 
  * &lt;p&gt;Java class for UsageType&lt;/p&gt;.
  * 
  * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
@@ -39,7 +41,6 @@ public enum UsageType {
 
     /**
      * Service location name
-     *                     
      * 
      */
     S,
@@ -52,21 +53,18 @@ public enum UsageType {
 
     /**
      * Locally used name
-     *                     
      * 
      */
     L,
 
     /**
      * Abbreviated name
-     *                     
      * 
      */
     A,
 
     /**
      * Enterprise name
-     *                     
      * 
      */
     E,

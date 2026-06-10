@@ -3,13 +3,13 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovide
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
+import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.BatchSearchForProviderIndividualResultType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
-import au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1.BatchSearchForProviderIndividualResultType;
 
 
 /**
@@ -76,25 +76,31 @@ public class RetrieveSearchForProviderIndividualResult {
     /**
      * Gets the value of the batchSearchForProviderIndividualResult property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the batchSearchForProviderIndividualResult property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the batchSearchForProviderIndividualResult property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getBatchSearchForProviderIndividualResult().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getBatchSearchForProviderIndividualResult().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BatchSearchForProviderIndividualResultType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the batchSearchForProviderIndividualResult property.
      */
     public List<BatchSearchForProviderIndividualResultType> getBatchSearchForProviderIndividualResult() {
         if (batchSearchForProviderIndividualResult == null) {
-            batchSearchForProviderIndividualResult = new ArrayList<BatchSearchForProviderIndividualResultType>();
+            batchSearchForProviderIndividualResult = new ArrayList<>();
         }
         return this.batchSearchForProviderIndividualResult;
     }

@@ -42,25 +42,31 @@ public class SubmitSearchIHIBatch {
     /**
      * Gets the value of the searchIHIBatchRequest property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the searchIHIBatchRequest property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the searchIHIBatchRequest property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getSearchIHIBatchRequest().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getSearchIHIBatchRequest().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SearchIHIRequestType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the searchIHIBatchRequest property.
      */
     public List<SearchIHIRequestType> getSearchIHIBatchRequest() {
         if (searchIHIBatchRequest == null) {
-            searchIHIBatchRequest = new ArrayList<SearchIHIRequestType>();
+            searchIHIBatchRequest = new ArrayList<>();
         }
         return this.searchIHIBatchRequest;
     }

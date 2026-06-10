@@ -42,25 +42,31 @@ public class ReadReferenceData {
     /**
      * Gets the value of the elementNames property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the elementNames property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the elementNames property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getElementNames().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getElementNames().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the elementNames property.
      */
     public List<String> getElementNames() {
         if (elementNames == null) {
-            elementNames = new ArrayList<String>();
+            elementNames = new ArrayList<>();
         }
         return this.elementNames;
     }

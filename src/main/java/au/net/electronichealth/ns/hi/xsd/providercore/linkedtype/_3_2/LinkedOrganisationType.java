@@ -1,11 +1,12 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 
 
 /**
@@ -38,6 +39,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 public class LinkedOrganisationType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     @XmlElement(required = true)
     protected String name;

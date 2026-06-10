@@ -1,11 +1,11 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.QualifiedId;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.QualifiedId;
 
 
 /**

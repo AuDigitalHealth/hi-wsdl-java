@@ -5,6 +5,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -35,6 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class SearchForProviderOrganisation {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0", required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
 
     /**

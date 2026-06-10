@@ -3,13 +3,13 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovide
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
+import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._5_1.BatchSearchForProviderOrganisationResultType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
-import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._5_1.BatchSearchForProviderOrganisationResultType;
 
 
 /**
@@ -76,25 +76,31 @@ public class RetrieveSearchForProviderOrganisationResult {
     /**
      * Gets the value of the batchSearchForProviderOrganisationResult property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the batchSearchForProviderOrganisationResult property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the batchSearchForProviderOrganisationResult property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getBatchSearchForProviderOrganisationResult().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getBatchSearchForProviderOrganisationResult().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BatchSearchForProviderOrganisationResultType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the batchSearchForProviderOrganisationResult property.
      */
     public List<BatchSearchForProviderOrganisationResultType> getBatchSearchForProviderOrganisationResult() {
         if (batchSearchForProviderOrganisationResult == null) {
-            batchSearchForProviderOrganisationResult = new ArrayList<BatchSearchForProviderOrganisationResultType>();
+            batchSearchForProviderOrganisationResult = new ArrayList<>();
         }
         return this.batchSearchForProviderOrganisationResult;
     }

@@ -1,11 +1,11 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_1;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividual;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividual;
 
 
 /**
@@ -37,6 +37,10 @@ public class BatchSearchForProviderIndividualCriteriaType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", required = true)
     protected String requestIdentifier;
+    /**
+     * Search for Provider Individual Request element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0", required = true)
     protected SearchForProviderIndividual searchForProviderIndividual;
 
@@ -65,7 +69,7 @@ public class BatchSearchForProviderIndividualCriteriaType {
     }
 
     /**
-     * Gets the value of the searchForProviderIndividual property.
+     * Search for Provider Individual Request element
      * 
      * @return
      *     possible object is
@@ -83,6 +87,7 @@ public class BatchSearchForProviderIndividualCriteriaType {
      *     allowed object is
      *     {@link SearchForProviderIndividual }
      *     
+     * @see #getSearchForProviderIndividual()
      */
     public void setSearchForProviderIndividual(SearchForProviderIndividual value) {
         this.searchForProviderIndividual = value;

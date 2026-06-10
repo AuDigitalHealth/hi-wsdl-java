@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3;
 
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
-import javax.xml.namespace.QName;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3 package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _QualifiedId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", "qualifiedId");
+    private static final QName _QualifiedId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", "qualifiedId");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3
@@ -36,18 +36,24 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link QualifiedId }
      * 
+     * @return
+     *     the new instance of {@link QualifiedId }
      */
     public QualifiedId createQualifiedId() {
         return new QualifiedId();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", name = "qualifiedId")
     public JAXBElement<QualifiedId> createQualifiedId(QualifiedId value) {
-        return new JAXBElement<QualifiedId>(_QualifiedId_QNAME, QualifiedId.class, null, value);
+        return new JAXBElement<>(_QualifiedId_QNAME, QualifiedId.class, null, value);
     }
 
 }

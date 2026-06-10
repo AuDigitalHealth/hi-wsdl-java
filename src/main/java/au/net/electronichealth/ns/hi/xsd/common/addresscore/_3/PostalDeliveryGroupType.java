@@ -1,11 +1,12 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.addresscore._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.PostalDeliveryType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.PostalDeliveryType;
 
 
 /**
@@ -36,6 +37,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.PostalDel
 public class PostalDeliveryGroupType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected PostalDeliveryType postalDeliveryType;
     protected String postalDeliveryNumber;
 

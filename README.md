@@ -14,7 +14,7 @@ Use **version numbers** in documentation and dependencies — **not** Git branch
 | **1.6.5** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
 | **1.7.0** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Full MCA — **26** `Service` stubs |
 
-**This checkout** builds **`1.6.5-SNAPSHOT`** (Java **11** / **Jakarta**).
+**This checkout** builds **`1.7.0-SNAPSHOT`** (Java **11** / **Jakarta** / full MCA).
 
 ## Dependency
 
@@ -24,27 +24,27 @@ Published releases are consumed from **[Maven Central](https://central.sonatype.
 <dependency>
   <groupId>au.gov.nehta</groupId>
   <artifactId>hi-wsdl</artifactId>
-  <version>1.6.5</version>
+  <version>1.7.0</version>
 </dependency>
 ```
 
 Compile dependencies: **`jakarta.xml.bind-api`** **4.0.5** and **`jakarta.xml.ws-api`** **4.0.3**. Add Eclipse EE4J **`com.sun.xml.ws:jaxws-rt`** **4.0.4** at runtime in your application when you invoke SOAP endpoints. This JAR does not bundle **`jaxws-rt`**.
 
-Align **`hi-wsdl`** and **`hi-b2b-client`** at the **same version** when both are on the classpath (GA versions in the table above).
+Align **`hi-wsdl`** and **`hi-b2b-client`** versions per the table above when both are on the classpath.
 
 ## Local development (SNAPSHOT)
 
-This repository builds **`1.6.5-SNAPSHOT`** on the Java **11** / **Jakarta** line. **`hi-b2b-client-java`** declares **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** — install this types JAR **first** when both checkouts are unpublished:
+This repository builds **`1.7.0-SNAPSHOT`**. **`hi-b2b-client-java`** declares **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** — install this types JAR **first** when both projects are unpublished:
 
 ```text
-# 1) hi-wsdl (1.6.5-SNAPSHOT — this repository)
+# 1) hi-wsdl (1.7.0-SNAPSHOT — this repository)
 mvn -B "-Dgpg.skip=true" clean install
 
-# 2) hi-b2b-client (1.6.5-SNAPSHOT — matching version)
+# 2) hi-b2b-client (1.7.0-SNAPSHOT — matching version)
 mvn -B "-Dgpg.skip=true" clean verify
 ```
 
-If Maven warns that a **GA** POM is missing (for example **`1.6.5`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in one project does not clear the local repository cache.
+If Maven warns that a **GA** POM is missing (for example **`1.7.0`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** and reinstall the SNAPSHOT.
 
 ## What is in the JAR
 
@@ -93,9 +93,7 @@ Or **`build.ps1`**, **`build.sh`**, **`build.bat`**. See **`CONTRIBUTING.md`** f
 | --- | --- | --- |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 | Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.hi.*`) |
-| Codegen | **14** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`1.6.5`**: depends on **`hi-wsdl`** from Maven Central (no in-repo **`wsimport`**) |
-
-Full MCA (**26** services) is **`1.7.0`** in both repositories.
+| Codegen | **26** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`1.7.0`**: in-repo **`wsimport`** (26 executions) by default; optional **`-Phi-wsdl-artifact`** uses **`hi-wsdl`** from Maven Central |
 
 ## Documentation
 

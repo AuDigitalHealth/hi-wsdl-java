@@ -1,16 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.LevelGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.PostalDeliveryGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.UnitGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetSuffixType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -73,14 +74,17 @@ public class SearchAustralianAddressType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String streetName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StreetType streetType;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StreetSuffixType streetSuffix;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected PostalDeliveryGroupType postalDeliveryGroup;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String suburb;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String postcode;

@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providersearchforproviderindividual._5_0;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividualResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.SearchForProviderIndividualResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.
 @XmlRootElement(name = "searchForProviderIndividualResponse")
 public class SearchForProviderIndividualResponse {
 
+    /**
+     * Search for Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0", required = true)
     protected SearchForProviderIndividualResult searchForProviderIndividualResult;
 
     /**
-     * Gets the value of the searchForProviderIndividualResult property.
+     * Search for Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchForProviderIndividualResponse {
      *     allowed object is
      *     {@link SearchForProviderIndividualResult }
      *     
+     * @see #getSearchForProviderIndividualResult()
      */
     public void setSearchForProviderIndividualResult(SearchForProviderIndividualResult value) {
         this.searchForProviderIndividualResult = value;

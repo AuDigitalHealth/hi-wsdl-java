@@ -18,7 +18,7 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | **1.6.5** | `java-11-jakarta` |
 | **1.7.0** | `java-11-jakarta-full-wsdl` |
 
-**This tree (`1.6.5-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **14** primary HI B2B **`@WebServiceClient`** services. **`hi-b2b-client`** **`1.6.5`** resolves **`hi-wsdl`** at **`${project.version}`** — **`mvn install`** here before an unpublished client **`verify`**. GA **`1.6.5`** pairs ship to Maven Central together.
+**This tree (`1.7.0-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **26** primary HI B2B **`@WebServiceClient`** services. **`hi-b2b-client`** **`1.7.0`** aligns with matching **`hi-wsdl`** releases from Maven Central.
 
 ## Artifact
 
@@ -34,22 +34,25 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | `src/test/java/au/gov/nehta/hiwsdl/` | Offline binding smoke tests |
 | `wsdls/readme.txt` | Licensed WSDL tree staging instructions (tracked) |
 | `wsdls/xml/` | Local licensed WSDL/XSD for regeneration (**gitignored**) |
+| `pom.xml` (`-Pregenerate-sources`) | **26** **`wsimport`** executions; align with **hi-b2b-client-java** 1.7.0 when adding services |
+| `.github/workflows/ci.yml` | GitHub Actions **`mvn verify`** on push/PR to release branches |
 
-## HI service coverage (`1.6.5`)
+## HI service coverage (`1.7.0`)
 
-**14** primary HI B2B interfaces (consumer search/batch-sync, provider 3.2 / 5.0 / 5.1 batch async). Additional **`HI_*.wsdl`** under **`src/main/resources`** ship in the JAR without committed port types.
+**26** primary HI B2B interfaces (consumer 3.0–4.0, provider 3.2 / 5.0 / 5.1, TDS 5.1, batch async 5.1, etc.). Interface-only WSDL variants may also exist under **`src/main/resources`**.
 
-**ProviderMatchProviderAdministrativeIndividual** is intentionally out of scope (virtual service in .NET tooling). Full MCA (**26** services) is **`1.7.0`**.
+**ProviderMatchProviderAdministrativeIndividual** is intentionally out of scope (virtual service in .NET tooling).
 
-## Build (`1.6.5` line)
+## Build (`1.7.0` line)
 
 - **`maven.compiler.release` 11**
-- Compile deps: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3** — no **`jaxws-rt`** in this POM
-- **`jaxws-rt` 4.0.4** for **`-Pregenerate-sources`** only (not a compile/runtime dependency of the published JAR)
+- Compile deps: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3** — no **`jaxws-rt`** in the published JAR (**`test`** scope only, for **`GeneratedWsdlBindingsTest`**)
+- **`jaxws-rt` 4.0.4** for **`-Pregenerate-sources`** only (via **`jaxws-tools`** on **`jaxws-maven-plugin`** classpath; not a compile/runtime dependency of the published JAR)
 - Generated sources are **committed**; root POM has **no** default **`wsimport`** execution
+- **`maven-enforcer-plugin`:** bans legacy Metro **`webservices-*`** and **`javax.xml.ws` / `javax.xml.bind`**
 - **`maven-gpg-plugin`:** skipped unless **`-Dgpg.skip=false`**
 - **`maven-javadoc-plugin`:** **`doclint=none`**, **`verbose=false`**, **`quiet=true`**, **`failOnWarnings=false`**, **`detectOfflineLinks=false`**, **`source=11`**. Do not hand-edit Javadoc in generated **`src/main/java`**.
-- **Regenerate committed types:** `mvn -B clean -Pregenerate-sources generate-sources process-sources "-Dhi.wsdl.sync.generated=true"` — WSDL from **`hi.wsdl.tree.root`** (default **`wsdls/xml/`**). Copy **`HI_*.wsdl`** into **`src/main/resources/`** when the licensed tree changes. Pins **`jaxb-xjc`** / **`jaxb-jxc`** **4.0.9** on **`jaxws-maven-plugin`**.
+- **Regenerate committed types:** `mvn -B clean -Pregenerate-sources generate-sources process-sources "-Dhi.wsdl.sync.generated=true"` — licensed tree at **`hi.wsdl.tree.root`** (default **`wsdls/xml/`**). Copy updated **`HI_*.wsdl`** into **`src/main/resources/`** when interfaces change. Pins **`jaxb-xjc`** **4.0.9** on **`jaxws-maven-plugin`**.
 
 Align **`jaxws-rt`** with **hi-b2b-client-java** when bumping toolchain versions.
 

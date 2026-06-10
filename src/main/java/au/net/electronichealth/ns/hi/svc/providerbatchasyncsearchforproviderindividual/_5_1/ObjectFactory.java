@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.svc.providerbatchasyncsearchforproviderindividual._5_1 package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -30,35 +30,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RetrieveSearchForProviderIndividualResponse }
+     * Create an instance of {@link SubmitSearchForProviderIndividual }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchForProviderIndividual }
      */
-    public RetrieveSearchForProviderIndividualResponse createRetrieveSearchForProviderIndividualResponse() {
-        return new RetrieveSearchForProviderIndividualResponse();
-    }
-
-    /**
-     * Create an instance of {@link RetrieveSearchForProviderIndividual }
-     * 
-     */
-    public RetrieveSearchForProviderIndividual createRetrieveSearchForProviderIndividual() {
-        return new RetrieveSearchForProviderIndividual();
+    public SubmitSearchForProviderIndividual createSubmitSearchForProviderIndividual() {
+        return new SubmitSearchForProviderIndividual();
     }
 
     /**
      * Create an instance of {@link SubmitSearchForProviderIndividualResponse }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchForProviderIndividualResponse }
      */
     public SubmitSearchForProviderIndividualResponse createSubmitSearchForProviderIndividualResponse() {
         return new SubmitSearchForProviderIndividualResponse();
     }
 
     /**
-     * Create an instance of {@link SubmitSearchForProviderIndividual }
+     * Create an instance of {@link RetrieveSearchForProviderIndividual }
      * 
+     * @return
+     *     the new instance of {@link RetrieveSearchForProviderIndividual }
      */
-    public SubmitSearchForProviderIndividual createSubmitSearchForProviderIndividual() {
-        return new SubmitSearchForProviderIndividual();
+    public RetrieveSearchForProviderIndividual createRetrieveSearchForProviderIndividual() {
+        return new RetrieveSearchForProviderIndividual();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderIndividualResponse }
+     * 
+     * @return
+     *     the new instance of {@link RetrieveSearchForProviderIndividualResponse }
+     */
+    public RetrieveSearchForProviderIndividualResponse createRetrieveSearchForProviderIndividualResponse() {
+        return new RetrieveSearchForProviderIndividualResponse();
     }
 
 }

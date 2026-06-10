@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.consumersearchihi._3;
 
+import au.net.electronichealth.ns.hi.xsd.consumermessages.searchihi._3.SearchIHIResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.consumermessages.searchihi._3.SearchIHIResult;
 
 
 /**

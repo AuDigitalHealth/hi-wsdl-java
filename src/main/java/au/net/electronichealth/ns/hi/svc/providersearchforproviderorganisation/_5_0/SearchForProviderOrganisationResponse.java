@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providersearchforproviderorganisation._5_0;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_0.SearchForProviderOrganisationResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_0.SearchForProviderOrganisationResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_
 @XmlRootElement(name = "searchForProviderOrganisationResponse")
 public class SearchForProviderOrganisationResponse {
 
+    /**
+     * Search for Provider Organisation Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0", required = true)
     protected SearchForProviderOrganisationResult searchForProviderOrganisationResult;
 
     /**
-     * Gets the value of the searchForProviderOrganisationResult property.
+     * Search for Provider Organisation Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchForProviderOrganisationResponse {
      *     allowed object is
      *     {@link SearchForProviderOrganisationResult }
      *     
+     * @see #getSearchForProviderOrganisationResult()
      */
     public void setSearchForProviderOrganisationResult(SearchForProviderOrganisationResult value) {
         this.searchForProviderOrganisationResult = value;

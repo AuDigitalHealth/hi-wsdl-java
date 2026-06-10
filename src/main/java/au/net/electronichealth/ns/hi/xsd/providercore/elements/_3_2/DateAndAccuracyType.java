@@ -1,13 +1,13 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2;
 
+import javax.xml.datatype.XMLGregorianCalendar;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.DateAccuracyIndicatorType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.DateAccuracyIndicatorType;
 
 
 /**
@@ -41,6 +41,7 @@ public class DateAndAccuracyType {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected DateAccuracyIndicatorType accuracyIndicator;
 
     /**

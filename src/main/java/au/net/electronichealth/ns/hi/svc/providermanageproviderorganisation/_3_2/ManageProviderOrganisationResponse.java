@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providermanageproviderorganisation._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganisation._3_2.ManageProviderOrganisationResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganisation._3_2.ManageProviderOrganisationResult;
 
 
 /**
@@ -35,11 +35,17 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganisa
 @XmlRootElement(name = "manageProviderOrganisationResponse")
 public class ManageProviderOrganisationResponse {
 
+    /**
+     * Manage Provider/Administrative Organisation
+     *                 Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderOrganisation/3.2.0", required = true)
     protected ManageProviderOrganisationResult manageProviderOrganisationResult;
 
     /**
-     * Gets the value of the manageProviderOrganisationResult property.
+     * Manage Provider/Administrative Organisation
+     *                 Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +63,7 @@ public class ManageProviderOrganisationResponse {
      *     allowed object is
      *     {@link ManageProviderOrganisationResult }
      *     
+     * @see #getManageProviderOrganisationResult()
      */
     public void setManageProviderOrganisationResult(ManageProviderOrganisationResult value) {
         this.manageProviderOrganisationResult = value;

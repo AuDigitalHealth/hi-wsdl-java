@@ -4,6 +4,7 @@ package au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -39,6 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class LinkedIndividualType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     protected String role;
     protected String familyName;

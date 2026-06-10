@@ -1,12 +1,13 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumercore.address._3;
 
+import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.PostalDeliveryGroupType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.PostalDeliveryGroupType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 
 
 /**
@@ -41,6 +42,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
 public class AustralianPostalAddressType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String postcode;

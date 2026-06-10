@@ -5,7 +5,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import hi_override.org.w3.xmldsig.SignatureType;
+import org.w3._2000._09.xmldsig_.SignatureType;
 
 
 /**

@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providerbatchasyncsearchforproviderorganisation._5_1;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchproviderorganisation._5_1.RetrieveSearchForProviderOrganisationResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchproviderorganisation._5_1.RetrieveSearchForProviderOrganisationResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovider
 @XmlRootElement(name = "retrieveSearchForProviderOrganisationResponse")
 public class RetrieveSearchForProviderOrganisationResponse {
 
+    /**
+     * Retrieve Batch Search for Provider Organisation Results Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderOrganisation/5.1.0", required = true)
     protected RetrieveSearchForProviderOrganisationResult retrieveSearchForProviderOrganisationResult;
 
     /**
-     * Gets the value of the retrieveSearchForProviderOrganisationResult property.
+     * Retrieve Batch Search for Provider Organisation Results Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class RetrieveSearchForProviderOrganisationResponse {
      *     allowed object is
      *     {@link RetrieveSearchForProviderOrganisationResult }
      *     
+     * @see #getRetrieveSearchForProviderOrganisationResult()
      */
     public void setRetrieveSearchForProviderOrganisationResult(RetrieveSearchForProviderOrganisationResult value) {
         this.retrieveSearchForProviderOrganisationResult = value;

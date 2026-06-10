@@ -3,12 +3,12 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 
 
 /**
@@ -46,25 +46,31 @@ public class SearchHIProviderDirectoryForOrganisationResult {
     /**
      * Gets the value of the organisationProviderDirectoryEntries property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationProviderDirectoryEntries property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationProviderDirectoryEntries property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getOrganisationProviderDirectoryEntries().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getOrganisationProviderDirectoryEntries().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationProviderDirectoryEntryType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationProviderDirectoryEntries property.
      */
     public List<OrganisationProviderDirectoryEntryType> getOrganisationProviderDirectoryEntries() {
         if (organisationProviderDirectoryEntries == null) {
-            organisationProviderDirectoryEntries = new ArrayList<OrganisationProviderDirectoryEntryType>();
+            organisationProviderDirectoryEntries = new ArrayList<>();
         }
         return this.organisationProviderDirectoryEntries;
     }

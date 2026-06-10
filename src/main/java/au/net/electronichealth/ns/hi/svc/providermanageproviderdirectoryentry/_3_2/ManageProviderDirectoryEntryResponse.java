@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providermanageproviderdirectoryentry._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirectoryentry._3_2.ManageProviderDirectoryEntryResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirectoryentry._3_2.ManageProviderDirectoryEntryResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirector
 @XmlRootElement(name = "manageProviderDirectoryEntryResponse")
 public class ManageProviderDirectoryEntryResponse {
 
+    /**
+     * Manage PDS Entry Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderDirectoryEntry/3.2.0", required = true)
     protected ManageProviderDirectoryEntryResult manageProviderDirectoryEntryResult;
 
     /**
-     * Gets the value of the manageProviderDirectoryEntryResult property.
+     * Manage PDS Entry Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class ManageProviderDirectoryEntryResponse {
      *     allowed object is
      *     {@link ManageProviderDirectoryEntryResult }
      *     
+     * @see #getManageProviderDirectoryEntryResult()
      */
     public void setManageProviderDirectoryEntryResult(ManageProviderDirectoryEntryResult value) {
         this.manageProviderDirectoryEntryResult = value;

@@ -9,7 +9,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>1.6.5-SNAPSHOT</version>
+    <version>1.7.0-SNAPSHOT</version>
     <name>HI WSDL library</name>
     <description>Healthcare Identifiers B2B WSDL and Jakarta generated types (Java 11)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
@@ -71,6 +71,7 @@
         <jakarta.xml.bind.api.version>4.0.5</jakarta.xml.bind.api.version>
         <jakarta.xml.ws.api.version>4.0.3</jakarta.xml.ws.api.version>
         <junit.version>4.13.2</junit.version>
+        <plugin.enforcer.version>3.6.2</plugin.enforcer.version>
     </properties>
 
     <!-- Java 11+: JAXB/JAX-WS are not on the JDK classpath. jakarta.xml.ws-api includes JWS annotations. -->
@@ -89,6 +90,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>${jaxws.rt.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -220,6 +227,38 @@
                 <version>3.4.2</version>
                 <!-- HI service WSDL under src/main/resources is intentionally packaged in this artifact. -->
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${plugin.enforcer.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-build-tooling</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>[3.6.3,)</version>
+                                </requireMavenVersion>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>com.sun.xml.ws:webservices-rt</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-api</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra-api</exclude>
+                                        <exclude>javax.xml.ws:*</exclude>
+                                        <exclude>javax.xml.bind:*</exclude>
+                                        <exclude>javax.xml.soap:*</exclude>
+                                    </excludes>
+                                    <message>Use Eclipse EE4J jaxws-rt and Jakarta XML APIs, not legacy Metro / javax JAX-WS.</message>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -329,30 +368,14 @@
                         <artifactId>jaxws-maven-plugin</artifactId>
                         <version>${jaxws.maven.plugin.version}</version>
                         <dependencies>
-                            <!-- jaxws-tools bundles an older com.sun.xml.bind:jaxb-xjc; exclude so wsimport uses ${jaxb.xjc.version}. -->
                             <dependency>
                                 <groupId>com.sun.xml.ws</groupId>
                                 <artifactId>jaxws-tools</artifactId>
                                 <version>${jaxws.rt.version}</version>
-                                <exclusions>
-                                    <exclusion>
-                                        <groupId>com.sun.xml.bind</groupId>
-                                        <artifactId>jaxb-xjc</artifactId>
-                                    </exclusion>
-                                    <exclusion>
-                                        <groupId>com.sun.xml.bind</groupId>
-                                        <artifactId>jaxb-jxc</artifactId>
-                                    </exclusion>
-                                </exclusions>
                             </dependency>
                             <dependency>
-                                <groupId>com.sun.xml.bind</groupId>
+                                <groupId>org.glassfish.jaxb</groupId>
                                 <artifactId>jaxb-xjc</artifactId>
-                                <version>${jaxb.xjc.version}</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>com.sun.xml.bind</groupId>
-                                <artifactId>jaxb-jxc</artifactId>
                                 <version>${jaxb.xjc.version}</version>
                             </dependency>
                         </dependencies>
@@ -361,7 +384,6 @@
                             <extension>true</extension>
                             <quiet>true</quiet>
                             <encoding>${project.build.sourceEncoding}</encoding>
-                            <xadditionalHeaders>true</xadditionalHeaders>
                             <xjcArgs>
                                 <xjcArg>-XautoNameResolution</xjcArg>
                             </xjcArgs>

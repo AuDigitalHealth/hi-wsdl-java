@@ -1,0 +1,448 @@
+
+package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihi._3;
+
+import javax.xml.datatype.XMLGregorianCalendar;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalseType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianPostalAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianStreetAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.AustralianUnstructuredStreetAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.address._3.InternationalAddressType;
+import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3.ElectronicCommunicationType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
+/**
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * 
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}ihiNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareCardNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareIRN" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}dvaFileNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirth"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianPostalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianUnstructuredStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0}electronicCommunication" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}history" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "ihiNumber",
+    "medicareCardNumber",
+    "medicareIRN",
+    "dvaFileNumber",
+    "dateOfBirth",
+    "sex",
+    "familyName",
+    "givenName",
+    "australianPostalAddress",
+    "australianStreetAddress",
+    "internationalAddress",
+    "australianUnstructuredStreetAddress",
+    "electronicCommunication",
+    "history"
+})
+@XmlRootElement(name = "searchIHI")
+public class SearchIHI {
+
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "anyURI")
+    protected String ihiNumber;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String medicareCardNumber;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "integer")
+    protected Integer medicareIRN;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String dvaFileNumber;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar dateOfBirth;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
+    protected SexType sex;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
+    protected String familyName;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
+    protected String givenName;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected AustralianPostalAddressType australianPostalAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected AustralianStreetAddressType australianStreetAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected InternationalAddressType internationalAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
+    protected AustralianUnstructuredStreetAddressType australianUnstructuredStreetAddress;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0")
+    protected ElectronicCommunicationType electronicCommunication;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
+    @XmlSchemaType(name = "string")
+    protected TrueFalseType history;
+
+    /**
+     * Gets the value of the ihiNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIhiNumber() {
+        return ihiNumber;
+    }
+
+    /**
+     * Sets the value of the ihiNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIhiNumber(String value) {
+        this.ihiNumber = value;
+    }
+
+    /**
+     * Gets the value of the medicareCardNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMedicareCardNumber() {
+        return medicareCardNumber;
+    }
+
+    /**
+     * Sets the value of the medicareCardNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMedicareCardNumber(String value) {
+        this.medicareCardNumber = value;
+    }
+
+    /**
+     * Gets the value of the medicareIRN property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMedicareIRN() {
+        return medicareIRN;
+    }
+
+    /**
+     * Sets the value of the medicareIRN property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMedicareIRN(Integer value) {
+        this.medicareIRN = value;
+    }
+
+    /**
+     * Gets the value of the dvaFileNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDvaFileNumber() {
+        return dvaFileNumber;
+    }
+
+    /**
+     * Sets the value of the dvaFileNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDvaFileNumber(String value) {
+        this.dvaFileNumber = value;
+    }
+
+    /**
+     * Gets the value of the dateOfBirth property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    /**
+     * Sets the value of the dateOfBirth property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDateOfBirth(XMLGregorianCalendar value) {
+        this.dateOfBirth = value;
+    }
+
+    /**
+     * Gets the value of the sex property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SexType }
+     *     
+     */
+    public SexType getSex() {
+        return sex;
+    }
+
+    /**
+     * Sets the value of the sex property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SexType }
+     *     
+     */
+    public void setSex(SexType value) {
+        this.sex = value;
+    }
+
+    /**
+     * Gets the value of the familyName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    /**
+     * Sets the value of the familyName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFamilyName(String value) {
+        this.familyName = value;
+    }
+
+    /**
+     * Gets the value of the givenName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getGivenName() {
+        return givenName;
+    }
+
+    /**
+     * Sets the value of the givenName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setGivenName(String value) {
+        this.givenName = value;
+    }
+
+    /**
+     * Gets the value of the australianPostalAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AustralianPostalAddressType }
+     *     
+     */
+    public AustralianPostalAddressType getAustralianPostalAddress() {
+        return australianPostalAddress;
+    }
+
+    /**
+     * Sets the value of the australianPostalAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AustralianPostalAddressType }
+     *     
+     */
+    public void setAustralianPostalAddress(AustralianPostalAddressType value) {
+        this.australianPostalAddress = value;
+    }
+
+    /**
+     * Gets the value of the australianStreetAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AustralianStreetAddressType }
+     *     
+     */
+    public AustralianStreetAddressType getAustralianStreetAddress() {
+        return australianStreetAddress;
+    }
+
+    /**
+     * Sets the value of the australianStreetAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AustralianStreetAddressType }
+     *     
+     */
+    public void setAustralianStreetAddress(AustralianStreetAddressType value) {
+        this.australianStreetAddress = value;
+    }
+
+    /**
+     * Gets the value of the internationalAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link InternationalAddressType }
+     *     
+     */
+    public InternationalAddressType getInternationalAddress() {
+        return internationalAddress;
+    }
+
+    /**
+     * Sets the value of the internationalAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InternationalAddressType }
+     *     
+     */
+    public void setInternationalAddress(InternationalAddressType value) {
+        this.internationalAddress = value;
+    }
+
+    /**
+     * Gets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public AustralianUnstructuredStreetAddressType getAustralianUnstructuredStreetAddress() {
+        return australianUnstructuredStreetAddress;
+    }
+
+    /**
+     * Sets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public void setAustralianUnstructuredStreetAddress(AustralianUnstructuredStreetAddressType value) {
+        this.australianUnstructuredStreetAddress = value;
+    }
+
+    /**
+     * Gets the value of the electronicCommunication property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ElectronicCommunicationType }
+     *     
+     */
+    public ElectronicCommunicationType getElectronicCommunication() {
+        return electronicCommunication;
+    }
+
+    /**
+     * Sets the value of the electronicCommunication property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ElectronicCommunicationType }
+     *     
+     */
+    public void setElectronicCommunication(ElectronicCommunicationType value) {
+        this.electronicCommunication = value;
+    }
+
+    /**
+     * Gets the value of the history property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TrueFalseType }
+     *     
+     */
+    public TrueFalseType getHistory() {
+        return history;
+    }
+
+    /**
+     * Sets the value of the history property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TrueFalseType }
+     *     
+     */
+    public void setHistory(TrueFalseType value) {
+        this.history = value;
+    }
+
+}

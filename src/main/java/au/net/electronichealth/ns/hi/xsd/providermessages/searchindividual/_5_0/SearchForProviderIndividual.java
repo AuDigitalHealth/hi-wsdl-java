@@ -3,17 +3,17 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.datatype.XMLGregorianCalendar;
+import au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0.SearchAustralianAddressType;
+import au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0.SearchInternationalAddressType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0.SearchAustralianAddressType;
-import au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0.SearchInternationalAddressType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType;
 
 
 /**
@@ -63,6 +63,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
 public class SearchForProviderIndividual {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0")
+    @XmlSchemaType(name = "anyURI")
     protected String hpiiNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0")
     protected String registrationId;
@@ -76,8 +77,10 @@ public class SearchForProviderIndividual {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfBirth;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
+    @XmlSchemaType(name = "string")
     protected SexType sex;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String postcode;
@@ -185,25 +188,31 @@ public class SearchForProviderIndividual {
     /**
      * Gets the value of the givenName property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the givenName property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the givenName property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getGivenName().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getGivenName().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the givenName property.
      */
     public List<String> getGivenName() {
         if (givenName == null) {
-            givenName = new ArrayList<String>();
+            givenName = new ArrayList<>();
         }
         return this.givenName;
     }

@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providerreadprovideradministrativeindividual._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.readindividual._3_2.ReadProviderAdministrativeIndividualResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.readindividual._3_2.ReadProviderAdministrativeIndividualResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.readindividual._3_2.Re
 @XmlRootElement(name = "readProviderAdministrativeIndividualResponse")
 public class ReadProviderAdministrativeIndividualResponse {
 
+    /**
+     * Read Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadIndividual/3.2.0", required = true)
     protected ReadProviderAdministrativeIndividualResult readProviderAdministrativeIndividualResult;
 
     /**
-     * Gets the value of the readProviderAdministrativeIndividualResult property.
+     * Read Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class ReadProviderAdministrativeIndividualResponse {
      *     allowed object is
      *     {@link ReadProviderAdministrativeIndividualResult }
      *     
+     * @see #getReadProviderAdministrativeIndividualResult()
      */
     public void setReadProviderAdministrativeIndividualResult(ReadProviderAdministrativeIndividualResult value) {
         this.readProviderAdministrativeIndividualResult = value;

@@ -1,14 +1,15 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressCriteriaType;
+import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressCriteriaType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressCriteriaType;
-import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressCriteriaType;
 
 
 /**
@@ -53,12 +54,14 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.International
 @XmlRootElement(name = "searchHIProviderDirectoryForIndividual")
 public class SearchHIProviderDirectoryForIndividual {
 
+    @XmlSchemaType(name = "anyURI")
     protected String hpiiNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
     protected String familyName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
     protected String givenName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
+    @XmlSchemaType(name = "string")
     protected SexType sex;
     protected String providerTypeCode;
     protected String providerSpecialty;

@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providersearchhiproviderdirectoryforindividual._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2.SearchHIProviderDirectoryForIndividualResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2.SearchHIProviderDirectoryForIndividualResult;
 
 
 /**
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2.
 @XmlRootElement(name = "searchHIProviderDirectoryForIndividualResponse")
 public class SearchHIProviderDirectoryForIndividualResponse {
 
+    /**
+     * Search for Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/3.2.0", required = true)
     protected SearchHIProviderDirectoryForIndividualResult searchHIProviderDirectoryForIndividualResult;
 
     /**
-     * Gets the value of the searchHIProviderDirectoryForIndividualResult property.
+     * Search for Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchHIProviderDirectoryForIndividualResponse {
      *     allowed object is
      *     {@link SearchHIProviderDirectoryForIndividualResult }
      *     
+     * @see #getSearchHIProviderDirectoryForIndividualResult()
      */
     public void setSearchHIProviderDirectoryForIndividualResult(SearchHIProviderDirectoryForIndividualResult value) {
         this.searchHIProviderDirectoryForIndividualResult = value;

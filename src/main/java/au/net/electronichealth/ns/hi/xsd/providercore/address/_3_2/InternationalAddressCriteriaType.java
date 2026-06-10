@@ -5,7 +5,6 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.CountryType;
 
 
 /**
@@ -46,7 +45,7 @@ public class InternationalAddressCriteriaType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String internationalPostcode;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
-    protected CountryType country;
+    protected String country;
 
     /**
      * Gets the value of the internationalAddressLine property.
@@ -125,10 +124,10 @@ public class InternationalAddressCriteriaType {
      * 
      * @return
      *     possible object is
-     *     {@link CountryType }
+     *     {@link String }
      *     
      */
-    public CountryType getCountry() {
+    public String getCountry() {
         return country;
     }
 
@@ -137,10 +136,10 @@ public class InternationalAddressCriteriaType {
      * 
      * @param value
      *     allowed object is
-     *     {@link CountryType }
+     *     {@link String }
      *     
      */
-    public void setCountry(CountryType value) {
+    public void setCountry(String value) {
         this.country = value;
     }
 

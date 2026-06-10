@@ -1,13 +1,14 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.MediumType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.MediumType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType;
 
 
 /**
@@ -45,10 +46,12 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType
 public class ElectronicCommunication {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected MediumType medium;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
     protected String details;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected UsageType usage;
     protected Boolean preferred;
 

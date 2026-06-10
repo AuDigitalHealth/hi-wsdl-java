@@ -1,12 +1,13 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
+import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SexType;
-import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**
@@ -37,6 +38,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 public class PersonalDetails {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected SexType sex;
     protected DateAndAccuracyType dateOfBirth;
 

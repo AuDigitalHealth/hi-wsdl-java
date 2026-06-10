@@ -3,12 +3,13 @@ package au.net.electronichealth.ns.hi.xsd.providercore.address._3_2;
 
 import java.util.ArrayList;
 import java.util.List;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.AddressPurposeType;
+import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.AddressPurposeType;
-import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**
@@ -41,6 +42,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 public class AddressPurposeAndDateType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected List<AddressPurposeType> purpose;
     protected DateAndAccuracyType startDate;
     protected DateAndAccuracyType endDate;
@@ -48,25 +50,31 @@ public class AddressPurposeAndDateType {
     /**
      * Gets the value of the purpose property.
      * 
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the purpose property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the purpose property.</p>
      * 
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;{&#064;code
-     *    getPurpose().add(newItem);
-     * }&lt;/pre&gt;
+     * </p>
+     * <pre>
+     * getPurpose().add(newItem);
+     * </pre>
      * 
      * 
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressPurposeType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the purpose property.
      */
     public List<AddressPurposeType> getPurpose() {
         if (purpose == null) {
-            purpose = new ArrayList<AddressPurposeType>();
+            purpose = new ArrayList<>();
         }
         return this.purpose;
     }

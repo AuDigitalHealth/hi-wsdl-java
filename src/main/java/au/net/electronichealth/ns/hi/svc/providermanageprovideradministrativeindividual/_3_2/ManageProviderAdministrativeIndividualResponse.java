@@ -1,12 +1,12 @@
 
 package au.net.electronichealth.ns.hi.svc.providermanageprovideradministrativeindividual._3_2;
 
+import au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradministrativeindividual._3_2.ManageProviderAdministrativeIndividualResult;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradministrativeindividual._3_2.ManageProviderAdministrativeIndividualResult;
 
 
 /**
@@ -35,11 +35,17 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradminist
 @XmlRootElement(name = "manageProviderAdministrativeIndividualResponse")
 public class ManageProviderAdministrativeIndividualResponse {
 
+    /**
+     * Manage Provider/Administrative Individual
+     *                 Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderAdministrativeIndividual/3.2.0", required = true)
     protected ManageProviderAdministrativeIndividualResult manageProviderAdministrativeIndividualResult;
 
     /**
-     * Gets the value of the manageProviderAdministrativeIndividualResult property.
+     * Manage Provider/Administrative Individual
+     *                 Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +63,7 @@ public class ManageProviderAdministrativeIndividualResponse {
      *     allowed object is
      *     {@link ManageProviderAdministrativeIndividualResult }
      *     
+     * @see #getManageProviderAdministrativeIndividualResult()
      */
     public void setManageProviderAdministrativeIndividualResult(ManageProviderAdministrativeIndividualResult value) {
         this.manageProviderAdministrativeIndividualResult = value;

@@ -139,7 +139,7 @@ public class GeneratedWsdlBindingsTest {
         return 0;
     }
 
-    private static int exerciseServiceMethod(Class<?> type, Method method) {
+    private static int exerciseServiceMethod(Class<?> type, Method method) throws Exception {
         if (!method.getName().startsWith("get") || method.getAnnotation(WebEndpoint.class) == null) {
             return 0;
         }
@@ -151,9 +151,11 @@ public class GeneratedWsdlBindingsTest {
             wsdl = Thread.currentThread().getContextClassLoader().getResource(client.wsdlLocation());
         }
         assertNotNull(client.wsdlLocation(), wsdl);
-        assertFalse(client.targetNamespace().isEmpty());
-        assertFalse(client.name().isEmpty());
-        assertFalse(method.getAnnotation(WebEndpoint.class).name().isEmpty());
+
+        Constructor<?> constructor = type.getConstructor(URL.class, QName.class);
+        Object service = constructor.newInstance(wsdl, new QName(client.targetNamespace(), client.name()));
+        Object result = method.invoke(service, sampleArguments(method.getParameterTypes()));
+        assertNotNull(type.getName() + "." + method.getName(), result);
         return 1;
     }
 
