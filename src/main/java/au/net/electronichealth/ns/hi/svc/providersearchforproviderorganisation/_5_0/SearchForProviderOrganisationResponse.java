@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0}searchForProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0}searchForProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_
 @XmlRootElement(name = "searchForProviderOrganisationResponse")
 public class SearchForProviderOrganisationResponse {
 
+    /**
+     * Search for Provider Organisation Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0", required = true)
     protected SearchForProviderOrganisationResult searchForProviderOrganisationResult;
 
     /**
-     * Gets the value of the searchForProviderOrganisationResult property.
+     * Search for Provider Organisation Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchForProviderOrganisationResponse {
      *     allowed object is
      *     {@link SearchForProviderOrganisationResult }
      *     
+     * @see #getSearchForProviderOrganisationResult()
      */
     public void setSearchForProviderOrganisationResult(SearchForProviderOrganisationResult value) {
         this.searchForProviderOrganisationResult = value;

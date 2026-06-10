@@ -6,28 +6,29 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.AddressPurposeType;
 import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**
- * <p>Java class for AddressPurposeAndDateType complex type.
+ * <p>Java class for AddressPurposeAndDateType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="AddressPurposeAndDateType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}purpose" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/>
- *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AddressPurposeAndDateType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}purpose" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/&gt;
+ *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -41,6 +42,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 public class AddressPurposeAndDateType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected List<AddressPurposeType> purpose;
     protected DateAndAccuracyType startDate;
     protected DateAndAccuracyType endDate;
@@ -48,24 +50,27 @@ public class AddressPurposeAndDateType {
     /**
      * Gets the value of the purpose property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the purpose property.
+     * This is why there is not a <CODE>set</CODE> method for the purpose property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getPurpose().add(newItem);
+     * getPurpose().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressPurposeType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the purpose property.
      */
     public List<AddressPurposeType> getPurpose() {
         if (purpose == null) {

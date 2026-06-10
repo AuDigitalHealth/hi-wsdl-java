@@ -7,21 +7,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ProviderDirectoryIndividualEntryRecord complex type.
+ * <p>Java class for ProviderDirectoryIndividualEntryRecord complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="ProviderDirectoryIndividualEntryRecord">
- *   &lt;complexContent>
- *     &lt;extension base="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderdirectoryService/3.2.0}ProviderDirectoryIndividualEntry">
- *       &lt;sequence>
- *         &lt;element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/>
- *         &lt;element name="externalIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ProviderDirectoryIndividualEntryRecord"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderdirectoryService/3.2.0}ProviderDirectoryIndividualEntry"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="clientRef" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ClientRefType" minOccurs="0"/&gt;
+ *         &lt;element name="externalIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

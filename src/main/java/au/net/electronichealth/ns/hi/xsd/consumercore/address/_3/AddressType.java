@@ -4,30 +4,32 @@ package au.net.electronichealth.ns.hi.xsd.consumercore.address._3;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.AddressPurposeType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalseType;
 
 
 /**
- * <p>Java class for AddressType complex type.
+ * <p>Java class for AddressType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="AddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianPostalAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}purpose"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}preferred"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianPostalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianUnstructuredStreetAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}purpose"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}preferred"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -37,6 +39,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalse
     "australianStreetAddress",
     "australianPostalAddress",
     "internationalAddress",
+    "australianUnstructuredStreetAddress",
     "purpose",
     "preferred"
 })
@@ -45,9 +48,12 @@ public class AddressType {
     protected AustralianStreetAddressType australianStreetAddress;
     protected AustralianPostalAddressType australianPostalAddress;
     protected InternationalAddressType internationalAddress;
+    protected AustralianUnstructuredStreetAddressType australianUnstructuredStreetAddress;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected AddressPurposeType purpose;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected TrueFalseType preferred;
 
     /**
@@ -120,6 +126,30 @@ public class AddressType {
      */
     public void setInternationalAddress(InternationalAddressType value) {
         this.internationalAddress = value;
+    }
+
+    /**
+     * Gets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public AustralianUnstructuredStreetAddressType getAustralianUnstructuredStreetAddress() {
+        return australianUnstructuredStreetAddress;
+    }
+
+    /**
+     * Sets the value of the australianUnstructuredStreetAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AustralianUnstructuredStreetAddressType }
+     *     
+     */
+    public void setAustralianUnstructuredStreetAddress(AustralianUnstructuredStreetAddressType value) {
+        this.australianUnstructuredStreetAddress = value;
     }
 
     /**

@@ -24,9 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BatchIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "batchIdentifier");
-    private final static QName _RequestIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "requestIdentifier");
-    private final static QName _BatchStatus_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "batchStatus");
+    private static final QName _BatchIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "batchIdentifier");
+    private static final QName _RequestIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "requestIdentifier");
+    private static final QName _BatchStatus_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", "batchStatus");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.providercoreelements._5_1
@@ -36,8 +36,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", name = "batchIdentifier")
     public JAXBElement<String> createBatchIdentifier(String value) {
@@ -45,8 +49,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", name = "requestIdentifier")
     public JAXBElement<String> createRequestIdentifier(String value) {
@@ -54,8 +62,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BatchStatusType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BatchStatusType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link BatchStatusType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", name = "batchStatus")
     public JAXBElement<BatchStatusType> createBatchStatus(BatchStatusType value) {

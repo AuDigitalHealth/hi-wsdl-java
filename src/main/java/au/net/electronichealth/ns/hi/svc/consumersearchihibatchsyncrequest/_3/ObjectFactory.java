@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchIHIBatchResponse }
-     * 
-     */
-    public SearchIHIBatchResponse createSearchIHIBatchResponse() {
-        return new SearchIHIBatchResponse();
-    }
-
-    /**
      * Create an instance of {@link SearchIHIBatchSync }
      * 
      */
     public SearchIHIBatchSync createSearchIHIBatchSync() {
         return new SearchIHIBatchSync();
+    }
+
+    /**
+     * Create an instance of {@link SearchIHIBatchResponse }
+     * 
+     */
+    public SearchIHIBatchResponse createSearchIHIBatchResponse() {
+        return new SearchIHIBatchResponse();
     }
 
 }

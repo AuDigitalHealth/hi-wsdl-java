@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _RegistrationId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0", "registrationId");
+    private static final QName _RegistrationId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0", "registrationId");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.providertype._5_0
@@ -34,8 +34,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0", name = "registrationId")
     public JAXBElement<String> createRegistrationId(String value) {

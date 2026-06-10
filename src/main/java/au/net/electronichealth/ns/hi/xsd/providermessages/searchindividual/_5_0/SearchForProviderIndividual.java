@@ -17,30 +17,30 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}hpiiNumber" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0}registrationId" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.0.0}onlyNameIndicator" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0}dateOfBirth" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}searchAustralianAddress" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}searchInternationalAddress" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0}hpiiNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0}registrationId" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/5.0.0}onlyNameIndicator" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}givenName" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0}dateOfBirth" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}state" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0}postcode" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}searchAustralianAddress" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0}searchInternationalAddress" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -63,6 +63,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
 public class SearchForProviderIndividual {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.0.0")
+    @XmlSchemaType(name = "anyURI")
     protected String hpiiNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/5.0.0")
     protected String registrationId;
@@ -76,8 +77,10 @@ public class SearchForProviderIndividual {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfBirth;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
+    @XmlSchemaType(name = "string")
     protected SexType sex;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String postcode;
@@ -185,24 +188,27 @@ public class SearchForProviderIndividual {
     /**
      * Gets the value of the givenName property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the givenName property.
+     * This is why there is not a <CODE>set</CODE> method for the givenName property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getGivenName().add(newItem);
+     * getGivenName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the givenName property.
      */
     public List<String> getGivenName() {
         if (givenName == null) {

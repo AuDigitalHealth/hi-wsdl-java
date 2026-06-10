@@ -25,7 +25,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _DateOfBirth_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0", "dateOfBirth");
+    private static final QName _DateOfBirth_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0", "dateOfBirth");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._5_0
@@ -35,8 +35,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/5.0.0", name = "dateOfBirth")
     public JAXBElement<XMLGregorianCalendar> createDateOfBirth(XMLGregorianCalendar value) {

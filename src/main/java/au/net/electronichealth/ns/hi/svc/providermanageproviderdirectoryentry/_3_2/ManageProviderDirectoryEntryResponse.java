@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirector
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderDirectoryEntry/3.2.0}manageProviderDirectoryEntryResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderDirectoryEntry/3.2.0}manageProviderDirectoryEntryResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirector
 @XmlRootElement(name = "manageProviderDirectoryEntryResponse")
 public class ManageProviderDirectoryEntryResponse {
 
+    /**
+     * Manage PDS Entry Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderDirectoryEntry/3.2.0", required = true)
     protected ManageProviderDirectoryEntryResult manageProviderDirectoryEntryResult;
 
     /**
-     * Gets the value of the manageProviderDirectoryEntryResult property.
+     * Manage PDS Entry Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class ManageProviderDirectoryEntryResponse {
      *     allowed object is
      *     {@link ManageProviderDirectoryEntryResult }
      *     
+     * @see #getManageProviderDirectoryEntryResult()
      */
     public void setManageProviderDirectoryEntryResult(ManageProviderDirectoryEntryResult value) {
         this.manageProviderDirectoryEntryResult = value;

@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.submitsearchprovideror
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SubmitSearchProviderOrganisation/5.1.0}submitSearchForProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SubmitSearchProviderOrganisation/5.1.0}submitSearchForProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.submitsearchprovideror
 @XmlRootElement(name = "submitSearchForProviderOrganisationResponse")
 public class SubmitSearchForProviderOrganisationResponse {
 
+    /**
+     * Search for Provider Organisation Batch Request element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SubmitSearchProviderOrganisation/5.1.0", required = true)
     protected SubmitSearchForProviderOrganisationResult submitSearchForProviderOrganisationResult;
 
     /**
-     * Gets the value of the submitSearchForProviderOrganisationResult property.
+     * Search for Provider Organisation Batch Request element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SubmitSearchForProviderOrganisationResponse {
      *     allowed object is
      *     {@link SubmitSearchForProviderOrganisationResult }
      *     
+     * @see #getSubmitSearchForProviderOrganisationResult()
      */
     public void setSubmitSearchForProviderOrganisationResult(SubmitSearchForProviderOrganisationResult value) {
         this.submitSearchForProviderOrganisationResult = value;

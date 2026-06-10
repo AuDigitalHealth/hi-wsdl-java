@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.readorganisation._3_2.
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadOrganisation/3.2.0}readProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadOrganisation/3.2.0}readProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.readorganisation._3_2.
 @XmlRootElement(name = "readProviderOrganisationResponse")
 public class ReadProviderOrganisationResponse {
 
+    /**
+     * Read Provider Organisation Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ReadOrganisation/3.2.0", required = true)
     protected ReadProviderOrganisationResult readProviderOrganisationResult;
 
     /**
-     * Gets the value of the readProviderOrganisationResult property.
+     * Read Provider Organisation Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class ReadProviderOrganisationResponse {
      *     allowed object is
      *     {@link ReadProviderOrganisationResult }
      *     
+     * @see #getReadProviderOrganisationResult()
      */
     public void setReadProviderOrganisationResult(ReadProviderOrganisationResult value) {
         this.readProviderOrganisationResult = value;

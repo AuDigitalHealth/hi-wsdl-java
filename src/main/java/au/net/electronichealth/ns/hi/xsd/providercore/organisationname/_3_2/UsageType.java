@@ -6,23 +6,24 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UsageType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for UsageType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="UsageType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="S"/>
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="A"/>
- *     &lt;enumeration value="E"/>
- *     &lt;enumeration value="X"/>
- *     &lt;enumeration value="Y"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="UsageType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *     &lt;enumeration value="S"/&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *     &lt;enumeration value="L"/&gt;
+ *     &lt;enumeration value="A"/&gt;
+ *     &lt;enumeration value="E"/&gt;
+ *     &lt;enumeration value="X"/&gt;
+ *     &lt;enumeration value="Y"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
@@ -40,7 +41,6 @@ public enum UsageType {
 
     /**
      * Service location name
-     *                     
      * 
      */
     S,
@@ -53,21 +53,18 @@ public enum UsageType {
 
     /**
      * Locally used name
-     *                     
      * 
      */
     L,
 
     /**
      * Abbreviated name
-     *                     
      * 
      */
     A,
 
     /**
      * Enterprise name
-     *                     
      * 
      */
     E,

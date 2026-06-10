@@ -6,21 +6,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for IndividualNameUsageType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for IndividualNameUsageType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="IndividualNameUsageType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="N"/>
- *     &lt;enumeration value="O"/>
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="R"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="IndividualNameUsageType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="N"/&gt;
+ *     &lt;enumeration value="O"/&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *     &lt;enumeration value="L"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

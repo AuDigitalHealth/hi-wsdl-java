@@ -13,24 +13,24 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsRespo
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="individualEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="organisationEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="deleteIndividualEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="deleteOrganisationEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="individualEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="organisationEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="deleteIndividualEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="deleteOrganisationEntryResponses" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DetailsResponseType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}serviceMessages" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -56,24 +56,27 @@ public class ManageProviderDirectoryEntryResult {
     /**
      * Gets the value of the individualEntryResponses property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualEntryResponses property.
+     * This is why there is not a <CODE>set</CODE> method for the individualEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getIndividualEntryResponses().add(newItem);
+     * getIndividualEntryResponses().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the individualEntryResponses property.
      */
     public List<DetailsResponseType> getIndividualEntryResponses() {
         if (individualEntryResponses == null) {
@@ -85,24 +88,27 @@ public class ManageProviderDirectoryEntryResult {
     /**
      * Gets the value of the organisationEntryResponses property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationEntryResponses property.
+     * This is why there is not a <CODE>set</CODE> method for the organisationEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisationEntryResponses().add(newItem);
+     * getOrganisationEntryResponses().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationEntryResponses property.
      */
     public List<DetailsResponseType> getOrganisationEntryResponses() {
         if (organisationEntryResponses == null) {
@@ -114,24 +120,27 @@ public class ManageProviderDirectoryEntryResult {
     /**
      * Gets the value of the deleteIndividualEntryResponses property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the deleteIndividualEntryResponses property.
+     * This is why there is not a <CODE>set</CODE> method for the deleteIndividualEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getDeleteIndividualEntryResponses().add(newItem);
+     * getDeleteIndividualEntryResponses().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the deleteIndividualEntryResponses property.
      */
     public List<DetailsResponseType> getDeleteIndividualEntryResponses() {
         if (deleteIndividualEntryResponses == null) {
@@ -143,24 +152,27 @@ public class ManageProviderDirectoryEntryResult {
     /**
      * Gets the value of the deleteOrganisationEntryResponses property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the deleteOrganisationEntryResponses property.
+     * This is why there is not a <CODE>set</CODE> method for the deleteOrganisationEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getDeleteOrganisationEntryResponses().add(newItem);
+     * getDeleteOrganisationEntryResponses().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DetailsResponseType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the deleteOrganisationEntryResponses property.
      */
     public List<DetailsResponseType> getDeleteOrganisationEntryResponses() {
         if (deleteOrganisationEntryResponses == null) {

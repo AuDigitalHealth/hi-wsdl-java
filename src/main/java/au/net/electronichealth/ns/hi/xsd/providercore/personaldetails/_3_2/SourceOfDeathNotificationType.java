@@ -6,21 +6,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SourceOfDeathNotificationType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for SourceOfDeathNotificationType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="SourceOfDeathNotificationType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="D"/>
- *     &lt;enumeration value="P"/>
- *     &lt;enumeration value="R"/>
- *     &lt;enumeration value="T"/>
- *     &lt;enumeration value="O"/>
- *     &lt;enumeration value="U"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="SourceOfDeathNotificationType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="D"/&gt;
+ *     &lt;enumeration value="P"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *     &lt;enumeration value="T"/&gt;
+ *     &lt;enumeration value="O"/&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -24,21 +24,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BatchIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0", "batchIdentifier");
+    private static final QName _BatchIdentifier_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0", "batchIdentifier");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link SearchIHIResultType }
-     * 
-     */
-    public SearchIHIResultType createSearchIHIResultType() {
-        return new SearchIHIResultType();
     }
 
     /**
@@ -50,11 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RetrieveSearchIHIBatch }
+     * Create an instance of {@link SearchIHIResultType }
      * 
      */
-    public RetrieveSearchIHIBatch createRetrieveSearchIHIBatch() {
-        return new RetrieveSearchIHIBatch();
+    public SearchIHIResultType createSearchIHIResultType() {
+        return new SearchIHIResultType();
     }
 
     /**
@@ -66,11 +58,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteSearchIHIBatch }
+     * Create an instance of {@link SubmitSearchIHIBatchResponse }
      * 
      */
-    public DeleteSearchIHIBatch createDeleteSearchIHIBatch() {
-        return new DeleteSearchIHIBatch();
+    public SubmitSearchIHIBatchResponse createSubmitSearchIHIBatchResponse() {
+        return new SubmitSearchIHIBatchResponse();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchIHIBatch }
+     * 
+     */
+    public RetrieveSearchIHIBatch createRetrieveSearchIHIBatch() {
+        return new RetrieveSearchIHIBatch();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchIHIBatchResponse }
+     * 
+     */
+    public RetrieveSearchIHIBatchResponse createRetrieveSearchIHIBatchResponse() {
+        return new RetrieveSearchIHIBatchResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSearchIHIBatchStatus }
+     * 
+     */
+    public GetSearchIHIBatchStatus createGetSearchIHIBatchStatus() {
+        return new GetSearchIHIBatchStatus();
     }
 
     /**
@@ -90,27 +106,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetSearchIHIBatchStatus }
+     * Create an instance of {@link DeleteSearchIHIBatch }
      * 
      */
-    public GetSearchIHIBatchStatus createGetSearchIHIBatchStatus() {
-        return new GetSearchIHIBatchStatus();
-    }
-
-    /**
-     * Create an instance of {@link RetrieveSearchIHIBatchResponse }
-     * 
-     */
-    public RetrieveSearchIHIBatchResponse createRetrieveSearchIHIBatchResponse() {
-        return new RetrieveSearchIHIBatchResponse();
-    }
-
-    /**
-     * Create an instance of {@link SubmitSearchIHIBatchResponse }
-     * 
-     */
-    public SubmitSearchIHIBatchResponse createSubmitSearchIHIBatchResponse() {
-        return new SubmitSearchIHIBatchResponse();
+    public DeleteSearchIHIBatch createDeleteSearchIHIBatch() {
+        return new DeleteSearchIHIBatch();
     }
 
     /**
@@ -130,8 +130,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0", name = "batchIdentifier")
     public JAXBElement<String> createBatchIdentifier(String value) {

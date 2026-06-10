@@ -6,27 +6,28 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for StreetSuffixType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for StreetSuffixType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="StreetSuffixType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="CN"/>
- *     &lt;enumeration value="E"/>
- *     &lt;enumeration value="EX"/>
- *     &lt;enumeration value="LR"/>
- *     &lt;enumeration value="N"/>
- *     &lt;enumeration value="NE"/>
- *     &lt;enumeration value="NW"/>
- *     &lt;enumeration value="S"/>
- *     &lt;enumeration value="SE"/>
- *     &lt;enumeration value="SW"/>
- *     &lt;enumeration value="UP"/>
- *     &lt;enumeration value="W"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="StreetSuffixType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="CN"/&gt;
+ *     &lt;enumeration value="E"/&gt;
+ *     &lt;enumeration value="EX"/&gt;
+ *     &lt;enumeration value="LR"/&gt;
+ *     &lt;enumeration value="N"/&gt;
+ *     &lt;enumeration value="NE"/&gt;
+ *     &lt;enumeration value="NW"/&gt;
+ *     &lt;enumeration value="S"/&gt;
+ *     &lt;enumeration value="SE"/&gt;
+ *     &lt;enumeration value="SW"/&gt;
+ *     &lt;enumeration value="UP"/&gt;
+ *     &lt;enumeration value="W"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

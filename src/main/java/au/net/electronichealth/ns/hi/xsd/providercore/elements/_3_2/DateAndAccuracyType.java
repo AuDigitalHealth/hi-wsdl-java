@@ -11,21 +11,21 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.DateAccur
 
 
 /**
- * <p>Java class for DateAndAccuracyType complex type.
+ * <p>Java class for DateAndAccuracyType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="DateAndAccuracyType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="accuracyIndicator" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}DateAccuracyIndicatorType"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="DateAndAccuracyType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *         &lt;element name="accuracyIndicator" type="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreDatatypes/3.0}DateAccuracyIndicatorType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -41,6 +41,7 @@ public class DateAndAccuracyType {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected DateAccuracyIndicatorType accuracyIndicator;
 
     /**

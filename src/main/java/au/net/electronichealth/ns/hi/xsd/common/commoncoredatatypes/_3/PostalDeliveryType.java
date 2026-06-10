@@ -7,27 +7,28 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for PostalDeliveryType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for PostalDeliveryType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="PostalDeliveryType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Care PO"/>
- *     &lt;enumeration value="CMA"/>
- *     &lt;enumeration value="CMB"/>
- *     &lt;enumeration value="GPO Box"/>
- *     &lt;enumeration value="Locked Bag"/>
- *     &lt;enumeration value="MS"/>
- *     &lt;enumeration value="PO Box"/>
- *     &lt;enumeration value="POR"/>
- *     &lt;enumeration value="Private Bag"/>
- *     &lt;enumeration value="RSD"/>
- *     &lt;enumeration value="RMB"/>
- *     &lt;enumeration value="RMS"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="PostalDeliveryType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Care PO"/&gt;
+ *     &lt;enumeration value="CMA"/&gt;
+ *     &lt;enumeration value="CMB"/&gt;
+ *     &lt;enumeration value="GPO Box"/&gt;
+ *     &lt;enumeration value="Locked Bag"/&gt;
+ *     &lt;enumeration value="MS"/&gt;
+ *     &lt;enumeration value="PO Box"/&gt;
+ *     &lt;enumeration value="POR"/&gt;
+ *     &lt;enumeration value="Private Bag"/&gt;
+ *     &lt;enumeration value="RSD"/&gt;
+ *     &lt;enumeration value="RMB"/&gt;
+ *     &lt;enumeration value="RMS"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
@@ -118,10 +119,26 @@ public enum PostalDeliveryType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static PostalDeliveryType fromValue(String v) {
         for (PostalDeliveryType c: PostalDeliveryType.values()) {
             if (c.value.equals(v)) {

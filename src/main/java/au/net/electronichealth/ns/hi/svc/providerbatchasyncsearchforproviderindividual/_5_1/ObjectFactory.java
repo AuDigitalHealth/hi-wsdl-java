@@ -30,19 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RetrieveSearchForProviderIndividualResponse }
+     * Create an instance of {@link SubmitSearchForProviderIndividual }
      * 
      */
-    public RetrieveSearchForProviderIndividualResponse createRetrieveSearchForProviderIndividualResponse() {
-        return new RetrieveSearchForProviderIndividualResponse();
-    }
-
-    /**
-     * Create an instance of {@link RetrieveSearchForProviderIndividual }
-     * 
-     */
-    public RetrieveSearchForProviderIndividual createRetrieveSearchForProviderIndividual() {
-        return new RetrieveSearchForProviderIndividual();
+    public SubmitSearchForProviderIndividual createSubmitSearchForProviderIndividual() {
+        return new SubmitSearchForProviderIndividual();
     }
 
     /**
@@ -54,11 +46,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubmitSearchForProviderIndividual }
+     * Create an instance of {@link RetrieveSearchForProviderIndividual }
      * 
      */
-    public SubmitSearchForProviderIndividual createSubmitSearchForProviderIndividual() {
-        return new SubmitSearchForProviderIndividual();
+    public RetrieveSearchForProviderIndividual createRetrieveSearchForProviderIndividual() {
+        return new RetrieveSearchForProviderIndividual();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderIndividualResponse }
+     * 
+     */
+    public RetrieveSearchForProviderIndividualResponse createRetrieveSearchForProviderIndividualResponse() {
+        return new RetrieveSearchForProviderIndividualResponse();
     }
 
 }

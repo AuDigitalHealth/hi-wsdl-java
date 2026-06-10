@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganisa
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderOrganisation/3.2.0}manageProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderOrganisation/3.2.0}manageProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,17 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderorganisa
 @XmlRootElement(name = "manageProviderOrganisationResponse")
 public class ManageProviderOrganisationResponse {
 
+    /**
+     * Manage Provider/Administrative Organisation
+     *                 Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderOrganisation/3.2.0", required = true)
     protected ManageProviderOrganisationResult manageProviderOrganisationResult;
 
     /**
-     * Gets the value of the manageProviderOrganisationResult property.
+     * Manage Provider/Administrative Organisation
+     *                 Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +63,7 @@ public class ManageProviderOrganisationResponse {
      *     allowed object is
      *     {@link ManageProviderOrganisationResult }
      *     
+     * @see #getManageProviderOrganisationResult()
      */
     public void setManageProviderOrganisationResult(ManageProviderOrganisationResult value) {
         this.manageProviderOrganisationResult = value;

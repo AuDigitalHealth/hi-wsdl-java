@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _OrganisationServiceRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationServiceRecord");
-    private final static QName _OrganisationService_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationService");
+    private static final QName _OrganisationServiceRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationServiceRecord");
+    private static final QName _OrganisationService_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationService");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2
@@ -51,8 +51,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", name = "organisationServiceRecord")
     public JAXBElement<OrganisationServiceRecord> createOrganisationServiceRecord(OrganisationServiceRecord value) {
@@ -60,8 +64,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", name = "organisationService")
     public JAXBElement<OrganisationService> createOrganisationService(OrganisationService value) {

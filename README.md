@@ -1,74 +1,87 @@
-# HI WSDL Library
+# HI WSDL library
 
-Introduction
-============
+Maven artifact **`au.gov.nehta:hi-wsdl`** — HI B2B **WSDL resources** and **pre-generated JAX-WS / JAXB types** for Healthcare Identifiers (HI) client development.
 
-This library provides the required artefacts required to support Health Identifier (HI) B2B clients.
+For NEHTA facade clients, TLS, and signing, use **[hi-b2b-client-java](https://github.com/AuDigitalHealth/hi-b2b-client-java)**. This repository supplies the **generated type layer** and classpath WSDL only.
 
-Setup
-=====
+## Release lines
 
--   To build and test the distributable package, an appropriate Java IDE or
-    build environment must be installed.
+| Version | Java | XML stack | HI service scope |
+| ------- | ---- | --------- | ---------------- |
+| **1.6.3** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.6.5** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.7.0** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Full MCA — **26** `Service` stubs |
 
--   WSDL/XSD source files should be used in conjunction with JAX-WS and wsimport
-    to build the generated Java classes/source files. These WSDL/XSD files can be
-    found at:
-    /wsdls/*
+**This checkout** builds **`1.6.3-SNAPSHOT`** (Java **8** / **`javax`**) — **committed** generated types with **14** standard HI B2B services (no **`wsimport`** in the build).
 
-    Generated Java source files can be found in:
-    /hi-wsdl-<version>-sources.jar
+## Dependency
 
--   For detailed API documentation, refer to the included Javadoc package.
+Published releases are consumed from **[Maven Central](https://central.sonatype.com/)** like any other dependency — no local build is required.
 
-Solution
-========
+```xml
+<dependency>
+  <groupId>au.gov.nehta</groupId>
+  <artifactId>hi-wsdl</artifactId>
+  <version>1.6.3</version>
+</dependency>
+```
 
-The package consists of these components:
+Add Eclipse EE4J **`com.sun.xml.ws:jaxws-rt`** **2.3.7** at runtime in your application when you invoke SOAP endpoints ( **`javax.xml.ws`** / **`javax.xml.bind`** ). This JAR does not bundle **`jaxws-rt`**. 
 
-    -   /hi-wsdl-<version>.jar
-        Contains the required classes for B2B client
-        development, deployment and invocation.
+Align **`hi-wsdl`** and **`hi-b2b-client`** at the **same version** when both are on the classpath (GA versions in the table above).
 
-    -   /hi-wsdl-<version>-docs.jar
-        Contains Javadoc for generated code.
+## Local development (SNAPSHOT)
 
-    -   /hi-wsdl-<version>-sources.jar
-        Contains artefact Java and WSDL/XSD source files.
+This repository builds **`1.6.3-SNAPSHOT`** on the Java **8** / **`javax`** line. **`hi-b2b-client-java`** declares **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** — install this types JAR **first** when both checkouts are unpublished:
 
-Pre-Requisites
-==============
+```text
+# 1) hi-wsdl (1.6.3-SNAPSHOT — this repository)
+mvn -B "-Dgpg.skip=true" clean install
 
-Java Development Kit (JDK)
-------------------------------------
-1.  Download and install JDK 8 Update 271 or later:
-    URL: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+# 2) hi-b2b-client (1.6.3-SNAPSHOT — matching version)
+mvn -B "-Dgpg.skip=true" clean verify
+```
 
-2.  Unpack the JDK distribution into a directory of your choice.
+If Maven warns that a **GA** POM is missing (for example **`1.6.3`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in one project does not clear the local repository cache.
 
-    This directory will be your <JDK_HOME>and will be used in this document
-    to refer to the root directory of the JDK installation.
+## What is in the JAR
 
-    <JRE_HOME> will be used in this document to refer to <JDK_HOME>/jre.
+| Content | Location in repo |
+| ------- | ---------------- |
+| **14** primary binding WSDLs (classpath) | `src/main/resources/HI_*.wsdl` (plus supporting message/interface WSDLs in the same tree) |
+| Generated stubs (`javax`) | `src/main/java/` |
+| XMLDSig JAXB override | `src/main/java/hi_override/` |
 
-3.  Create a JAVA_HOME environment variable pointing to the <JDK_HOME>
-    directory in Step 2.
+## Building from source
 
-4.  Add <JDK_HOME>/bin to the system path.
+**Audience:** contributors changing this repository — not integrators adding a Maven dependency.
 
+Prerequisites: **JDK 8+**, **Maven 3.6+**. All JAX-WS/JAXB types are **committed** in **`src/main/java`**; the build compiles them only (no codegen, no licensed MCA schema tree required).
 
-Licensing
-=========
-Copyright 2012 NEHTA
+```text
+mvn -B "-Dgpg.skip=true" clean verify
+```
 
-Copyright 2021 ADHA
+See **`CONTRIBUTING.md`** for optional **`mvn install`** when testing unpublished snapshots locally.
 
-Licensed under the NEHTA/ADHA Open Source (Apache) License; you may not use this
-file except in compliance with the License. A copy of the License is in the
-'LICENSE.txt' file, which should be provided with this work.
+## Related repositories
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.
+| Repository | Role |
+| ---------- | ---- |
+| [hi-b2b-client-java](https://github.com/AuDigitalHealth/hi-b2b-client-java) | HI facade clients |
+| [mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java) | MHR facades (separate domain) |
+
+## Documentation
+
+| Document | Audience |
+| -------- | -------- |
+| **README.md** (this file) | Integrators |
+| **CONTRIBUTING.md** | Contributors |
+| **MAINTAINERS.md** | Releases and tooling |
+| **SECURITY.md** | Secrets and licensed material |
+| **CHANGELOG.md** | Release history |
+| **LICENSE.txt** | Apache License 2.0 + ADHA terms |
+
+## License
+
+Apache License 2.0. See **LICENSE.txt**.

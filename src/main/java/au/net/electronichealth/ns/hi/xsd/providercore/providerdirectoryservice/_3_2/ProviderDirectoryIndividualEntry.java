@@ -11,27 +11,27 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ProviderDirectoryIndividualEntry complex type.
+ * <p>Java class for ProviderDirectoryIndividualEntry complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="ProviderDirectoryIndividualEntry">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="nameExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
- *         &lt;element name="addressExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/>
- *         &lt;element name="electronicCommunicationExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="providerTypeExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/>
- *         &lt;element name="display" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType"/>
- *         &lt;element name="displayPersonalDetails" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ProviderDirectoryIndividualEntry"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="nameExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/&gt;
+ *         &lt;element name="addressExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType"/&gt;
+ *         &lt;element name="electronicCommunicationExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="providerTypeExternalId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}ExternalIdentifierType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="additionalComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}AdditionalCommentsType" minOccurs="0"/&gt;
+ *         &lt;element name="display" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="priorityNumber" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}PriorityNumberType"/&gt;
+ *         &lt;element name="displayPersonalDetails" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -98,24 +98,27 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the electronicCommunicationExternalId property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.
+     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getElectronicCommunicationExternalId().add(newItem);
+     * getElectronicCommunicationExternalId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the electronicCommunicationExternalId property.
      */
     public List<Integer> getElectronicCommunicationExternalId() {
         if (electronicCommunicationExternalId == null) {
@@ -127,24 +130,27 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the providerTypeExternalId property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the providerTypeExternalId property.
+     * This is why there is not a <CODE>set</CODE> method for the providerTypeExternalId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getProviderTypeExternalId().add(newItem);
+     * getProviderTypeExternalId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the providerTypeExternalId property.
      */
     public List<Integer> getProviderTypeExternalId() {
         if (providerTypeExternalId == null) {

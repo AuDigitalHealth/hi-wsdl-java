@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovider
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderIndividual/5.1.0}retrieveSearchForProviderIndividualResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderIndividual/5.1.0}retrieveSearchForProviderIndividualResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovider
 @XmlRootElement(name = "retrieveSearchForProviderIndividualResponse")
 public class RetrieveSearchForProviderIndividualResponse {
 
+    /**
+     * Retrieve Batch Search for Provider Individual Results Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderIndividual/5.1.0", required = true)
     protected RetrieveSearchForProviderIndividualResult retrieveSearchForProviderIndividualResult;
 
     /**
-     * Gets the value of the retrieveSearchForProviderIndividualResult property.
+     * Retrieve Batch Search for Provider Individual Results Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class RetrieveSearchForProviderIndividualResponse {
      *     allowed object is
      *     {@link RetrieveSearchForProviderIndividualResult }
      *     
+     * @see #getRetrieveSearchForProviderIndividualResult()
      */
     public void setRetrieveSearchForProviderIndividualResult(RetrieveSearchForProviderIndividualResult value) {
         this.retrieveSearchForProviderIndividualResult = value;

@@ -9,21 +9,21 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.
 
 
 /**
- * <p>Java class for BatchSearchForProviderIndividualResultType complex type.
+ * <p>Java class for BatchSearchForProviderIndividualResultType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="BatchSearchForProviderIndividualResultType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0}requestIdentifier"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="BatchSearchForProviderIndividualResultType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0}requestIdentifier"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -37,6 +37,10 @@ public class BatchSearchForProviderIndividualResultType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", required = true)
     protected String requestIdentifier;
+    /**
+     * Search for Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0", required = true)
     protected SearchForProviderIndividualResult searchForProviderIndividualResult;
 
@@ -65,7 +69,7 @@ public class BatchSearchForProviderIndividualResultType {
     }
 
     /**
-     * Gets the value of the searchForProviderIndividualResult property.
+     * Search for Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -83,6 +87,7 @@ public class BatchSearchForProviderIndividualResultType {
      *     allowed object is
      *     {@link SearchForProviderIndividualResult }
      *     
+     * @see #getSearchForProviderIndividualResult()
      */
     public void setSearchForProviderIndividualResult(SearchForProviderIndividualResult value) {
         this.searchForProviderIndividualResult = value;

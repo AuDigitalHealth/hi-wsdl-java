@@ -30,11 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DetailsResponseType }
+     * Create an instance of {@link DateAndAccuracyType }
      * 
      */
-    public DetailsResponseType createDetailsResponseType() {
-        return new DetailsResponseType();
+    public DateAndAccuracyType createDateAndAccuracyType() {
+        return new DateAndAccuracyType();
     }
 
     /**
@@ -46,11 +46,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DateAndAccuracyType }
+     * Create an instance of {@link DetailsResponseType }
      * 
      */
-    public DateAndAccuracyType createDateAndAccuracyType() {
-        return new DateAndAccuracyType();
+    public DetailsResponseType createDetailsResponseType() {
+        return new DetailsResponseType();
     }
 
 }

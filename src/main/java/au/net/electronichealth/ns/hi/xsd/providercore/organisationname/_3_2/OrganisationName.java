@@ -9,22 +9,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for OrganisationName complex type.
+ * <p>Java class for OrganisationName complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="OrganisationName">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="name" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}NameType"/>
- *         &lt;element name="nameUsage" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0}NameUsageType"/>
- *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="OrganisationName"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="name" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}NameType"/&gt;
+ *         &lt;element name="nameUsage" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0}NameUsageType"/&gt;
+ *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

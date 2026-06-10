@@ -6,24 +6,25 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for MediumType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for MediumType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="MediumType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;minLength value="1"/>
- *     &lt;maxLength value="1"/>
- *     &lt;enumeration value="E"/>
- *     &lt;enumeration value="F"/>
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="O"/>
- *     &lt;enumeration value="P"/>
- *     &lt;enumeration value="T"/>
- *     &lt;enumeration value="U"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="MediumType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;minLength value="1"/&gt;
+ *     &lt;maxLength value="1"/&gt;
+ *     &lt;enumeration value="E"/&gt;
+ *     &lt;enumeration value="F"/&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="O"/&gt;
+ *     &lt;enumeration value="P"/&gt;
+ *     &lt;enumeration value="T"/&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Status_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/Status/3.2.0", "status");
+    private static final QName _Status_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/Status/3.2.0", "status");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.status._3_2
@@ -42,8 +42,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Status }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Status }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Status }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/Status/3.2.0", name = "status")
     public JAXBElement<Status> createStatus(Status value) {

@@ -10,27 +10,27 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 
 
 /**
- * <p>Java class for ProviderType complex type.
+ * <p>Java class for ProviderType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="ProviderType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="providerTypeCode" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderTypeCode"/>
- *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/>
- *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/>
- *         &lt;element name="providerSpecialty" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderSpecialtyType" minOccurs="0"/>
- *         &lt;element name="providerSpecialisation" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderSpecialisationType" minOccurs="0"/>
- *         &lt;element name="registrationId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationIdType" minOccurs="0"/>
- *         &lt;element name="registrationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationType" minOccurs="0"/>
- *         &lt;element name="registrationIssuer" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationIssuerType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ProviderType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="providerTypeCode" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderTypeCode"/&gt;
+ *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/&gt;
+ *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/&gt;
+ *         &lt;element name="providerSpecialty" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderSpecialtyType" minOccurs="0"/&gt;
+ *         &lt;element name="providerSpecialisation" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}ProviderSpecialisationType" minOccurs="0"/&gt;
+ *         &lt;element name="registrationId" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationIdType" minOccurs="0"/&gt;
+ *         &lt;element name="registrationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationType" minOccurs="0"/&gt;
+ *         &lt;element name="registrationIssuer" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0}RegistrationIssuerType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

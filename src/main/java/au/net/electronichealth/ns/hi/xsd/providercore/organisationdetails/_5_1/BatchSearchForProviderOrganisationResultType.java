@@ -9,21 +9,21 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._5_
 
 
 /**
- * <p>Java class for BatchSearchForProviderOrganisationResultType complex type.
+ * <p>Java class for BatchSearchForProviderOrganisationResultType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="BatchSearchForProviderOrganisationResultType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0}requestIdentifier"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0}searchForProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="BatchSearchForProviderOrganisationResultType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0}requestIdentifier"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0}searchForProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -37,6 +37,10 @@ public class BatchSearchForProviderOrganisationResultType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0", required = true)
     protected String requestIdentifier;
+    /**
+     * Search for Provider Organisation Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/5.0.0", required = true)
     protected SearchForProviderOrganisationResult searchForProviderOrganisationResult;
 
@@ -65,7 +69,7 @@ public class BatchSearchForProviderOrganisationResultType {
     }
 
     /**
-     * Gets the value of the searchForProviderOrganisationResult property.
+     * Search for Provider Organisation Response element
      * 
      * @return
      *     possible object is
@@ -83,6 +87,7 @@ public class BatchSearchForProviderOrganisationResultType {
      *     allowed object is
      *     {@link SearchForProviderOrganisationResult }
      *     
+     * @see #getSearchForProviderOrganisationResult()
      */
     public void setSearchForProviderOrganisationResult(SearchForProviderOrganisationResult value) {
         this.searchForProviderOrganisationResult = value;
