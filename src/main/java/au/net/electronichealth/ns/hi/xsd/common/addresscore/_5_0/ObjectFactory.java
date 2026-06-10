@@ -1,9 +1,9 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressType;
@@ -13,7 +13,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.International
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * &lt;p&gt;An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -26,10 +26,10 @@ import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.International
 @XmlRegistry
 public class ObjectFactory {
 
-    private static final QName _SearchAustralianAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "searchAustralianAddress");
-    private static final QName _SearchInternationalAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "searchInternationalAddress");
-    private static final QName _AustralianAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "australianAddress");
-    private static final QName _InternationalAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "internationalAddress");
+    private final static QName _InternationalAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "internationalAddress");
+    private final static QName _SearchInternationalAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "searchInternationalAddress");
+    private final static QName _SearchAustralianAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "searchAustralianAddress");
+    private final static QName _AustralianAddress_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", "australianAddress");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.common.addresscore._5_0
@@ -55,25 +55,17 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SearchAustralianAddressType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InternationalAddressType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link SearchAustralianAddressType }{@code >}
      */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "searchAustralianAddress")
-    public JAXBElement<SearchAustralianAddressType> createSearchAustralianAddress(SearchAustralianAddressType value) {
-        return new JAXBElement<SearchAustralianAddressType>(_SearchAustralianAddress_QNAME, SearchAustralianAddressType.class, null, value);
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "internationalAddress")
+    public JAXBElement<InternationalAddressType> createInternationalAddress(InternationalAddressType value) {
+        return new JAXBElement<InternationalAddressType>(_InternationalAddress_QNAME, InternationalAddressType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SearchInternationalAddressType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SearchInternationalAddressType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link SearchInternationalAddressType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "searchInternationalAddress")
     public JAXBElement<SearchInternationalAddressType> createSearchInternationalAddress(SearchInternationalAddressType value) {
@@ -81,29 +73,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AustralianAddressType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SearchAustralianAddressType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AustralianAddressType }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "searchAustralianAddress")
+    public JAXBElement<SearchAustralianAddressType> createSearchAustralianAddress(SearchAustralianAddressType value) {
+        return new JAXBElement<SearchAustralianAddressType>(_SearchAustralianAddress_QNAME, SearchAustralianAddressType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AustralianAddressType }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "australianAddress")
     public JAXBElement<AustralianAddressType> createAustralianAddress(AustralianAddressType value) {
         return new JAXBElement<AustralianAddressType>(_AustralianAddress_QNAME, AustralianAddressType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InternationalAddressType }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link InternationalAddressType }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/5.0.0", name = "internationalAddress")
-    public JAXBElement<InternationalAddressType> createInternationalAddress(InternationalAddressType value) {
-        return new JAXBElement<InternationalAddressType>(_InternationalAddress_QNAME, InternationalAddressType.class, null, value);
     }
 
 }

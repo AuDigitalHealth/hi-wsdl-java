@@ -1,24 +1,22 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * &lt;p&gt;Java class for RequestType&lt;/p&gt;.
  * 
- * 
- * <p>Java class for RequestType</p>.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
- * <pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
  * &lt;simpleType name="RequestType"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;enumeration value="A"/&gt;
  *     &lt;enumeration value="R"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "RequestType")

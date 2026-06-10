@@ -4,13 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
-import java.net.URL;
 import java.net.URLDecoder;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
-import javax.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceClient;
 import org.junit.Test;
 
 /**

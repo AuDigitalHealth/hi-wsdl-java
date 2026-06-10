@@ -3,11 +3,10 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunication;
 import au.net.electronichealth.ns.hi.xsd.providercore.endpoint._3_2.EndpointLocatorService;
@@ -19,11 +18,11 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.O
 
 
 /**
- * <p>Java class for OrganisationProviderDirectoryEntryType complex type</p>.
+ * &lt;p&gt;Java class for OrganisationProviderDirectoryEntryType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="OrganisationProviderDirectoryEntryType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -43,7 +42,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.O
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -64,7 +63,6 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.O
 public class OrganisationProviderDirectoryEntryType {
 
     @XmlElement(required = true)
-    @XmlSchemaType(name = "anyURI")
     protected String hpioNumber;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationName/3.2.0", required = true)
     protected OrganisationName organisationName;
@@ -158,27 +156,21 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the organisationService property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationService property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the organisationService property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getOrganisationService().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getOrganisationService().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationService }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the organisationService property.
      */
     public List<OrganisationService> getOrganisationService() {
         if (organisationService == null) {
@@ -214,27 +206,21 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the electronicCommunication property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunication property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the electronicCommunication property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getElectronicCommunication().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getElectronicCommunication().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ElectronicCommunication }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the electronicCommunication property.
      */
     public List<ElectronicCommunication> getElectronicCommunication() {
         if (electronicCommunication == null) {
@@ -246,27 +232,21 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the endpointLocatorService property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorService property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorService property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getEndpointLocatorService().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getEndpointLocatorService().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EndpointLocatorService }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the endpointLocatorService property.
      */
     public List<EndpointLocatorService> getEndpointLocatorService() {
         if (endpointLocatorService == null) {
@@ -278,27 +258,21 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the linkedProviders property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedProviders property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the linkedProviders property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getLinkedProviders().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getLinkedProviders().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LinkedProviderType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the linkedProviders property.
      */
     public List<LinkedProviderType> getLinkedProviders() {
         if (linkedProviders == null) {
@@ -310,27 +284,21 @@ public class OrganisationProviderDirectoryEntryType {
     /**
      * Gets the value of the linkedOrganisations property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedOrganisations property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the linkedOrganisations property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getLinkedOrganisations().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getLinkedOrganisations().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LinkedOrganisationType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the linkedOrganisations property.
      */
     public List<LinkedOrganisationType> getLinkedOrganisations() {
         if (linkedOrganisations == null) {

@@ -1,11 +1,10 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.address._3_2;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.LevelGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.PostalDeliveryGroupType;
 import au.net.electronichealth.ns.hi.xsd.common.addresscore._3.UnitGroupType;
@@ -15,13 +14,15 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetTyp
 
 
 /**
- * An AddressType should not contain both 'addressLine' and 'unstructuredAddressLine' elements.
  * 
- * <p>Java class for AustralianAddressType complex type</p>.
+ *         An AddressType should not contain both 'addressLine' and 'unstructuredAddressLine' elements.
+ *     
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;Java class for AustralianAddressType complex type&lt;/p&gt;.
  * 
- * <pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * 
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="AustralianAddressType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -43,7 +44,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetTyp
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -78,10 +79,8 @@ public class AustralianAddressType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected String streetName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
-    @XmlSchemaType(name = "string")
     protected StreetType streetType;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
-    @XmlSchemaType(name = "string")
     protected StreetSuffixType streetSuffix;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0")
     protected PostalDeliveryGroupType postalDeliveryGroup;
@@ -89,7 +88,6 @@ public class AustralianAddressType {
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String suburb;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
-    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", required = true)
     protected String postcode;

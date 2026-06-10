@@ -3,12 +3,11 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradminis
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AddressRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.certificate._3_2.CertificateType;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunicationRecord;
@@ -18,11 +17,11 @@ import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.Perso
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -38,7 +37,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.Perso
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -55,7 +54,6 @@ import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.Perso
 @XmlRootElement(name = "manageProviderAdministrativeIndividual")
 public class ManageProviderAdministrativeIndividual {
 
-    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0")
     protected PersonalDetails personalDetails;
@@ -121,27 +119,21 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the individualNameRecord property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualNameRecord property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the individualNameRecord property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getIndividualNameRecord().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getIndividualNameRecord().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link IndividualNameRecord }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the individualNameRecord property.
      */
     public List<IndividualNameRecord> getIndividualNameRecord() {
         if (individualNameRecord == null) {
@@ -153,27 +145,21 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the addressRecord property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressRecord property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the addressRecord property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getAddressRecord().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getAddressRecord().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressRecord }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the addressRecord property.
      */
     public List<AddressRecord> getAddressRecord() {
         if (addressRecord == null) {
@@ -185,27 +171,21 @@ public class ManageProviderAdministrativeIndividual {
     /**
      * Gets the value of the electronicCommunicationRecord property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationRecord property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationRecord property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getElectronicCommunicationRecord().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getElectronicCommunicationRecord().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ElectronicCommunicationRecord }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the electronicCommunicationRecord property.
      */
     public List<ElectronicCommunicationRecord> getElectronicCommunicationRecord() {
         if (electronicCommunicationRecord == null) {

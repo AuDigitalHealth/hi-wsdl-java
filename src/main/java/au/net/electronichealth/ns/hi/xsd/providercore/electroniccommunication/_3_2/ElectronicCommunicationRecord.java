@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ElectronicCommunicationRecord complex type</p>.
+ * &lt;p&gt;Java class for ElectronicCommunicationRecord complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="ElectronicCommunicationRecord"&gt;
  *   &lt;complexContent&gt;
  *     &lt;extension base="{http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0}ElectronicCommunication"&gt;
@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */

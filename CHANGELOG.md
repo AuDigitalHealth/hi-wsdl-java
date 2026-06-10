@@ -1,11 +1,10 @@
 # Change Log/Revision History
 
-= 1.6.3-SNAPSHOT =
+= 1.6.5-SNAPSHOT =
 ======
-- **`1.6.3`** line: Java **8** / **`javax`** committed types and classpath WSDL (**14** `Service` stubs, standard HI B2B scope).
-- POM: Eclipse EE4J stack alignment — compile **`jaxb-api`** / **`jaxws-api`** only; **`maven-enforcer-plugin`** bans legacy Metro **`webservices-*`** bundles. Consuming apps use **`jaxws-rt` 2.3.7** at runtime.
-- Build plugins and dependency versions updated to latest Java **8**–compatible releases (aligned with **hi-b2b-client-java** **`1.6.3`** tooling where applicable).
-- **`maven-javadoc-plugin`:** **`doclint=none`**, **`quiet=true`**, **`failOnWarnings=false`**, **`detectOfflineLinks=false`**.
+- **`1.6.5`** line: Java **11** / **Jakarta** committed types and classpath WSDL (**14** `Service` stubs, standard HI B2B scope).
+- Compile: **`jakarta.xml.bind-api`** 4.0.5, **`jakarta.xml.ws-api`** 4.0.3 only (no **`jaxws-rt`** in the published JAR). **`junit`** test-scoped for offline smoke tests.
+- Javadoc: **`maven-javadoc-plugin`** 3.12.0; committed types use PCEHR/XJC 4.0.7+ schema-fragment style; **`-Pregenerate-sources`** pins **`jaxb-xjc`** / **`jaxb-jxc`** **4.0.9** for maintainer regen.
 
 = 1.6.2 =
 =========

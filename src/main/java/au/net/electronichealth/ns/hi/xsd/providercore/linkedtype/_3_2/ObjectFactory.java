@@ -1,14 +1,14 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * &lt;p&gt;An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -38,19 +38,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinkedProviderType }
-     * 
-     */
-    public LinkedProviderType createLinkedProviderType() {
-        return new LinkedProviderType();
-    }
-
-    /**
      * Create an instance of {@link LinkedIndividualType }
      * 
      */
     public LinkedIndividualType createLinkedIndividualType() {
         return new LinkedIndividualType();
+    }
+
+    /**
+     * Create an instance of {@link LinkedProviderType }
+     * 
+     */
+    public LinkedProviderType createLinkedProviderType() {
+        return new LinkedProviderType();
     }
 
 }

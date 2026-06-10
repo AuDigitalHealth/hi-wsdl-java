@@ -3,20 +3,20 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -27,7 +27,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMes
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -46,27 +46,21 @@ public class SearchHIProviderDirectoryForIndividualResult {
     /**
      * Gets the value of the individualProviderDirectoryEntries property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualProviderDirectoryEntries property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the individualProviderDirectoryEntries property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getIndividualProviderDirectoryEntries().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getIndividualProviderDirectoryEntries().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link IndividualProviderDirectoryEntryType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the individualProviderDirectoryEntries property.
      */
     public List<IndividualProviderDirectoryEntryType> getIndividualProviderDirectoryEntries() {
         if (individualProviderDirectoryEntries == null) {

@@ -4,8 +4,6 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 
 ## Release lines
 
-**Documentation convention:** README, CONTRIBUTING, CHANGELOG, and integrator-facing text use **version numbers only** — never Git branch names.
-
 | Version | Java | APIs | `Service` stubs |
 | ------- | ---- | ---- | ----------------- |
 | **1.6.3** | 8 | **`javax.xml.ws`**, **`javax.xml.bind`** | **14** (standard HI B2B) |
@@ -20,22 +18,40 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | **1.6.5** | `java-11-jakarta` |
 | **1.7.0** | `java-11-jakarta-full-wsdl` |
 
-**This checkout (`1.6.3-SNAPSHOT`):** Java **8**, committed **`javax`** generated types, **14** primary HI B2B **`@WebServiceClient`** services (no **`wsimport`** / XJC in this POM). **`hi-b2b-client`** **`1.6.3`** resolves **`hi-wsdl`** at **`${project.version}`** — **`mvn install`** here before an unpublished client **`verify`**. GA **`1.6.3`** pairs ship to Maven Central together. Type regeneration for new HI releases is on **`1.6.5`** / **`1.7.0`** lines.
+**This tree (`1.6.5-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **14** primary HI B2B **`@WebServiceClient`** services. **`hi-b2b-client`** **`1.6.5`** resolves **`hi-wsdl`** at **`${project.version}`** — **`mvn install`** here before an unpublished client **`verify`**. GA **`1.6.5`** pairs ship to Maven Central together.
 
 ## Artifact
 
 - **`au.gov.nehta:hi-wsdl`** — HI WSDL on the classpath + pre-generated JAX-WS/JAXB types.
 - **Not included:** facade clients, TLS/signing, or runtime filesystem WSDL resolution (**`HiWsdlArtifactRoot`** lives in **hi-b2b-client-java**).
 
-## Build (`1.6.3` line)
+## Layout
 
-- **`maven.compiler.release` 8**
-- Compile deps: **`jaxb-api` 2.3.1**, **`jaxws-api` 2.3.1** — no **`jaxws-rt`** in this POM
-- **`maven-enforcer-plugin`:** bans Metro **`webservices-rt`** / **`webservices-api`** / **`webservices-extra*`** / **`metro-*`** and all **`jakarta.xml.*`** / **`jakarta.jws`** API coordinates ( **`javax`** compile deps only)
-- Consumers (e.g. **hi-b2b-client**): **`com.sun.xml.ws:jaxws-rt` 2.3.7** (Eclipse EE4J, last **2.3.x** on Central for Java **8**)
+| Path | Role |
+| ---- | ---- |
+| `src/main/resources/` | HI `HI_*.wsdl` (classpath root; packaged in JAR) |
+| `src/main/java/` | Committed generated types + `hi_override` XMLDSig |
+| `src/test/java/au/gov/nehta/hiwsdl/` | Offline binding smoke tests |
+| `wsdls/readme.txt` | Licensed WSDL tree staging instructions (tracked) |
+| `wsdls/xml/` | Local licensed WSDL/XSD for regeneration (**gitignored**) |
+
+## HI service coverage (`1.6.5`)
+
+**14** primary HI B2B interfaces (consumer search/batch-sync, provider 3.2 / 5.0 / 5.1 batch async). Additional **`HI_*.wsdl`** under **`src/main/resources`** ship in the JAR without committed port types.
+
+**ProviderMatchProviderAdministrativeIndividual** is intentionally out of scope (virtual service in .NET tooling). Full MCA (**26** services) is **`1.7.0`**.
+
+## Build (`1.6.5` line)
+
+- **`maven.compiler.release` 11**
+- Compile deps: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3** — no **`jaxws-rt`** in this POM
+- **`jaxws-rt` 4.0.4** for **`-Pregenerate-sources`** only (not a compile/runtime dependency of the published JAR)
+- Generated sources are **committed**; root POM has **no** default **`wsimport`** execution
 - **`maven-gpg-plugin`:** skipped unless **`-Dgpg.skip=false`**
-- **`maven-javadoc-plugin`:** **`doclint=none`**, **`verbose=false`**, **`quiet=true`**, **`failOnWarnings=false`**, **`detectOfflineLinks=false`**, **`source=${maven.compiler.release}`** (8).
-- **No source regeneration** on **`1.6.3`** — no licensed MCA **`wsdls/xml`** tree and no **`-Pregenerate-sources`** profile. **`src/main/java`** and **`hi_override/`** are committed as-is.
+- **`maven-javadoc-plugin`:** **`doclint=none`**, **`verbose=false`**, **`quiet=true`**, **`failOnWarnings=false`**, **`detectOfflineLinks=false`**, **`source=11`**. Do not hand-edit Javadoc in generated **`src/main/java`**.
+- **Regenerate committed types:** `mvn -B clean -Pregenerate-sources generate-sources process-sources "-Dhi.wsdl.sync.generated=true"` — WSDL from **`hi.wsdl.tree.root`** (default **`wsdls/xml/`**). Copy **`HI_*.wsdl`** into **`src/main/resources/`** when the licensed tree changes. Pins **`jaxb-xjc`** / **`jaxb-jxc`** **4.0.9** on **`jaxws-maven-plugin`**.
+
+Align **`jaxws-rt`** with **hi-b2b-client-java** when bumping toolchain versions.
 
 ## Release
 

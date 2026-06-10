@@ -3,20 +3,19 @@ package au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityType;
 
 
 /**
- * <p>Java class for ServiceMessagesType complex type</p>.
+ * &lt;p&gt;Java class for ServiceMessagesType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="ServiceMessagesType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -27,7 +26,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityT
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -39,7 +38,6 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.SeverityT
 public class ServiceMessagesType {
 
     @XmlElement(required = true)
-    @XmlSchemaType(name = "string")
     protected SeverityType highestSeverity;
     @XmlElement(required = true)
     protected List<ServiceMessageType> serviceMessage;
@@ -71,27 +69,21 @@ public class ServiceMessagesType {
     /**
      * Gets the value of the serviceMessage property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the serviceMessage property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the serviceMessage property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getServiceMessage().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getServiceMessage().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceMessageType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the serviceMessage property.
      */
     public List<ServiceMessageType> getServiceMessage() {
         if (serviceMessage == null) {

@@ -3,22 +3,21 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirecto
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._3_2.ProviderDirectoryIndividualEntryRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._3_2.ProviderDirectoryOrganisationEntryRecord;
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -32,7 +31,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -48,7 +47,6 @@ import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._
 public class ManageProviderDirectoryEntry {
 
     @XmlElement(required = true)
-    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     protected List<ProviderDirectoryOrganisationEntryRecord> organisationEntry;
     protected List<ProviderDirectoryIndividualEntryRecord> individualEntry;
@@ -84,27 +82,21 @@ public class ManageProviderDirectoryEntry {
     /**
      * Gets the value of the organisationEntry property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationEntry property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the organisationEntry property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getOrganisationEntry().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getOrganisationEntry().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProviderDirectoryOrganisationEntryRecord }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the organisationEntry property.
      */
     public List<ProviderDirectoryOrganisationEntryRecord> getOrganisationEntry() {
         if (organisationEntry == null) {
@@ -116,27 +108,21 @@ public class ManageProviderDirectoryEntry {
     /**
      * Gets the value of the individualEntry property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualEntry property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the individualEntry property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getIndividualEntry().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getIndividualEntry().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProviderDirectoryIndividualEntryRecord }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the individualEntry property.
      */
     public List<ProviderDirectoryIndividualEntryRecord> getIndividualEntry() {
         if (individualEntry == null) {
@@ -148,27 +134,21 @@ public class ManageProviderDirectoryEntry {
     /**
      * Gets the value of the organisationDeleteEntry property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationDeleteEntry property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the organisationDeleteEntry property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getOrganisationDeleteEntry().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getOrganisationDeleteEntry().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the organisationDeleteEntry property.
      */
     public List<Integer> getOrganisationDeleteEntry() {
         if (organisationDeleteEntry == null) {
@@ -180,27 +160,21 @@ public class ManageProviderDirectoryEntry {
     /**
      * Gets the value of the individualDeleteEntry property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualDeleteEntry property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the individualDeleteEntry property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getIndividualDeleteEntry().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getIndividualDeleteEntry().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the individualDeleteEntry property.
      */
     public List<Integer> getIndividualDeleteEntry() {
         if (individualDeleteEntry == null) {

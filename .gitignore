@@ -21,6 +21,7 @@ hs_err_pid*
 .project
 .settings/
 bin/
+hi-wsdl-java.code-workspace
 
 # OS
 .DS_Store
@@ -29,9 +30,17 @@ Thumbs.db
 *.orig
 *~
 
-# Local secrets / keystores
+# Local secrets (never commit populated copies)
+/local.properties
 local.properties
 /settings.xml
+settings.xml
+
+# Licensed HI WSDL/XSD tree for wsimport regeneration (see wsdls/readme.txt)
+/wsdls/*
+!/wsdls/readme.txt
+
+/certs/
 *.jks
 *.keystore
 *.p12

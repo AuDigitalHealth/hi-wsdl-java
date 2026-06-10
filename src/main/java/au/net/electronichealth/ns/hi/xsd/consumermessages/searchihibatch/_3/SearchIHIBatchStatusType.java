@@ -1,20 +1,19 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessageType;
 
 
 /**
- * <p>Java class for SearchIHIBatchStatusType complex type</p>.
+ * &lt;p&gt;Java class for SearchIHIBatchStatusType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="SearchIHIBatchStatusType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -26,7 +25,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMes
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -41,7 +40,6 @@ public class SearchIHIBatchStatusType {
     @XmlElement(required = true)
     protected String batchIdentifier;
     @XmlElement(required = true)
-    @XmlSchemaType(name = "string")
     protected BatchResponseStatusType status;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0")
     protected ServiceMessageType serviceMessage;

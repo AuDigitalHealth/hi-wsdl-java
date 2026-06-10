@@ -3,21 +3,21 @@ package au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffixType;
+import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameTitleType;
 
 
 /**
- * <p>Java class for IndividualName complex type</p>.
+ * &lt;p&gt;Java class for IndividualName complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="IndividualName"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -32,7 +32,7 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffi
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -51,13 +51,12 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.NameSuffi
 public class IndividualName {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
-    protected List<String> nameTitle;
+    protected List<NameTitleType> nameTitle;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
     protected List<String> givenName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
     protected String familyName;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0")
-    @XmlSchemaType(name = "string")
     protected List<NameSuffixType> nameSuffix;
     @XmlElement(required = true)
     protected NameUsageType nameUsage;
@@ -66,31 +65,25 @@ public class IndividualName {
     /**
      * Gets the value of the nameTitle property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nameTitle property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the nameTitle property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getNameTitle().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getNameTitle().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * </p>
+     * {@link NameTitleType }
      * 
      * 
-     * @return
-     *     The value of the nameTitle property.
      */
-    public List<String> getNameTitle() {
+    public List<NameTitleType> getNameTitle() {
         if (nameTitle == null) {
-            nameTitle = new ArrayList<String>();
+            nameTitle = new ArrayList<NameTitleType>();
         }
         return this.nameTitle;
     }
@@ -98,27 +91,21 @@ public class IndividualName {
     /**
      * Gets the value of the givenName property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the givenName property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the givenName property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getGivenName().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getGivenName().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the givenName property.
      */
     public List<String> getGivenName() {
         if (givenName == null) {
@@ -154,27 +141,21 @@ public class IndividualName {
     /**
      * Gets the value of the nameSuffix property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nameSuffix property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the nameSuffix property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getNameSuffix().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getNameSuffix().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link NameSuffixType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the nameSuffix property.
      */
     public List<NameSuffixType> getNameSuffix() {
         if (nameSuffix == null) {

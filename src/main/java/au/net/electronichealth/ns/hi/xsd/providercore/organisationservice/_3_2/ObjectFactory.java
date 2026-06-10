@@ -1,9 +1,9 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
 
@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * &lt;p&gt;An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private static final QName _OrganisationServiceRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationServiceRecord");
-    private static final QName _OrganisationService_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationService");
+    private final static QName _OrganisationServiceRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationServiceRecord");
+    private final static QName _OrganisationService_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", "organisationService");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2
@@ -51,12 +51,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link OrganisationServiceRecord }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", name = "organisationServiceRecord")
     public JAXBElement<OrganisationServiceRecord> createOrganisationServiceRecord(OrganisationServiceRecord value) {
@@ -64,12 +60,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link OrganisationService }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0", name = "organisationService")
     public JAXBElement<OrganisationService> createOrganisationService(OrganisationService value) {

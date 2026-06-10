@@ -3,21 +3,20 @@ package au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.IndividualNameUsageType;
 import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccuracyType;
 
 
 /**
- * <p>Java class for NameUsageType complex type</p>.
+ * &lt;p&gt;Java class for NameUsageType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="NameUsageType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -29,7 +28,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -42,7 +41,6 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 public class NameUsageType {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0", required = true)
-    @XmlSchemaType(name = "string")
     protected List<IndividualNameUsageType> usage;
     @XmlElement(required = true)
     protected DateAndAccuracyType startDate;
@@ -51,27 +49,21 @@ public class NameUsageType {
     /**
      * Gets the value of the usage property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the usage property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the usage property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getUsage().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getUsage().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link IndividualNameUsageType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the usage property.
      */
     public List<IndividualNameUsageType> getUsage() {
         if (usage == null) {

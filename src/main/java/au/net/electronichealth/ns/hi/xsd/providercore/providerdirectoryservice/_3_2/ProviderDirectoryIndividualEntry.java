@@ -3,19 +3,19 @@ package au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice.
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ProviderDirectoryIndividualEntry complex type</p>.
+ * &lt;p&gt;Java class for ProviderDirectoryIndividualEntry complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="ProviderDirectoryIndividualEntry"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -98,27 +98,21 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the electronicCommunicationExternalId property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getElectronicCommunicationExternalId().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getElectronicCommunicationExternalId().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the electronicCommunicationExternalId property.
      */
     public List<Integer> getElectronicCommunicationExternalId() {
         if (electronicCommunicationExternalId == null) {
@@ -130,27 +124,21 @@ public class ProviderDirectoryIndividualEntry {
     /**
      * Gets the value of the providerTypeExternalId property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the providerTypeExternalId property.</p>
+     * This is why there is not a <CODE>set</CODE> method for the providerTypeExternalId property.
      * 
-     * <p>
      * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getProviderTypeExternalId().add(newItem);
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     *    getProviderTypeExternalId().add(newItem);
+     * }&lt;/pre&gt;
      * 
      * 
-     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the providerTypeExternalId property.
      */
     public List<Integer> getProviderTypeExternalId() {
         if (providerTypeExternalId == null) {
