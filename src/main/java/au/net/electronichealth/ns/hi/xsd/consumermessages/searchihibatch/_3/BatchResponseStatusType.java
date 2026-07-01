@@ -6,22 +6,23 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for BatchResponseStatusType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for BatchResponseStatusType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="BatchResponseStatusType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="RECEIVED"/>
- *     &lt;enumeration value="PROCESSING"/>
- *     &lt;enumeration value="COMPLETED"/>
- *     &lt;enumeration value="RETRIEVED"/>
- *     &lt;enumeration value="DELETED"/>
- *     &lt;enumeration value="NOTFOUND"/>
- *     &lt;enumeration value="ERROR"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="BatchResponseStatusType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="RECEIVED"/&gt;
+ *     &lt;enumeration value="PROCESSING"/&gt;
+ *     &lt;enumeration value="COMPLETED"/&gt;
+ *     &lt;enumeration value="RETRIEVED"/&gt;
+ *     &lt;enumeration value="DELETED"/&gt;
+ *     &lt;enumeration value="NOTFOUND"/&gt;
+ *     &lt;enumeration value="ERROR"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

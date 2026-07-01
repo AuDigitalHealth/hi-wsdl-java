@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchIHIResponse }
-     * 
-     */
-    public SearchIHIResponse createSearchIHIResponse() {
-        return new SearchIHIResponse();
-    }
-
-    /**
      * Create an instance of {@link SearchIHI }
      * 
      */
     public SearchIHI createSearchIHI() {
         return new SearchIHI();
+    }
+
+    /**
+     * Create an instance of {@link SearchIHIResponse }
+     * 
+     */
+    public SearchIHIResponse createSearchIHIResponse() {
+        return new SearchIHIResponse();
     }
 
 }

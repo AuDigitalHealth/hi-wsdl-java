@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadProviderOrganisationResponse }
-     * 
-     */
-    public ReadProviderOrganisationResponse createReadProviderOrganisationResponse() {
-        return new ReadProviderOrganisationResponse();
-    }
-
-    /**
      * Create an instance of {@link ReadProviderOrganisation }
      * 
      */
     public ReadProviderOrganisation createReadProviderOrganisation() {
         return new ReadProviderOrganisation();
+    }
+
+    /**
+     * Create an instance of {@link ReadProviderOrganisationResponse }
+     * 
+     */
+    public ReadProviderOrganisationResponse createReadProviderOrganisationResponse() {
+        return new ReadProviderOrganisationResponse();
     }
 
 }

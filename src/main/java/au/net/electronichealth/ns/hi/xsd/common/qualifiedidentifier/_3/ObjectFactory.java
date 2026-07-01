@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _QualifiedId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", "qualifiedId");
+    private static final QName _QualifiedId_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", "qualifiedId");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3
@@ -42,8 +42,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link QualifiedId }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0", name = "qualifiedId")
     public JAXBElement<QualifiedId> createQualifiedId(QualifiedId value) {

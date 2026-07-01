@@ -24,22 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ElectronicCommunicationRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", "electronicCommunicationRecord");
-    private final static QName _ElectronicCommunication_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", "electronicCommunication");
+    private static final QName _ElectronicCommunication_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", "electronicCommunication");
+    private static final QName _ElectronicCommunicationRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", "electronicCommunicationRecord");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link ElectronicCommunicationRecord }
-     * 
-     */
-    public ElectronicCommunicationRecord createElectronicCommunicationRecord() {
-        return new ElectronicCommunicationRecord();
     }
 
     /**
@@ -51,21 +43,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationRecord }{@code >}}
+     * Create an instance of {@link ElectronicCommunicationRecord }
      * 
      */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", name = "electronicCommunicationRecord")
-    public JAXBElement<ElectronicCommunicationRecord> createElectronicCommunicationRecord(ElectronicCommunicationRecord value) {
-        return new JAXBElement<ElectronicCommunicationRecord>(_ElectronicCommunicationRecord_QNAME, ElectronicCommunicationRecord.class, null, value);
+    public ElectronicCommunicationRecord createElectronicCommunicationRecord() {
+        return new ElectronicCommunicationRecord();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunication }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunication }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ElectronicCommunication }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", name = "electronicCommunication")
     public JAXBElement<ElectronicCommunication> createElectronicCommunication(ElectronicCommunication value) {
         return new JAXBElement<ElectronicCommunication>(_ElectronicCommunication_QNAME, ElectronicCommunication.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationRecord }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ElectronicCommunicationRecord }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ElectronicCommunication/3.2.0", name = "electronicCommunicationRecord")
+    public JAXBElement<ElectronicCommunicationRecord> createElectronicCommunicationRecord(ElectronicCommunicationRecord value) {
+        return new JAXBElement<ElectronicCommunicationRecord>(_ElectronicCommunicationRecord_QNAME, ElectronicCommunicationRecord.class, null, value);
     }
 
 }

@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _DeathNotification_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", "deathNotification");
-    private final static QName _PersonalDetails_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", "personalDetails");
+    private static final QName _PersonalDetails_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", "personalDetails");
+    private static final QName _DeathNotification_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", "deathNotification");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2
@@ -51,21 +51,29 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeathNotificationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalDetails }{@code >}
      * 
-     */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", name = "deathNotification")
-    public JAXBElement<DeathNotificationType> createDeathNotification(DeathNotificationType value) {
-        return new JAXBElement<DeathNotificationType>(_DeathNotification_QNAME, DeathNotificationType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonalDetails }{@code >}}
-     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link PersonalDetails }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", name = "personalDetails")
     public JAXBElement<PersonalDetails> createPersonalDetails(PersonalDetails value) {
         return new JAXBElement<PersonalDetails>(_PersonalDetails_QNAME, PersonalDetails.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeathNotificationType }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeathNotificationType }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/PersonalDetails/3.2.0", name = "deathNotification")
+    public JAXBElement<DeathNotificationType> createDeathNotification(DeathNotificationType value) {
+        return new JAXBElement<DeathNotificationType>(_DeathNotification_QNAME, DeathNotificationType.class, null, value);
     }
 
 }

@@ -6,30 +6,31 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for LevelType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for LevelType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="LevelType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="FL"/>
- *     &lt;enumeration value="G"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="LG"/>
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="OD"/>
- *     &lt;enumeration value="P"/>
- *     &lt;enumeration value="PTHS"/>
- *     &lt;enumeration value="PLF"/>
- *     &lt;enumeration value="PLZA"/>
- *     &lt;enumeration value="PDM"/>
- *     &lt;enumeration value="RT"/>
- *     &lt;enumeration value="SB"/>
- *     &lt;enumeration value="UG"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="LevelType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *     &lt;enumeration value="FL"/&gt;
+ *     &lt;enumeration value="G"/&gt;
+ *     &lt;enumeration value="L"/&gt;
+ *     &lt;enumeration value="LG"/&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="OD"/&gt;
+ *     &lt;enumeration value="P"/&gt;
+ *     &lt;enumeration value="PTHS"/&gt;
+ *     &lt;enumeration value="PLF"/&gt;
+ *     &lt;enumeration value="PLZA"/&gt;
+ *     &lt;enumeration value="PDM"/&gt;
+ *     &lt;enumeration value="RT"/&gt;
+ *     &lt;enumeration value="SB"/&gt;
+ *     &lt;enumeration value="UG"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

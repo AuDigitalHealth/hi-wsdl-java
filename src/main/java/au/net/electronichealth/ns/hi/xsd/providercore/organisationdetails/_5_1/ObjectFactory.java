@@ -24,22 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BatchSearchForProviderOrganisationResult_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", "batchSearchForProviderOrganisationResult");
-    private final static QName _BatchSearchForProviderOrganisationCriteria_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", "batchSearchForProviderOrganisationCriteria");
+    private static final QName _BatchSearchForProviderOrganisationCriteria_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", "batchSearchForProviderOrganisationCriteria");
+    private static final QName _BatchSearchForProviderOrganisationResult_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", "batchSearchForProviderOrganisationResult");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._5_1
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link BatchSearchForProviderOrganisationResultType }
-     * 
-     */
-    public BatchSearchForProviderOrganisationResultType createBatchSearchForProviderOrganisationResultType() {
-        return new BatchSearchForProviderOrganisationResultType();
     }
 
     /**
@@ -51,21 +43,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationResultType }{@code >}}
+     * Create an instance of {@link BatchSearchForProviderOrganisationResultType }
      * 
      */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", name = "batchSearchForProviderOrganisationResult")
-    public JAXBElement<BatchSearchForProviderOrganisationResultType> createBatchSearchForProviderOrganisationResult(BatchSearchForProviderOrganisationResultType value) {
-        return new JAXBElement<BatchSearchForProviderOrganisationResultType>(_BatchSearchForProviderOrganisationResult_QNAME, BatchSearchForProviderOrganisationResultType.class, null, value);
+    public BatchSearchForProviderOrganisationResultType createBatchSearchForProviderOrganisationResultType() {
+        return new BatchSearchForProviderOrganisationResultType();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationCriteriaType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationCriteriaType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationCriteriaType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", name = "batchSearchForProviderOrganisationCriteria")
     public JAXBElement<BatchSearchForProviderOrganisationCriteriaType> createBatchSearchForProviderOrganisationCriteria(BatchSearchForProviderOrganisationCriteriaType value) {
         return new JAXBElement<BatchSearchForProviderOrganisationCriteriaType>(_BatchSearchForProviderOrganisationCriteria_QNAME, BatchSearchForProviderOrganisationCriteriaType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationResultType }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link BatchSearchForProviderOrganisationResultType }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationDetails/5.1.0", name = "batchSearchForProviderOrganisationResult")
+    public JAXBElement<BatchSearchForProviderOrganisationResultType> createBatchSearchForProviderOrganisationResult(BatchSearchForProviderOrganisationResultType value) {
+        return new JAXBElement<BatchSearchForProviderOrganisationResultType>(_BatchSearchForProviderOrganisationResult_QNAME, BatchSearchForProviderOrganisationResultType.class, null, value);
     }
 
 }

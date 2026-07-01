@@ -6,63 +6,64 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UnitType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for UnitType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="UnitType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="ANT"/>
- *     &lt;enumeration value="APT"/>
- *     &lt;enumeration value="ATM"/>
- *     &lt;enumeration value="BBQ"/>
- *     &lt;enumeration value="BTSD"/>
- *     &lt;enumeration value="BLDG"/>
- *     &lt;enumeration value="BNGW"/>
- *     &lt;enumeration value="CAGE"/>
- *     &lt;enumeration value="CARP"/>
- *     &lt;enumeration value="CARS"/>
- *     &lt;enumeration value="CLUB"/>
- *     &lt;enumeration value="COOL"/>
- *     &lt;enumeration value="CTGE"/>
- *     &lt;enumeration value="DUP"/>
- *     &lt;enumeration value="FY"/>
- *     &lt;enumeration value="F"/>
- *     &lt;enumeration value="GRGE"/>
- *     &lt;enumeration value="HALL"/>
- *     &lt;enumeration value="HSE"/>
- *     &lt;enumeration value="KSK"/>
- *     &lt;enumeration value="LSE"/>
- *     &lt;enumeration value="LBBY"/>
- *     &lt;enumeration value="LOFT"/>
- *     &lt;enumeration value="LOT"/>
- *     &lt;enumeration value="MSNT"/>
- *     &lt;enumeration value="MB"/>
- *     &lt;enumeration value="OFF"/>
- *     &lt;enumeration value="PTHS"/>
- *     &lt;enumeration value="RESV"/>
- *     &lt;enumeration value="RM"/>
- *     &lt;enumeration value="SHED"/>
- *     &lt;enumeration value="SHOP"/>
- *     &lt;enumeration value="SIGN"/>
- *     &lt;enumeration value="SITE"/>
- *     &lt;enumeration value="SL"/>
- *     &lt;enumeration value="STOR"/>
- *     &lt;enumeration value="STR"/>
- *     &lt;enumeration value="STU"/>
- *     &lt;enumeration value="SUBS"/>
- *     &lt;enumeration value="SE"/>
- *     &lt;enumeration value="TNCY"/>
- *     &lt;enumeration value="TWR"/>
- *     &lt;enumeration value="TNHS"/>
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="VLLA"/>
- *     &lt;enumeration value="WARD"/>
- *     &lt;enumeration value="WE"/>
- *     &lt;enumeration value="WKSH"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="UnitType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="ANT"/&gt;
+ *     &lt;enumeration value="APT"/&gt;
+ *     &lt;enumeration value="ATM"/&gt;
+ *     &lt;enumeration value="BBQ"/&gt;
+ *     &lt;enumeration value="BTSD"/&gt;
+ *     &lt;enumeration value="BLDG"/&gt;
+ *     &lt;enumeration value="BNGW"/&gt;
+ *     &lt;enumeration value="CAGE"/&gt;
+ *     &lt;enumeration value="CARP"/&gt;
+ *     &lt;enumeration value="CARS"/&gt;
+ *     &lt;enumeration value="CLUB"/&gt;
+ *     &lt;enumeration value="COOL"/&gt;
+ *     &lt;enumeration value="CTGE"/&gt;
+ *     &lt;enumeration value="DUP"/&gt;
+ *     &lt;enumeration value="FY"/&gt;
+ *     &lt;enumeration value="F"/&gt;
+ *     &lt;enumeration value="GRGE"/&gt;
+ *     &lt;enumeration value="HALL"/&gt;
+ *     &lt;enumeration value="HSE"/&gt;
+ *     &lt;enumeration value="KSK"/&gt;
+ *     &lt;enumeration value="LSE"/&gt;
+ *     &lt;enumeration value="LBBY"/&gt;
+ *     &lt;enumeration value="LOFT"/&gt;
+ *     &lt;enumeration value="LOT"/&gt;
+ *     &lt;enumeration value="MSNT"/&gt;
+ *     &lt;enumeration value="MB"/&gt;
+ *     &lt;enumeration value="OFF"/&gt;
+ *     &lt;enumeration value="PTHS"/&gt;
+ *     &lt;enumeration value="RESV"/&gt;
+ *     &lt;enumeration value="RM"/&gt;
+ *     &lt;enumeration value="SHED"/&gt;
+ *     &lt;enumeration value="SHOP"/&gt;
+ *     &lt;enumeration value="SIGN"/&gt;
+ *     &lt;enumeration value="SITE"/&gt;
+ *     &lt;enumeration value="SL"/&gt;
+ *     &lt;enumeration value="STOR"/&gt;
+ *     &lt;enumeration value="STR"/&gt;
+ *     &lt;enumeration value="STU"/&gt;
+ *     &lt;enumeration value="SUBS"/&gt;
+ *     &lt;enumeration value="SE"/&gt;
+ *     &lt;enumeration value="TNCY"/&gt;
+ *     &lt;enumeration value="TWR"/&gt;
+ *     &lt;enumeration value="TNHS"/&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *     &lt;enumeration value="VLLA"/&gt;
+ *     &lt;enumeration value="WARD"/&gt;
+ *     &lt;enumeration value="WE"/&gt;
+ *     &lt;enumeration value="WKSH"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -6,43 +6,44 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for DateAccuracyIndicatorType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for DateAccuracyIndicatorType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="DateAccuracyIndicatorType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;length value="3"/>
- *     &lt;enumeration value="AAA"/>
- *     &lt;enumeration value="AAE"/>
- *     &lt;enumeration value="AAU"/>
- *     &lt;enumeration value="AEA"/>
- *     &lt;enumeration value="AEE"/>
- *     &lt;enumeration value="AEU"/>
- *     &lt;enumeration value="AUA"/>
- *     &lt;enumeration value="AUE"/>
- *     &lt;enumeration value="AUU"/>
- *     &lt;enumeration value="EAA"/>
- *     &lt;enumeration value="EAE"/>
- *     &lt;enumeration value="EAU"/>
- *     &lt;enumeration value="EEA"/>
- *     &lt;enumeration value="EEE"/>
- *     &lt;enumeration value="EEU"/>
- *     &lt;enumeration value="EUA"/>
- *     &lt;enumeration value="EUE"/>
- *     &lt;enumeration value="EUU"/>
- *     &lt;enumeration value="UAA"/>
- *     &lt;enumeration value="UAE"/>
- *     &lt;enumeration value="UAU"/>
- *     &lt;enumeration value="UEA"/>
- *     &lt;enumeration value="UEE"/>
- *     &lt;enumeration value="UEU"/>
- *     &lt;enumeration value="UUA"/>
- *     &lt;enumeration value="UUE"/>
- *     &lt;enumeration value="UUU"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="DateAccuracyIndicatorType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;length value="3"/&gt;
+ *     &lt;enumeration value="AAA"/&gt;
+ *     &lt;enumeration value="AAE"/&gt;
+ *     &lt;enumeration value="AAU"/&gt;
+ *     &lt;enumeration value="AEA"/&gt;
+ *     &lt;enumeration value="AEE"/&gt;
+ *     &lt;enumeration value="AEU"/&gt;
+ *     &lt;enumeration value="AUA"/&gt;
+ *     &lt;enumeration value="AUE"/&gt;
+ *     &lt;enumeration value="AUU"/&gt;
+ *     &lt;enumeration value="EAA"/&gt;
+ *     &lt;enumeration value="EAE"/&gt;
+ *     &lt;enumeration value="EAU"/&gt;
+ *     &lt;enumeration value="EEA"/&gt;
+ *     &lt;enumeration value="EEE"/&gt;
+ *     &lt;enumeration value="EEU"/&gt;
+ *     &lt;enumeration value="EUA"/&gt;
+ *     &lt;enumeration value="EUE"/&gt;
+ *     &lt;enumeration value="EUU"/&gt;
+ *     &lt;enumeration value="UAA"/&gt;
+ *     &lt;enumeration value="UAE"/&gt;
+ *     &lt;enumeration value="UAU"/&gt;
+ *     &lt;enumeration value="UEA"/&gt;
+ *     &lt;enumeration value="UEE"/&gt;
+ *     &lt;enumeration value="UEU"/&gt;
+ *     &lt;enumeration value="UUA"/&gt;
+ *     &lt;enumeration value="UUE"/&gt;
+ *     &lt;enumeration value="UUU"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

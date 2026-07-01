@@ -10,25 +10,25 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DateAndAccur
 
 
 /**
- * <p>Java class for OrganisationService complex type.
+ * <p>Java class for OrganisationService complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="OrganisationService">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="organisationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}OrganisationType"/>
- *         &lt;element name="organisationServiceType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceType"/>
- *         &lt;element name="organisationServiceUnit" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceUnitType" minOccurs="0"/>
- *         &lt;element name="organisationServiceComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceCommentsType" minOccurs="0"/>
- *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/>
- *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="OrganisationService"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="organisationType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}OrganisationType"/&gt;
+ *         &lt;element name="organisationServiceType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceType"/&gt;
+ *         &lt;element name="organisationServiceUnit" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceUnitType" minOccurs="0"/&gt;
+ *         &lt;element name="organisationServiceComments" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/OrganisationService/3.2.0}ServiceCommentsType" minOccurs="0"/&gt;
+ *         &lt;element name="startDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType"/&gt;
+ *         &lt;element name="endDate" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}DateAndAccuracyType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

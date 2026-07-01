@@ -9,23 +9,23 @@ import au.net.electronichealth.ns.hi.xsd.common.qualifiedidentifier._3.Qualified
 
 
 /**
- * <p>Java class for ProductType complex type.
+ * <p>Java class for ProductType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="ProductType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/>
- *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ProductType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="vendor" type="{http://ns.electronichealth.net.au/hi/xsd/common/QualifiedIdentifier/3.0}QualifiedId"/&gt;
+ *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -4,6 +4,7 @@ package au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.MediumType;
@@ -11,23 +12,23 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType
 
 
 /**
- * <p>Java class for ElectronicCommunication complex type.
+ * <p>Java class for ElectronicCommunication complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="ElectronicCommunication">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}medium"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}details"/>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}usage"/>
- *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ElectronicCommunication"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}medium"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}details"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0}usage"/&gt;
+ *         &lt;element name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -45,10 +46,12 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType
 public class ElectronicCommunication {
 
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected MediumType medium;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
     protected String details;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", required = true)
+    @XmlSchemaType(name = "string")
     protected UsageType usage;
     protected Boolean preferred;
 

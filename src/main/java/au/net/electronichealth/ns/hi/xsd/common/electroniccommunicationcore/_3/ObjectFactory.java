@@ -26,9 +26,9 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UsageType
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Medium_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "medium");
-    private final static QName _Usage_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "usage");
-    private final static QName _Details_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "details");
+    private static final QName _Usage_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "usage");
+    private static final QName _Medium_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "medium");
+    private static final QName _Details_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", "details");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.common.electroniccommunicationcore._3
@@ -38,17 +38,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MediumType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UsageType }{@code >}
      * 
-     */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", name = "medium")
-    public JAXBElement<MediumType> createMedium(MediumType value) {
-        return new JAXBElement<MediumType>(_Medium_QNAME, MediumType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UsageType }{@code >}}
-     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link UsageType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", name = "usage")
     public JAXBElement<UsageType> createUsage(UsageType value) {
@@ -56,8 +51,25 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link MediumType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link MediumType }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", name = "medium")
+    public JAXBElement<MediumType> createMedium(MediumType value) {
+        return new JAXBElement<MediumType>(_Medium_QNAME, MediumType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/ElectronicCommunicationCore/3.0", name = "details")
     public JAXBElement<String> createDetails(String value) {

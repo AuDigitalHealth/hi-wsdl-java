@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0}searchForProviderIndividualResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0.
 @XmlRootElement(name = "searchForProviderIndividualResponse")
 public class SearchForProviderIndividualResponse {
 
+    /**
+     * Search for Provider Individual Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchIndividual/5.0.0", required = true)
     protected SearchForProviderIndividualResult searchForProviderIndividualResult;
 
     /**
-     * Gets the value of the searchForProviderIndividualResult property.
+     * Search for Provider Individual Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class SearchForProviderIndividualResponse {
      *     allowed object is
      *     {@link SearchForProviderIndividualResult }
      *     
+     * @see #getSearchForProviderIndividualResult()
      */
     public void setSearchForProviderIndividualResult(SearchForProviderIndividualResult value) {
         this.searchForProviderIndividualResult = value;

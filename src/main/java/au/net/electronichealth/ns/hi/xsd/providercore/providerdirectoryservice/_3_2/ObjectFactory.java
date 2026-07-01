@@ -30,14 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ProviderDirectoryOrganisationEntryRecord }
-     * 
-     */
-    public ProviderDirectoryOrganisationEntryRecord createProviderDirectoryOrganisationEntryRecord() {
-        return new ProviderDirectoryOrganisationEntryRecord();
-    }
-
-    /**
      * Create an instance of {@link ProviderDirectoryIndividualEntryRecord }
      * 
      */
@@ -59,6 +51,14 @@ public class ObjectFactory {
      */
     public ProviderDirectoryOrganisationEntry createProviderDirectoryOrganisationEntry() {
         return new ProviderDirectoryOrganisationEntry();
+    }
+
+    /**
+     * Create an instance of {@link ProviderDirectoryOrganisationEntryRecord }
+     * 
+     */
+    public ProviderDirectoryOrganisationEntryRecord createProviderDirectoryOrganisationEntryRecord() {
+        return new ProviderDirectoryOrganisationEntryRecord();
     }
 
 }

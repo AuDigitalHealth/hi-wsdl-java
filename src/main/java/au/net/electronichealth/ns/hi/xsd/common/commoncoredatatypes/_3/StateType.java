@@ -6,23 +6,24 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for StateType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for StateType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="StateType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="ACT"/>
- *     &lt;enumeration value="NSW"/>
- *     &lt;enumeration value="NT"/>
- *     &lt;enumeration value="QLD"/>
- *     &lt;enumeration value="SA"/>
- *     &lt;enumeration value="TAS"/>
- *     &lt;enumeration value="VIC"/>
- *     &lt;enumeration value="WA"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="StateType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="ACT"/&gt;
+ *     &lt;enumeration value="NSW"/&gt;
+ *     &lt;enumeration value="NT"/&gt;
+ *     &lt;enumeration value="QLD"/&gt;
+ *     &lt;enumeration value="SA"/&gt;
+ *     &lt;enumeration value="TAS"/&gt;
+ *     &lt;enumeration value="VIC"/&gt;
+ *     &lt;enumeration value="WA"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

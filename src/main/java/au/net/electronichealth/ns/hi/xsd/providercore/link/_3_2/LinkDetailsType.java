@@ -9,22 +9,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for LinkDetailsType complex type.
+ * <p>Java class for LinkDetailsType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType name="LinkDetailsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/>
- *         &lt;element name="requestType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Link/3.2.0}RequestType"/>
- *         &lt;element name="linkType" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="LinkDetailsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="qualifiedIdentifier" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Elements/3.2.0}QualifiedIdentifierType"/&gt;
+ *         &lt;element name="requestType" type="{http://ns.electronichealth.net.au/hi/xsd/providercore/Link/3.2.0}RequestType"/&gt;
+ *         &lt;element name="linkType" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -38,8 +38,10 @@ import javax.xml.bind.annotation.XmlType;
 public class LinkDetailsType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String qualifiedIdentifier;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected RequestType requestType;
     @XmlSchemaType(name = "anyURI")
     protected String linkType;

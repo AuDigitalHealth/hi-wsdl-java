@@ -10,20 +10,20 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovider
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderOrganisation/5.1.0}retrieveSearchForProviderOrganisationResult"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderOrganisation/5.1.0}retrieveSearchForProviderOrganisationResult"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -35,11 +35,15 @@ import au.net.electronichealth.ns.hi.xsd.providermessages.retrievesearchprovider
 @XmlRootElement(name = "retrieveSearchForProviderOrganisationResponse")
 public class RetrieveSearchForProviderOrganisationResponse {
 
+    /**
+     * Retrieve Batch Search for Provider Organisation Results Response element
+     * 
+     */
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/RetrieveSearchProviderOrganisation/5.1.0", required = true)
     protected RetrieveSearchForProviderOrganisationResult retrieveSearchForProviderOrganisationResult;
 
     /**
-     * Gets the value of the retrieveSearchForProviderOrganisationResult property.
+     * Retrieve Batch Search for Provider Organisation Results Response element
      * 
      * @return
      *     possible object is
@@ -57,6 +61,7 @@ public class RetrieveSearchForProviderOrganisationResponse {
      *     allowed object is
      *     {@link RetrieveSearchForProviderOrganisationResult }
      *     
+     * @see #getRetrieveSearchForProviderOrganisationResult()
      */
     public void setRetrieveSearchForProviderOrganisationResult(RetrieveSearchForProviderOrganisationResult value) {
         this.retrieveSearchForProviderOrganisationResult = value;

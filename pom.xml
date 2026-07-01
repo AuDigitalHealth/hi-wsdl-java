@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012 NEHTA
+  Copyright 2021-2026 ADHA (Australian Digital Health Agency)
+  SPDX: Apache-2.0; full text in LICENSE.txt at the repository root.
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -6,13 +11,13 @@
     <artifactId>hi-wsdl</artifactId>
     <version>1.6.3-SNAPSHOT</version>
     <name>HI Compiled WSDL library</name>
-    <description>Java classes for HI B2B client development</description>
+    <description>HI B2B WSDL resources and pre-generated JAX-WS / JAXB types (Java 8 / javax)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
 
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -22,8 +27,8 @@
             <name>Admin Open Source</name>
             <email>admin.opensource@digitalhealth.gov.au</email>
             <organization>Australian Digital Health Agency</organization>
-            <url>www.digitalhealth.gov.au</url>
-            <organizationUrl>www.digitalhealth.gov.au</organizationUrl>
+            <url>https://www.digitalhealth.gov.au/</url>
+            <organizationUrl>https://www.digitalhealth.gov.au/</organizationUrl>
             <roles>
                 <role>Admin</role>
             </roles>
@@ -32,50 +37,143 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/AuDigitalHealth/hi-wsdl-java.git
-        </connection>
-        <developerConnection>
-            scm:git:https://github.com/AuDigitalHealth/hi-wsdl-java.git
-        </developerConnection>
-        <url>https://github.com/AuDigitalHealth/hi-wsdl-java.git</url>
-        <tag>hi-wsdl-1.6.2</tag>
+        <connection>scm:git:${scm.repo.url}</connection>
+        <developerConnection>scm:git:${scm.repo.url}</developerConnection>
+        <url>${scm.repo.url}</url>
+        <tag>${scm.tag}</tag>
     </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/AuDigitalHealth/hi-wsdl-java/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/AuDigitalHealth/hi-wsdl-java/actions</url>
+    </ciManagement>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>central</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>nexus-releases</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>central</id>
+            <url>https://central.sonatype.com</url>
         </repository>
     </distributionManagement>
 
-    <dependencies>
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.santuario</groupId>-->
-        <!--            <artifactId>xmlsec</artifactId>-->
-        <!--            <version>2.2.1</version>-->
-        <!--        </dependency>-->
-    </dependencies>
-
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.release>8</maven.compiler.release>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
         <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
         <archetype.encoding>${encoding}</archetype.encoding>
+        <skipTests>false</skipTests>
+        <gpg.skip>true</gpg.skip>
+        <!-- SCM / maven-release-plugin (scm.repo.url is the only repo-specific Git value) -->
+        <scm.repo.url>https://github.com/AuDigitalHealth/hi-wsdl-java.git</scm.repo.url>
+        <scm.tag>HEAD</scm.tag>
+        <release.localCheckout>true</release.localCheckout>
+        <release.dryRun>false</release.dryRun>
+        <release.goals>deploy</release.goals>
+        <release.profiles>release</release.profiles>
+        <release.tagNameFormat>@{project.artifactId}-@{project.version}</release.tagNameFormat>
+        <release.pushChanges>true</release.pushChanges>
+        <release.remoteTagging>true</release.remoteTagging>
+        <release.scmCommentPrefix>[maven-release-plugin] </release.scmCommentPrefix>
+        <!-- Consumers add com.sun.xml.ws:jaxws-rt 2.3.7 at runtime; this JAR ships types + classpath WSDL only. -->
+        <jaxb.api.version>2.3.1</jaxb.api.version>
+        <jaxws.api.version>2.3.1</jaxws.api.version>
+        <javax.jws.api.version>1.1</javax.jws.api.version>
+        <junit.version>4.13.2</junit.version>
+        <plugin.clean.version>3.5.0</plugin.clean.version>
+        <plugin.compiler.version>3.15.0</plugin.compiler.version>
+        <plugin.surefire.version>3.5.5</plugin.surefire.version>
+        <plugin.javadoc.version>3.12.0</plugin.javadoc.version>
+        <plugin.source.version>3.4.0</plugin.source.version>
+        <plugin.deploy.version>3.1.4</plugin.deploy.version>
+        <plugin.release.version>3.3.1</plugin.release.version>
+        <plugin.central.publishing.version>0.9.0</plugin.central.publishing.version>
+        <plugin.gpg.version>3.2.8</plugin.gpg.version>
+        <plugin.enforcer.version>3.6.2</plugin.enforcer.version>
+        <argLine>-Xmx1024m</argLine>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.ws</groupId>
+            <artifactId>jaxws-api</artifactId>
+            <version>${jaxws.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.jws</groupId>
+            <artifactId>javax.jws-api</artifactId>
+            <version>${javax.jws.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${plugin.clean.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${plugin.enforcer.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-build-tooling</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>[3.6.3,)</version>
+                                </requireMavenVersion>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>com.sun.xml.ws:webservices-rt</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-api</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra-api</exclude>
+                                        <exclude>jakarta.xml.bind:*</exclude>
+                                        <exclude>jakarta.xml.ws:*</exclude>
+                                        <exclude>jakarta.jws:*</exclude>
+                                        <exclude>jakarta.xml.soap:*</exclude>
+                                        <exclude>jakarta.activation:*</exclude>
+                                        <exclude>jakarta.annotation:*</exclude>
+                                    </excludes>
+                                    <message>Java 8 / javax line: use javax.xml.bind, javax.xml.ws, and javax.jws only. Consumers add EE4J jaxws-rt 2.3.x at runtime — not Metro webservices-* or Jakarta XML APIs.</message>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>${plugin.gpg.version}</version>
+                <configuration>
+                    <skip>${gpg.skip}</skip>
+                </configuration>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -89,12 +187,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>${plugin.javadoc.version}</version>
                 <configuration>
-                    <verbose>true</verbose>
-                    <!--<skip>true</skip>-->
+                    <verbose>false</verbose>
+                    <quiet>true</quiet>
+                    <failOnWarnings>false</failOnWarnings>
                     <doclint>none</doclint>
+                    <detectOfflineLinks>false</detectOfflineLinks>
                     <encoding>${encoding}</encoding>
+                    <source>${maven.compiler.release}</source>
                 </configuration>
                 <executions>
                     <execution>
@@ -108,12 +209,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>${plugin.source.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -121,75 +222,73 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.0.0-M1</version>
+                <version>${plugin.deploy.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>${plugin.central.publishing.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>nexus-releases</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M4</version>
-                <configuration>
-                    <showSuccess>false</showSuccess>
-                    <title>CDA Schema Java Tests Output</title>
-                    <outputDirectory>${basedir}/target/surefire-reports</outputDirectory>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>${plugin.surefire.version}</version>
                 <configuration>
+                    <skipTests>${skipTests}</skipTests>
                     <encoding>UTF-8</encoding>
                     <enableAssertions>true</enableAssertions>
-                    <forkCount>3</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <argLine>-Xmx1024m</argLine>
+                    <argLine>${argLine}</argLine>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M1</version>
+                <version>${plugin.release.version}</version>
                 <configuration>
-                    <branchName>mavenization</branchName>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
-                    <localCheckout>true</localCheckout>
-                    <dryRun>false</dryRun>
-                    <goals>deploy</goals>
+                    <releaseProfiles>${release.profiles}</releaseProfiles>
+                    <localCheckout>${release.localCheckout}</localCheckout>
+                    <dryRun>${release.dryRun}</dryRun>
+                    <goals>${release.goals}</goals>
+                    <tagNameFormat>${release.tagNameFormat}</tagNameFormat>
+                    <pushChanges>${release.pushChanges}</pushChanges>
+                    <remoteTagging>${release.remoteTagging}</remoteTagging>
+                    <scmCommentPrefix>${release.scmCommentPrefix}</scmCommentPrefix>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${plugin.compiler.version}</version>
                 <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <proc>none</proc>
                     <compilerArgs>
                         <arg>-Xlint:unchecked</arg>
-                        <arg>-verbose</arg>
                     </compilerArgs>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <debug>true</debug><!--By default it is set to true-->
+                    <debug>true</debug>
                     <debuglevel>lines,vars,source</debuglevel>
                     <showDeprecation>true</showDeprecation>
                     <showWarnings>true</showWarnings>
-                    <verbose>true</verbose>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <properties>
+                <gpg.skip>false</gpg.skip>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

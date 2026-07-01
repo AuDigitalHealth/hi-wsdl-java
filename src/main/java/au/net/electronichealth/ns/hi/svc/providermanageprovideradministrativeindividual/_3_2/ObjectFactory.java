@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ManageProviderAdministrativeIndividualResponse }
-     * 
-     */
-    public ManageProviderAdministrativeIndividualResponse createManageProviderAdministrativeIndividualResponse() {
-        return new ManageProviderAdministrativeIndividualResponse();
-    }
-
-    /**
      * Create an instance of {@link ManageProviderAdministrativeIndividual }
      * 
      */
     public ManageProviderAdministrativeIndividual createManageProviderAdministrativeIndividual() {
         return new ManageProviderAdministrativeIndividual();
+    }
+
+    /**
+     * Create an instance of {@link ManageProviderAdministrativeIndividualResponse }
+     * 
+     */
+    public ManageProviderAdministrativeIndividualResponse createManageProviderAdministrativeIndividualResponse() {
+        return new ManageProviderAdministrativeIndividualResponse();
     }
 
 }

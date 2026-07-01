@@ -7,19 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SeverityType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for SeverityType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="SeverityType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Fatal"/>
- *     &lt;enumeration value="Error"/>
- *     &lt;enumeration value="Warning"/>
- *     &lt;enumeration value="Informational"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="SeverityType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Fatal"/&gt;
+ *     &lt;enumeration value="Error"/&gt;
+ *     &lt;enumeration value="Warning"/&gt;
+ *     &lt;enumeration value="Informational"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
@@ -41,10 +42,26 @@ public enum SeverityType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static SeverityType fromValue(String v) {
         for (SeverityType c: SeverityType.values()) {
             if (c.value.equals(v)) {

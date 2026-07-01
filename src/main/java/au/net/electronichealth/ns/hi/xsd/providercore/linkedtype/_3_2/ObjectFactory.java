@@ -38,19 +38,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinkedIndividualType }
-     * 
-     */
-    public LinkedIndividualType createLinkedIndividualType() {
-        return new LinkedIndividualType();
-    }
-
-    /**
      * Create an instance of {@link LinkedProviderType }
      * 
      */
     public LinkedProviderType createLinkedProviderType() {
         return new LinkedProviderType();
+    }
+
+    /**
+     * Create an instance of {@link LinkedIndividualType }
+     * 
+     */
+    public LinkedIndividualType createLinkedIndividualType() {
+        return new LinkedIndividualType();
     }
 
 }

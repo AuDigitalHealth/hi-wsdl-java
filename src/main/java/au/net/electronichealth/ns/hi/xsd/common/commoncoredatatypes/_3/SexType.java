@@ -6,20 +6,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SexType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
+ * <p>Java class for SexType</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * <pre>
- * &lt;simpleType name="SexType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="F"/>
- *     &lt;enumeration value="I"/>
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="N"/>
- *     &lt;length value="1"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="SexType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="F"/&gt;
+ *     &lt;enumeration value="I"/&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="N"/&gt;
+ *     &lt;length value="1"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

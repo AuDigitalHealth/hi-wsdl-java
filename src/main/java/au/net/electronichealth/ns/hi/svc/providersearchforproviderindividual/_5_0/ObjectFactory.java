@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchForProviderIndividualResponse }
-     * 
-     */
-    public SearchForProviderIndividualResponse createSearchForProviderIndividualResponse() {
-        return new SearchForProviderIndividualResponse();
-    }
-
-    /**
      * Create an instance of {@link SearchForProviderIndividual }
      * 
      */
     public SearchForProviderIndividual createSearchForProviderIndividual() {
         return new SearchForProviderIndividual();
+    }
+
+    /**
+     * Create an instance of {@link SearchForProviderIndividualResponse }
+     * 
+     */
+    public SearchForProviderIndividualResponse createSearchForProviderIndividualResponse() {
+        return new SearchForProviderIndividualResponse();
     }
 
 }

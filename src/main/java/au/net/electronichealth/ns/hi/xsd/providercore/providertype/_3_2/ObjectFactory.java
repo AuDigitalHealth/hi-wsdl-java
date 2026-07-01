@@ -24,22 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ProviderTypeRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", "providerTypeRecord");
-    private final static QName _ProviderType_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", "providerType");
+    private static final QName _ProviderType_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", "providerType");
+    private static final QName _ProviderTypeRecord_QNAME = new QName("http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", "providerTypeRecord");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.hi.xsd.providercore.providertype._3_2
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link ProviderTypeRecord }
-     * 
-     */
-    public ProviderTypeRecord createProviderTypeRecord() {
-        return new ProviderTypeRecord();
     }
 
     /**
@@ -51,21 +43,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderTypeRecord }{@code >}}
+     * Create an instance of {@link ProviderTypeRecord }
      * 
      */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", name = "providerTypeRecord")
-    public JAXBElement<ProviderTypeRecord> createProviderTypeRecord(ProviderTypeRecord value) {
-        return new JAXBElement<ProviderTypeRecord>(_ProviderTypeRecord_QNAME, ProviderTypeRecord.class, null, value);
+    public ProviderTypeRecord createProviderTypeRecord() {
+        return new ProviderTypeRecord();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ProviderType }{@code >}
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", name = "providerType")
     public JAXBElement<ProviderType> createProviderType(ProviderType value) {
         return new JAXBElement<ProviderType>(_ProviderType_QNAME, ProviderType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderTypeRecord }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ProviderTypeRecord }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderType/3.2.0", name = "providerTypeRecord")
+    public JAXBElement<ProviderTypeRecord> createProviderTypeRecord(ProviderTypeRecord value) {
+        return new JAXBElement<ProviderTypeRecord>(_ProviderTypeRecord_QNAME, ProviderTypeRecord.class, null, value);
     }
 
 }

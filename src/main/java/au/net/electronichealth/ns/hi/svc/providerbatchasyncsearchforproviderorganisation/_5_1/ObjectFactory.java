@@ -30,22 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RetrieveSearchForProviderOrganisation }
-     * 
-     */
-    public RetrieveSearchForProviderOrganisation createRetrieveSearchForProviderOrganisation() {
-        return new RetrieveSearchForProviderOrganisation();
-    }
-
-    /**
-     * Create an instance of {@link RetrieveSearchForProviderOrganisationResponse }
-     * 
-     */
-    public RetrieveSearchForProviderOrganisationResponse createRetrieveSearchForProviderOrganisationResponse() {
-        return new RetrieveSearchForProviderOrganisationResponse();
-    }
-
-    /**
      * Create an instance of {@link SubmitSearchForProviderOrganisation }
      * 
      */
@@ -59,6 +43,22 @@ public class ObjectFactory {
      */
     public SubmitSearchForProviderOrganisationResponse createSubmitSearchForProviderOrganisationResponse() {
         return new SubmitSearchForProviderOrganisationResponse();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderOrganisation }
+     * 
+     */
+    public RetrieveSearchForProviderOrganisation createRetrieveSearchForProviderOrganisation() {
+        return new RetrieveSearchForProviderOrganisation();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveSearchForProviderOrganisationResponse }
+     * 
+     */
+    public RetrieveSearchForProviderOrganisationResponse createRetrieveSearchForProviderOrganisationResponse() {
+        return new RetrieveSearchForProviderOrganisationResponse();
     }
 
 }
