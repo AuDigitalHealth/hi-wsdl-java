@@ -9,7 +9,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>1.6.3-SNAPSHOT</version>
+    <version>1.6.4-SNAPSHOT</version>
     <name>HI Compiled WSDL library</name>
     <description>HI B2B WSDL resources and pre-generated JAX-WS / JAXB types (Java 8 / javax)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
