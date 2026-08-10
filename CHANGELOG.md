@@ -1,5 +1,10 @@
 # Change Log/Revision History
 
+= 1.6.6 =
+======
+- Messages `searchIHI` JAXB `propOrder`: `electronicCommunication` before `dateOfBirth` so Consumer Search IHI (including batch sync) request XML matches the HI Service message schema. Includes consumer `ElectronicCommunicationType` and `AustralianUnstructuredStreetAddressType`.
+- **`maven-enforcer-plugin`:** bans legacy Metro **`webservices-*`** and **`javax.xml.ws` / `javax.xml.bind` / `javax.xml.soap`** coordinates on the default lifecycle.
+
 = 1.6.5-SNAPSHOT =
 ======
 - **`1.6.5`** line: Java **11** / **Jakarta** committed types and classpath WSDL (**14** `Service` stubs, standard HI B2B scope).

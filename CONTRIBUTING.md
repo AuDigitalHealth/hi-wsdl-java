@@ -1,6 +1,6 @@
 # Contributing
 
-**Audience:** developers building or changing **this repository** (**`1.6.5-SNAPSHOT`** / Java **11** / **Jakarta**). Integrators adding a Maven dependency should use **README.md**.
+**Audience:** developers building or changing **this repository** (**`1.6.6-SNAPSHOT`** / Java **11** / **Jakarta**). Integrators adding a Maven dependency should use **README.md**.
 
 ---
 

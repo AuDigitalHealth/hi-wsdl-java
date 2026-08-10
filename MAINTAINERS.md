@@ -7,7 +7,7 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | Version | Java | APIs | `Service` stubs |
 | ------- | ---- | ---- | ----------------- |
 | **1.6.3** | 8 | **`javax.xml.ws`**, **`javax.xml.bind`** | **14** (standard HI B2B) |
-| **1.6.5** | 11 | **Jakarta** XML WS / Bind | **14** (standard HI B2B) |
+| **1.6.6** | 11 | **Jakarta** XML WS / Bind | **14** (standard HI B2B) |
 | **1.7.0** | 11 | **Jakarta** XML WS / Bind | **26** (full MCA) |
 
 **Git branch mapping (maintainers / checkout only — do not use in integrator docs):**
@@ -15,10 +15,10 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | Version | Git branch |
 | ------- | ---------- |
 | **1.6.3** | `java-8-javax` |
-| **1.6.5** | `java-11-jakarta` |
+| **1.6.6** | `java-11-jakarta` |
 | **1.7.0** | `java-11-jakarta-full-wsdl` |
 
-**This tree (`1.6.5-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **14** primary HI B2B **`@WebServiceClient`** services. **`hi-b2b-client`** **`1.6.5`** resolves **`hi-wsdl`** at **`${project.version}`** — **`mvn install`** here before an unpublished client **`verify`**. GA **`1.6.5`** pairs ship to Maven Central together.
+**This tree (`1.6.6-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **14** primary HI B2B **`@WebServiceClient`** services. **`hi-b2b-client`** **`1.6.6`** resolves **`hi-wsdl`** at **`${project.version}`** — **`mvn install`** here before an unpublished client **`verify`**. GA **`1.6.6`** pairs ship to Maven Central together.
 
 ## Artifact
 
@@ -35,13 +35,13 @@ Paths are relative to the repository root (directory containing **`pom.xml`**).
 | `wsdls/readme.txt` | Licensed WSDL tree staging instructions (tracked) |
 | `wsdls/xml/` | Local licensed WSDL/XSD for regeneration (**gitignored**) |
 
-## HI service coverage (`1.6.5`)
+## HI service coverage (`1.6.6`)
 
 **14** primary HI B2B interfaces (consumer search/batch-sync, provider 3.2 / 5.0 / 5.1 batch async). Additional **`HI_*.wsdl`** under **`src/main/resources`** ship in the JAR without committed port types.
 
 **ProviderMatchProviderAdministrativeIndividual** is intentionally out of scope (virtual service in .NET tooling). Full MCA (**26** services) is **`1.7.0`**.
 
-## Build (`1.6.5` line)
+## Build (`1.6.6` line)
 
 - **`maven.compiler.release` 11**
 - Compile deps: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3** — no **`jaxws-rt`** in this POM
@@ -62,7 +62,7 @@ Publishing uses **`central-publishing-maven-plugin`** (Sonatype Central Portal).
 | Branch | Java | HI client / WSDL version | Facades |
 | ------ | ---- | ------------------------ | ------- |
 | **`java-8-javax`** | 8 / javax | **1.6.3** | 14 |
-| **`java-11-jakarta`** | 11 / Jakarta | **1.6.5** | 14 |
+| **`java-11-jakarta`** | 11 / Jakarta | **1.6.6** | 14 |
 | **`java-11-jakarta-full-wsdl`** | 11 / Jakarta | **1.7.0** | 26 |
 
 Release **`hi-wsdl`** and **`hi-b2b-client`** at the **same GA version** on the matching branch pair before integrators upgrade.
@@ -83,7 +83,7 @@ Run on the **target branch** with a **clean** working tree. The plugin commits v
 mvn -B "-Prelease" release:prepare release:perform -DreleaseVersion=1.7.0 -DdevelopmentVersion=1.7.1-SNAPSHOT -Dtag=hi-wsdl-1.7.0
 ```
 
-Replace versions and **`-Dtag`** for the branch you are on (**`hi-wsdl-1.6.5`**, **`hi-b2b-client-1.6.3`**, etc.). Omit **`-D…`** only if you accept interactive prompts.
+Replace versions and **`-Dtag`** for the branch you are on (**`hi-wsdl-1.6.6`**, **`hi-b2b-client-1.6.3`**, etc.). Omit **`-D…`** only if you accept interactive prompts.
 
 **After success:** confirm the artifact on Central; repeat on the paired types/client repo. No extra Git steps unless push failed (then **`git push origin <branch>`** and **`git push origin <tag>`**).
 

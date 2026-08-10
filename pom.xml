@@ -9,7 +9,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>1.6.5-SNAPSHOT</version>
+    <version>1.6.6-SNAPSHOT</version>
     <name>HI WSDL library</name>
     <description>Healthcare Identifiers B2B WSDL and Jakarta generated types (Java 11)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
@@ -115,6 +115,39 @@
                     <fast>false</fast>
                     <force>true</force>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <id>enforce-build-tooling</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>[3.6.3,)</version>
+                                </requireMavenVersion>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>com.sun.xml.ws:webservices-rt</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-api</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra</exclude>
+                                        <exclude>com.sun.xml.ws:webservices-extra-api</exclude>
+                                        <exclude>javax.xml.ws:*</exclude>
+                                        <exclude>javax.xml.bind:*</exclude>
+                                        <exclude>javax.xml.soap:*</exclude>
+                                    </excludes>
+                                    <message>Use Jakarta XML APIs (jakarta.xml.bind-api / jakarta.xml.ws-api), not legacy Metro / javax JAX-WS.</message>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
