@@ -20,9 +20,15 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * <p>
+ * Java class for anonymous complex type
+ * </p>
+ * .
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ * </p>
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -33,6 +39,7 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareCardNumber" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}medicareIRN" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}dvaFileNumber" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0}electronicCommunication" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}dateOfBirth"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0}sex"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/common/IndividualNameCore/3.0}familyName"/&gt;
@@ -41,7 +48,6 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianStreetAddress" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}internationalAddress" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0}australianUnstructuredStreetAddress" minOccurs="0"/&gt;
- *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0}electronicCommunication" minOccurs="0"/&gt;
  *         &lt;element ref="{http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0}history" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -57,6 +63,7 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
     "medicareCardNumber",
     "medicareIRN",
     "dvaFileNumber",
+    "electronicCommunication",
     "dateOfBirth",
     "sex",
     "familyName",
@@ -65,7 +72,6 @@ import au.net.electronichealth.ns.hi.xsd.consumercore.electroniccommunication._3
     "australianStreetAddress",
     "internationalAddress",
     "australianUnstructuredStreetAddress",
-    "electronicCommunication",
     "history"
 })
 @XmlRootElement(name = "searchIHI")

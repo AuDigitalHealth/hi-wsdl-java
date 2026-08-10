@@ -8,11 +8,11 @@ For NEHTA facade clients, TLS, and signing, use **[hi-b2b-client-java](https://g
 
 | Version | Java | XML stack | HI service scope |
 | ------- | ---- | --------- | ---------------- |
-| **1.6.3** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
-| **1.6.5** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
-| **1.7.0** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Full MCA — **26** `Service` stubs |
+| **1.6.4** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.6.6** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.7.1** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Full MCA — **26** `Service` stubs |
 
-**This checkout** builds **`1.6.3-SNAPSHOT`** (Java **8** / **`javax`**) — **committed** generated types with **14** standard HI B2B services (no **`wsimport`** in the build).
+**This checkout** builds **`1.6.4-SNAPSHOT`** (Java **8** / **`javax`**) — **committed** generated types with **14** standard HI B2B services (no **`wsimport`** in the build).
 
 ## Dependency
 
@@ -22,7 +22,7 @@ Published releases are consumed from **[Maven Central](https://central.sonatype.
 <dependency>
   <groupId>au.gov.nehta</groupId>
   <artifactId>hi-wsdl</artifactId>
-  <version>1.6.3</version>
+  <version>1.6.4</version>
 </dependency>
 ```
 
@@ -32,17 +32,17 @@ Align **`hi-wsdl`** and **`hi-b2b-client`** at the **same version** when both ar
 
 ## Local development (SNAPSHOT)
 
-This repository builds **`1.6.3-SNAPSHOT`** on the Java **8** / **`javax`** line. **`hi-b2b-client-java`** declares **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** — install this types JAR **first** when both checkouts are unpublished:
+This repository builds **`1.6.4-SNAPSHOT`** on the Java **8** / **`javax`** line. **`hi-b2b-client-java`** declares **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** — install this types JAR **first** when both checkouts are unpublished:
 
 ```text
-# 1) hi-wsdl (1.6.3-SNAPSHOT — this repository)
+# 1) hi-wsdl (1.6.4-SNAPSHOT — this repository)
 mvn -B "-Dgpg.skip=true" clean install
 
-# 2) hi-b2b-client (1.6.3-SNAPSHOT — matching version)
+# 2) hi-b2b-client (1.6.4-SNAPSHOT — matching version)
 mvn -B "-Dgpg.skip=true" clean verify
 ```
 
-If Maven warns that a **GA** POM is missing (for example **`1.6.3`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in one project does not clear the local repository cache.
+If Maven warns that a **GA** POM is missing (for example **`1.6.4`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in one project does not clear the local repository cache.
 
 ## What is in the JAR
 

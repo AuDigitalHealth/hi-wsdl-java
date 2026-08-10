@@ -1,5 +1,9 @@
 # Change Log/Revision History
 
+= 1.6.4 =
+======
+- Messages `searchIHI` JAXB `propOrder`: `electronicCommunication` before `dateOfBirth` so Consumer Search IHI (including batch sync) request XML matches the HI Service message schema.
+
 = 1.6.3-SNAPSHOT =
 ======
 - **`1.6.3`** line: Java **8** / **`javax`** committed types and classpath WSDL (**14** `Service` stubs, standard HI B2B scope).
