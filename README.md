@@ -10,8 +10,8 @@ Use **version numbers** in documentation and dependencies — **not** Git branch
 
 | Version | Java | XML stack | HI service scope |
 | ------- | ---- | --------- | ---------------- |
-| **1.6.3** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
-| **1.6.5** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.6.4** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
+| **1.6.6** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Standard HI B2B — **14** `Service` stubs |
 | **1.7.0** | **11** | **Jakarta** / EE4J **`jaxws-rt` 4.0.x** at runtime in consumers | Full MCA — **26** `Service` stubs |
 
 **This checkout** builds **`1.7.0-SNAPSHOT`** (Java **11** / **Jakarta** / full MCA).
@@ -93,7 +93,7 @@ Or **`build.ps1`**, **`build.sh`**, **`build.bat`**. See **`CONTRIBUTING.md`** f
 | --- | --- | --- |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 | Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.hi.*`) |
-| Codegen | **26** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`1.7.0`**: in-repo **`wsimport`** (26 executions) by default; optional **`-Phi-wsdl-artifact`** uses **`hi-wsdl`** from Maven Central |
+| Codegen | **26** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`1.7.1`**: in-repo **`wsimport`** (26 executions) by default; optional **`-Phi-wsdl-artifact`** uses **`hi-wsdl`** from Maven Central |
 
 ## Documentation
 
