@@ -9,7 +9,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>1.6.4-SNAPSHOT</version>
+    <version>8.0.0.1-SNAPSHOT</version>
     <name>HI Compiled WSDL library</name>
     <description>HI B2B WSDL resources and pre-generated JAX-WS / JAXB types (Java 8 / javax)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
@@ -160,7 +160,7 @@
                                         <exclude>jakarta.activation:*</exclude>
                                         <exclude>jakarta.annotation:*</exclude>
                                     </excludes>
-                                    <message>Java 8 / javax line: use javax.xml.bind, javax.xml.ws, and javax.jws only. Consumers add EE4J jaxws-rt 2.3.x at runtime — not Metro webservices-* or Jakarta XML APIs.</message>
+                                    <message>Java 8 / javax line: use javax.xml.bind, javax.xml.ws, and javax.jws only. Consumers add EE4J jaxws-rt 2.3.x at runtime - not Metro webservices-* or Jakarta XML APIs.</message>
                                 </bannedDependencies>
                             </rules>
                         </configuration>
