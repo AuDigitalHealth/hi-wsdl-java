@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.organisationname._3_2;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * 
  * 
- * <p>Java class for UsageType</p>.
+ * &lt;p&gt;Java class for UsageType&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
- * <pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
  * &lt;simpleType name="UsageType"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;enumeration value="U"/&gt;
@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Y"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "UsageType")

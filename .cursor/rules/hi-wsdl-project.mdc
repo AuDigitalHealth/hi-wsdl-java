@@ -5,35 +5,40 @@ alwaysApply: true
 
 # hi-wsdl-java
 
-Maven artifact **`au.gov.nehta:hi-wsdl`** — HI B2B WSDL resources and pre-generated JAX-WS/JAXB types. **Not** facade clients (**hi-b2b-client-java**).
+Maven artifact **`au.gov.nehta:hi-wsdl`** - HI B2B WSDL resources and pre-generated JAX-WS/JAXB types. **Not** facade clients (**hi-b2b-client-java**).
 
 ## Documentation
 
-Follow **`documentation-standards.mdc`**. Integrator docs use **version numbers** — not Git branch names.
+Follow **`documentation-standards.mdc`**. Integrator docs use **version numbers** - not Git branch names.
+
+The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Downstream artifacts that pin this coordinate to **`${project.version}`** (including **`hi-b2b-client`**) use the same version.
 
 | Version | Java | XML stack | `Service` stubs |
-| ------- | ---- | --------- | ----------------- |
-| **1.6.3** | 8 | **javax** | **14** (standard HI B2B) |
-| **1.6.5** | 11 | **Jakarta** | **14** (standard HI B2B) |
-| **1.7.0** | 11 | **Jakarta** | **26** (full MCA) |
+| ------- | ---- | --------- | --------------- |
+| **8.0.0.1** | 8 | **javax** | **14** (standard HI B2B) |
+| **11.0.0.1** | 11 | **Jakarta** | **26** (full MCA) |
+| **17.0.0.1** | 17 | **Jakarta** | **26** (full MCA) |
+| **21.0.0.1** | 21 | **Jakarta** | **26** (full MCA) |
+| **24.0.0.1** | 24 | **Jakarta** | **26** (full MCA) |
 
-**Git branch mapping (maintainers only — never in integrator docs):**
+**Git branch mapping (maintainers only - never in integrator docs):**
 
-| Version | Git branch |
-| ------- | ---------- |
-| **1.6.3** | `java-8-javax` |
-| **1.6.5** | `java-11-jakarta` |
-| **1.7.0** | `java-11-jakarta-full-wsdl` |
+| Version | Official Git branch |
+| ------- | ------------------- |
+| **8.0.0.1** | `java-8` |
+| **11.0.0.1** | `java-11` |
+| **17.0.0.1** | `java-17` |
+| **21.0.0.1** | `java-21` |
+| **24.0.0.1** | `java-24` |
 
-## This checkout
+## This 11.0.0.1 line
 
-**`1.6.3-SNAPSHOT`**: Java **8**, **`javax`** committed types, **14** services (standard HI B2B), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Sources frozen — no **`wsimport`** in this POM.
+**`11.0.0.1-SNAPSHOT`**: Java **11**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Default build compiles committed sources. Regen (**`-Pregenerate-sources`**) requires licensed **`wsdls/xml/`** locally. See **MAINTAINERS.md**.
 
 ## Build
 
-- JDK **8+**, from repo root: `mvn -B "-Dgpg.skip=true" clean verify` (quote `-D` on PowerShell).
-- Default build uses **committed** `src/main/java` — no wsimport.
-- Type regeneration for new HI releases is on **`1.6.5`** / **`1.7.0`** lines.
+- JDK **11**, from repo root: `mvn -B "-Dgpg.skip=true" clean verify` (quote `-D` on PowerShell).
+- Default build uses **committed** `src/main/java` - no wsimport.
 
 ## vs hi-b2b-client-java
 
@@ -42,11 +47,11 @@ Follow **`documentation-standards.mdc`**. Integrator docs use **version numbers*
 | Delivers | WSDL on classpath + generated types | Facade clients, TLS, signing |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 
-Align **`hi-wsdl`** and **`hi-b2b-client`** versions per release line table.
+Publish **`hi-wsdl`** first. Consumers that pin **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate on each line (**8.0.0.1**, **11.0.0.1**, and so on).
 
 ## Doc split
 
 - **`documentation-standards.mdc`**: implementor-first, Maven Central default, local/OS sections, relative paths, no secrets
 - **`README.md`**: integrators (Maven Central default)
-- **`CONTRIBUTING.md`**: build from source, local SNAPSHOT, OS wrappers
+- **`CONTRIBUTING.md`**: build from source, local SNAPSHOT, regeneration notes
 - **`MAINTAINERS.md`**: POM / type-regeneration internals

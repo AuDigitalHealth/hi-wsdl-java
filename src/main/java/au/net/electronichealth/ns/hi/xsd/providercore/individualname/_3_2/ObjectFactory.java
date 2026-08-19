@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -37,6 +37,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link IndividualName }
      * 
+     * @return
+     *     the new instance of {@link IndividualName }
      */
     public IndividualName createIndividualName() {
         return new IndividualName();
@@ -45,6 +47,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link IndividualNameRecord }
      * 
+     * @return
+     *     the new instance of {@link IndividualNameRecord }
      */
     public IndividualNameRecord createIndividualNameRecord() {
         return new IndividualNameRecord();
@@ -53,6 +57,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NameUsageType }
      * 
+     * @return
+     *     the new instance of {@link NameUsageType }
      */
     public NameUsageType createNameUsageType() {
         return new NameUsageType();
@@ -68,7 +74,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/3.2.0", name = "individualName")
     public JAXBElement<IndividualName> createIndividualName(IndividualName value) {
-        return new JAXBElement<IndividualName>(_IndividualName_QNAME, IndividualName.class, null, value);
+        return new JAXBElement<>(_IndividualName_QNAME, IndividualName.class, null, value);
     }
 
     /**
@@ -81,7 +87,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/IndividualName/3.2.0", name = "individualNameRecord")
     public JAXBElement<IndividualNameRecord> createIndividualNameRecord(IndividualNameRecord value) {
-        return new JAXBElement<IndividualNameRecord>(_IndividualNameRecord_QNAME, IndividualNameRecord.class, null, value);
+        return new JAXBElement<>(_IndividualNameRecord_QNAME, IndividualNameRecord.class, null, value);
     }
 
 }

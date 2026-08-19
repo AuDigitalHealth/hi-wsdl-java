@@ -1,18 +1,18 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * 
  * 
- * <p>Java class for IHIRecordStatusType</p>.
+ * &lt;p&gt;Java class for IHIRecordStatusType&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
- * <pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
  * &lt;simpleType name="IHIRecordStatusType"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
  *     &lt;enumeration value="Provisional"/&gt;
@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Verified"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "IHIRecordStatusType", namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreDatatypes/3.0")

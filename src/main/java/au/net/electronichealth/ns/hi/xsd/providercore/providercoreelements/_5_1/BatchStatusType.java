@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.providercoreelements._5_1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * 
  * 
- * <p>Java class for BatchStatusType</p>.
+ * &lt;p&gt;Java class for BatchStatusType&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
- * <pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
  * &lt;simpleType name="BatchStatusType"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;enumeration value="RECEIVED"/&gt;
@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="ERROR"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "BatchStatusType", namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/ProviderCoreElements/5.1.0")

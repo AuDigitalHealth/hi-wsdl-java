@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
-import javax.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceClient;
 import org.junit.Test;
 
 /**
@@ -33,7 +33,19 @@ public class HiWsdlArtifactTest {
         "HI_ProviderReadProviderOrganisation-3.2.0.wsdl",
         "HI_ProviderManageProviderAdministrativeIndividual-3.2.0.wsdl",
         "HI_ProviderReadProviderAdministrativeIndividual-3.2.0.wsdl",
-        "HI_ProviderSearchHIProviderDirectoryForIndividual-3.2.0.wsdl"
+        "HI_ProviderSearchHIProviderDirectoryForIndividual-3.2.0.wsdl",
+        "HI_ConsumerSearchIHIBatchAsync-3.0.wsdl",
+        "HI_ConsumerCreateProvisionalIHI-3.0.wsdl",
+        "HI_ConsumerMergeProvisionalIHI-3.0.wsdl",
+        "HI_ConsumerUpdateProvisionalIHI-3.0.wsdl",
+        "HI_ConsumerCreateUnverifiedIHI-3.0.2.wsdl",
+        "HI_ConsumerResolveProvisionalIHI-3.0.2.wsdl",
+        "HI_ConsumerNotifyDuplicateIHI-3.2.0.wsdl",
+        "HI_ConsumerNotifyReplicaIHI-3.2.0.wsdl",
+        "HI_ConsumerUpdateIHI-3.2.0.wsdl",
+        "HI_ConsumerCreateVerifiedIHI-4.0.0.wsdl",
+        "HI_ProviderManageTdsProviderIndividual-5.1.0.wsdl",
+        "HI_ProviderSearchTdsProviderIndividual-5.1.0.wsdl"
     );
 
     @Test
@@ -52,7 +64,7 @@ public class HiWsdlArtifactTest {
                 serviceStubs++;
             }
         }
-        assertEquals(14, serviceStubs);
+        assertEquals(26, serviceStubs);
     }
 
     private static List<Class<?>> serviceClassesOnClasspath() throws Exception {

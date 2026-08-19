@@ -3,12 +3,6 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.readorganisation._3_2
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AddressRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunicationRecord;
@@ -19,14 +13,20 @@ import au.net.electronichealth.ns.hi.xsd.providercore.organisationdetails._3_2.O
 import au.net.electronichealth.ns.hi.xsd.providercore.organisationname._3_2.OrganisationNameRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.organisationservice._3_2.OrganisationServiceRecord;
 import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._3_2.ProviderDirectoryOrganisationEntryRecord;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -47,7 +47,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -169,8 +169,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationNameRecord property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationNameRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -191,7 +191,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<OrganisationNameRecord> getOrganisationNameRecord() {
         if (organisationNameRecord == null) {
-            organisationNameRecord = new ArrayList<OrganisationNameRecord>();
+            organisationNameRecord = new ArrayList<>();
         }
         return this.organisationNameRecord;
     }
@@ -201,8 +201,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationServiceRecord property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationServiceRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -223,7 +223,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<OrganisationServiceRecord> getOrganisationServiceRecord() {
         if (organisationServiceRecord == null) {
-            organisationServiceRecord = new ArrayList<OrganisationServiceRecord>();
+            organisationServiceRecord = new ArrayList<>();
         }
         return this.organisationServiceRecord;
     }
@@ -233,8 +233,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressRecord property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the addressRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -255,7 +255,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<AddressRecord> getAddressRecord() {
         if (addressRecord == null) {
-            addressRecord = new ArrayList<AddressRecord>();
+            addressRecord = new ArrayList<>();
         }
         return this.addressRecord;
     }
@@ -265,8 +265,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationRecord property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -287,7 +287,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<ElectronicCommunicationRecord> getElectronicCommunicationRecord() {
         if (electronicCommunicationRecord == null) {
-            electronicCommunicationRecord = new ArrayList<ElectronicCommunicationRecord>();
+            electronicCommunicationRecord = new ArrayList<>();
         }
         return this.electronicCommunicationRecord;
     }
@@ -297,8 +297,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorServiceRecord property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the endpointLocatorServiceRecord property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -319,7 +319,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<EndpointLocatorServiceRecord> getEndpointLocatorServiceRecord() {
         if (endpointLocatorServiceRecord == null) {
-            endpointLocatorServiceRecord = new ArrayList<EndpointLocatorServiceRecord>();
+            endpointLocatorServiceRecord = new ArrayList<>();
         }
         return this.endpointLocatorServiceRecord;
     }
@@ -329,8 +329,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedIndividuals property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the linkedIndividuals property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -351,7 +351,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<LinkedIndividualType> getLinkedIndividuals() {
         if (linkedIndividuals == null) {
-            linkedIndividuals = new ArrayList<LinkedIndividualType>();
+            linkedIndividuals = new ArrayList<>();
         }
         return this.linkedIndividuals;
     }
@@ -361,8 +361,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedOrganisations property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the linkedOrganisations property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -383,7 +383,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<LinkedOrganisationType> getLinkedOrganisations() {
         if (linkedOrganisations == null) {
-            linkedOrganisations = new ArrayList<LinkedOrganisationType>();
+            linkedOrganisations = new ArrayList<>();
         }
         return this.linkedOrganisations;
     }
@@ -393,8 +393,8 @@ public class ReadProviderOrganisationResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the directoryServiceEntries property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the directoryServiceEntries property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -415,7 +415,7 @@ public class ReadProviderOrganisationResult {
      */
     public List<ProviderDirectoryOrganisationEntryRecord> getDirectoryServiceEntries() {
         if (directoryServiceEntries == null) {
-            directoryServiceEntries = new ArrayList<ProviderDirectoryOrganisationEntryRecord>();
+            directoryServiceEntries = new ArrayList<>();
         }
         return this.directoryServiceEntries;
     }

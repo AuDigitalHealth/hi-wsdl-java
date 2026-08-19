@@ -1,9 +1,6 @@
 
 package au.net.electronichealth.ns.hi.xsd.common.addresscore._3;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.AddressPurposeType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.LevelType;
@@ -12,13 +9,16 @@ import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StateType
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetSuffixType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.StreetType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.UnitType;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.common.addresscore._3 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -65,6 +65,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link UnitGroupType }
      * 
+     * @return
+     *     the new instance of {@link UnitGroupType }
      */
     public UnitGroupType createUnitGroupType() {
         return new UnitGroupType();
@@ -73,6 +75,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LevelGroupType }
      * 
+     * @return
+     *     the new instance of {@link LevelGroupType }
      */
     public LevelGroupType createLevelGroupType() {
         return new LevelGroupType();
@@ -81,6 +85,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PostalDeliveryGroupType }
      * 
+     * @return
+     *     the new instance of {@link PostalDeliveryGroupType }
      */
     public PostalDeliveryGroupType createPostalDeliveryGroupType() {
         return new PostalDeliveryGroupType();
@@ -96,7 +102,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "addressSiteName")
     public JAXBElement<String> createAddressSiteName(String value) {
-        return new JAXBElement<String>(_AddressSiteName_QNAME, String.class, null, value);
+        return new JAXBElement<>(_AddressSiteName_QNAME, String.class, null, value);
     }
 
     /**
@@ -109,7 +115,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "unitGroup")
     public JAXBElement<UnitGroupType> createUnitGroup(UnitGroupType value) {
-        return new JAXBElement<UnitGroupType>(_UnitGroup_QNAME, UnitGroupType.class, null, value);
+        return new JAXBElement<>(_UnitGroup_QNAME, UnitGroupType.class, null, value);
     }
 
     /**
@@ -122,7 +128,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "unitType")
     public JAXBElement<UnitType> createUnitType(UnitType value) {
-        return new JAXBElement<UnitType>(_UnitType_QNAME, UnitType.class, null, value);
+        return new JAXBElement<>(_UnitType_QNAME, UnitType.class, null, value);
     }
 
     /**
@@ -135,7 +141,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "unitNumber")
     public JAXBElement<String> createUnitNumber(String value) {
-        return new JAXBElement<String>(_UnitNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_UnitNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -148,7 +154,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "levelGroup")
     public JAXBElement<LevelGroupType> createLevelGroup(LevelGroupType value) {
-        return new JAXBElement<LevelGroupType>(_LevelGroup_QNAME, LevelGroupType.class, null, value);
+        return new JAXBElement<>(_LevelGroup_QNAME, LevelGroupType.class, null, value);
     }
 
     /**
@@ -161,7 +167,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "levelType")
     public JAXBElement<LevelType> createLevelType(LevelType value) {
-        return new JAXBElement<LevelType>(_LevelType_QNAME, LevelType.class, null, value);
+        return new JAXBElement<>(_LevelType_QNAME, LevelType.class, null, value);
     }
 
     /**
@@ -174,7 +180,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "levelNumber")
     public JAXBElement<String> createLevelNumber(String value) {
-        return new JAXBElement<String>(_LevelNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_LevelNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -187,7 +193,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "lotNumber")
     public JAXBElement<String> createLotNumber(String value) {
-        return new JAXBElement<String>(_LotNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_LotNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -200,7 +206,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "streetNumber")
     public JAXBElement<String> createStreetNumber(String value) {
-        return new JAXBElement<String>(_StreetNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_StreetNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -213,7 +219,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "streetName")
     public JAXBElement<String> createStreetName(String value) {
-        return new JAXBElement<String>(_StreetName_QNAME, String.class, null, value);
+        return new JAXBElement<>(_StreetName_QNAME, String.class, null, value);
     }
 
     /**
@@ -226,7 +232,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "streetType")
     public JAXBElement<StreetType> createStreetType(StreetType value) {
-        return new JAXBElement<StreetType>(_StreetType_QNAME, StreetType.class, null, value);
+        return new JAXBElement<>(_StreetType_QNAME, StreetType.class, null, value);
     }
 
     /**
@@ -239,7 +245,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "streetSuffix")
     public JAXBElement<StreetSuffixType> createStreetSuffix(StreetSuffixType value) {
-        return new JAXBElement<StreetSuffixType>(_StreetSuffix_QNAME, StreetSuffixType.class, null, value);
+        return new JAXBElement<>(_StreetSuffix_QNAME, StreetSuffixType.class, null, value);
     }
 
     /**
@@ -252,7 +258,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "suburb")
     public JAXBElement<String> createSuburb(String value) {
-        return new JAXBElement<String>(_Suburb_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Suburb_QNAME, String.class, null, value);
     }
 
     /**
@@ -265,7 +271,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "postcode")
     public JAXBElement<String> createPostcode(String value) {
-        return new JAXBElement<String>(_Postcode_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Postcode_QNAME, String.class, null, value);
     }
 
     /**
@@ -278,7 +284,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "state")
     public JAXBElement<StateType> createState(StateType value) {
-        return new JAXBElement<StateType>(_State_QNAME, StateType.class, null, value);
+        return new JAXBElement<>(_State_QNAME, StateType.class, null, value);
     }
 
     /**
@@ -291,7 +297,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "internationalStateProvince")
     public JAXBElement<String> createInternationalStateProvince(String value) {
-        return new JAXBElement<String>(_InternationalStateProvince_QNAME, String.class, null, value);
+        return new JAXBElement<>(_InternationalStateProvince_QNAME, String.class, null, value);
     }
 
     /**
@@ -304,7 +310,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "country")
     public JAXBElement<String> createCountry(String value) {
-        return new JAXBElement<String>(_Country_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Country_QNAME, String.class, null, value);
     }
 
     /**
@@ -317,7 +323,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "internationalPostcode")
     public JAXBElement<String> createInternationalPostcode(String value) {
-        return new JAXBElement<String>(_InternationalPostcode_QNAME, String.class, null, value);
+        return new JAXBElement<>(_InternationalPostcode_QNAME, String.class, null, value);
     }
 
     /**
@@ -330,7 +336,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "internationalAddressLine")
     public JAXBElement<String> createInternationalAddressLine(String value) {
-        return new JAXBElement<String>(_InternationalAddressLine_QNAME, String.class, null, value);
+        return new JAXBElement<>(_InternationalAddressLine_QNAME, String.class, null, value);
     }
 
     /**
@@ -343,7 +349,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "postalDeliveryType")
     public JAXBElement<PostalDeliveryType> createPostalDeliveryType(PostalDeliveryType value) {
-        return new JAXBElement<PostalDeliveryType>(_PostalDeliveryType_QNAME, PostalDeliveryType.class, null, value);
+        return new JAXBElement<>(_PostalDeliveryType_QNAME, PostalDeliveryType.class, null, value);
     }
 
     /**
@@ -356,7 +362,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "postalDeliveryNumber")
     public JAXBElement<String> createPostalDeliveryNumber(String value) {
-        return new JAXBElement<String>(_PostalDeliveryNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_PostalDeliveryNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -369,7 +375,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "postalDeliveryGroup")
     public JAXBElement<PostalDeliveryGroupType> createPostalDeliveryGroup(PostalDeliveryGroupType value) {
-        return new JAXBElement<PostalDeliveryGroupType>(_PostalDeliveryGroup_QNAME, PostalDeliveryGroupType.class, null, value);
+        return new JAXBElement<>(_PostalDeliveryGroup_QNAME, PostalDeliveryGroupType.class, null, value);
     }
 
     /**
@@ -382,7 +388,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/AddressCore/3.0", name = "purpose")
     public JAXBElement<AddressPurposeType> createPurpose(AddressPurposeType value) {
-        return new JAXBElement<AddressPurposeType>(_Purpose_QNAME, AddressPurposeType.class, null, value);
+        return new JAXBElement<>(_Purpose_QNAME, AddressPurposeType.class, null, value);
     }
 
 }

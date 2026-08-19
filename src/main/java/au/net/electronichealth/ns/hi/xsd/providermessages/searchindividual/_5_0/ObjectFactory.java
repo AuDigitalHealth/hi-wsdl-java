@@ -1,14 +1,14 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._5_0 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -30,19 +30,23 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchForProviderIndividualResult }
-     * 
-     */
-    public SearchForProviderIndividualResult createSearchForProviderIndividualResult() {
-        return new SearchForProviderIndividualResult();
-    }
-
-    /**
      * Create an instance of {@link SearchForProviderIndividual }
      * 
+     * @return
+     *     the new instance of {@link SearchForProviderIndividual }
      */
     public SearchForProviderIndividual createSearchForProviderIndividual() {
         return new SearchForProviderIndividual();
+    }
+
+    /**
+     * Create an instance of {@link SearchForProviderIndividualResult }
+     * 
+     * @return
+     *     the new instance of {@link SearchForProviderIndividualResult }
+     */
+    public SearchForProviderIndividualResult createSearchForProviderIndividualResult() {
+        return new SearchForProviderIndividualResult();
     }
 
 }

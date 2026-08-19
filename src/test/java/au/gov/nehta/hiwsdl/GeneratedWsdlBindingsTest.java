@@ -11,21 +11,21 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.net.URL;
 import java.net.URLDecoder;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
-import javax.jws.WebMethod;
-import javax.xml.bind.JAXBElement;
+import jakarta.jws.WebMethod;
+import jakarta.xml.bind.JAXBElement;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
-import javax.xml.ws.WebEndpoint;
-import javax.xml.ws.WebServiceClient;
-import javax.xml.ws.WebServiceFeature;
+import jakarta.xml.ws.Service;
+import jakarta.xml.ws.WebEndpoint;
+import jakarta.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceFeature;
 import org.junit.Test;
 
 public class GeneratedWsdlBindingsTest {
@@ -139,7 +139,7 @@ public class GeneratedWsdlBindingsTest {
         return 0;
     }
 
-    private static int exerciseServiceMethod(Class<?> type, Method method) {
+    private static int exerciseServiceMethod(Class<?> type, Method method) throws Exception {
         if (!method.getName().startsWith("get") || method.getAnnotation(WebEndpoint.class) == null) {
             return 0;
         }
@@ -151,9 +151,11 @@ public class GeneratedWsdlBindingsTest {
             wsdl = Thread.currentThread().getContextClassLoader().getResource(client.wsdlLocation());
         }
         assertNotNull(client.wsdlLocation(), wsdl);
-        assertFalse(client.targetNamespace().isEmpty());
-        assertFalse(client.name().isEmpty());
-        assertFalse(method.getAnnotation(WebEndpoint.class).name().isEmpty());
+
+        Constructor<?> constructor = type.getConstructor(URL.class, QName.class);
+        Object service = constructor.newInstance(wsdl, new QName(client.targetNamespace(), client.name()));
+        Object result = method.invoke(service, sampleArguments(method.getParameterTypes()));
+        assertNotNull(type.getName() + "." + method.getName(), result);
         return 1;
     }
 

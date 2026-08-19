@@ -1,19 +1,19 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3_2;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.AustralianAddressCriteriaType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.InternationalAddressCriteriaType;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providermessages.searchorganisation._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -45,6 +45,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchHIProviderDirectoryForOrganisationResult }
      * 
+     * @return
+     *     the new instance of {@link SearchHIProviderDirectoryForOrganisationResult }
      */
     public SearchHIProviderDirectoryForOrganisationResult createSearchHIProviderDirectoryForOrganisationResult() {
         return new SearchHIProviderDirectoryForOrganisationResult();
@@ -53,6 +55,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OrganisationProviderDirectoryEntryType }
      * 
+     * @return
+     *     the new instance of {@link OrganisationProviderDirectoryEntryType }
      */
     public OrganisationProviderDirectoryEntryType createOrganisationProviderDirectoryEntryType() {
         return new OrganisationProviderDirectoryEntryType();
@@ -61,6 +65,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchHIProviderDirectoryForOrganisation }
      * 
+     * @return
+     *     the new instance of {@link SearchHIProviderDirectoryForOrganisation }
      */
     public SearchHIProviderDirectoryForOrganisation createSearchHIProviderDirectoryForOrganisation() {
         return new SearchHIProviderDirectoryForOrganisation();
@@ -76,7 +82,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "hpioNumber")
     public JAXBElement<String> createHpioNumber(String value) {
-        return new JAXBElement<String>(_HpioNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_HpioNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -89,7 +95,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "name")
     public JAXBElement<String> createName(String value) {
-        return new JAXBElement<String>(_Name_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Name_QNAME, String.class, null, value);
     }
 
     /**
@@ -102,7 +108,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "organisationType")
     public JAXBElement<String> createOrganisationType(String value) {
-        return new JAXBElement<String>(_OrganisationType_QNAME, String.class, null, value);
+        return new JAXBElement<>(_OrganisationType_QNAME, String.class, null, value);
     }
 
     /**
@@ -115,7 +121,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "serviceType")
     public JAXBElement<String> createServiceType(String value) {
-        return new JAXBElement<String>(_ServiceType_QNAME, String.class, null, value);
+        return new JAXBElement<>(_ServiceType_QNAME, String.class, null, value);
     }
 
     /**
@@ -128,7 +134,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "unitType")
     public JAXBElement<String> createUnitType(String value) {
-        return new JAXBElement<String>(_UnitType_QNAME, String.class, null, value);
+        return new JAXBElement<>(_UnitType_QNAME, String.class, null, value);
     }
 
     /**
@@ -141,7 +147,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "australianAddressCriteria")
     public JAXBElement<AustralianAddressCriteriaType> createAustralianAddressCriteria(AustralianAddressCriteriaType value) {
-        return new JAXBElement<AustralianAddressCriteriaType>(_AustralianAddressCriteria_QNAME, AustralianAddressCriteriaType.class, null, value);
+        return new JAXBElement<>(_AustralianAddressCriteria_QNAME, AustralianAddressCriteriaType.class, null, value);
     }
 
     /**
@@ -154,7 +160,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "internationalAddressCriteria")
     public JAXBElement<InternationalAddressCriteriaType> createInternationalAddressCriteria(InternationalAddressCriteriaType value) {
-        return new JAXBElement<InternationalAddressCriteriaType>(_InternationalAddressCriteria_QNAME, InternationalAddressCriteriaType.class, null, value);
+        return new JAXBElement<>(_InternationalAddressCriteria_QNAME, InternationalAddressCriteriaType.class, null, value);
     }
 
     /**
@@ -167,7 +173,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/SearchOrganisation/3.2.0", name = "linkSearchType")
     public JAXBElement<String> createLinkSearchType(String value) {
-        return new JAXBElement<String>(_LinkSearchType_QNAME, String.class, null, value);
+        return new JAXBElement<>(_LinkSearchType_QNAME, String.class, null, value);
     }
 
 }

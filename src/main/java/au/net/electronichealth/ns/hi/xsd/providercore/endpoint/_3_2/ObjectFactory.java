@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.endpoint._3_2;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providercore.endpoint._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -37,6 +37,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EndpointLocatorServiceRecord }
      * 
+     * @return
+     *     the new instance of {@link EndpointLocatorServiceRecord }
      */
     public EndpointLocatorServiceRecord createEndpointLocatorServiceRecord() {
         return new EndpointLocatorServiceRecord();
@@ -45,6 +47,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EndpointLocatorService }
      * 
+     * @return
+     *     the new instance of {@link EndpointLocatorService }
      */
     public EndpointLocatorService createEndpointLocatorService() {
         return new EndpointLocatorService();
@@ -60,7 +64,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0", name = "endpointLocatorServiceRecord")
     public JAXBElement<EndpointLocatorServiceRecord> createEndpointLocatorServiceRecord(EndpointLocatorServiceRecord value) {
-        return new JAXBElement<EndpointLocatorServiceRecord>(_EndpointLocatorServiceRecord_QNAME, EndpointLocatorServiceRecord.class, null, value);
+        return new JAXBElement<>(_EndpointLocatorServiceRecord_QNAME, EndpointLocatorServiceRecord.class, null, value);
     }
 
     /**
@@ -73,7 +77,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providercore/EndPoint/3.2.0", name = "endpointLocatorService")
     public JAXBElement<EndpointLocatorService> createEndpointLocatorService(EndpointLocatorService value) {
-        return new JAXBElement<EndpointLocatorService>(_EndpointLocatorService_QNAME, EndpointLocatorService.class, null, value);
+        return new JAXBElement<>(_EndpointLocatorService_QNAME, EndpointLocatorService.class, null, value);
     }
 
 }

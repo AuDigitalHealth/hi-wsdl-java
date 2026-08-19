@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.consumermessages.searchihibatch._3 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -36,6 +36,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchIHIRequestType }
      * 
+     * @return
+     *     the new instance of {@link SearchIHIRequestType }
      */
     public SearchIHIRequestType createSearchIHIRequestType() {
         return new SearchIHIRequestType();
@@ -44,6 +46,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchIHIResultType }
      * 
+     * @return
+     *     the new instance of {@link SearchIHIResultType }
      */
     public SearchIHIResultType createSearchIHIResultType() {
         return new SearchIHIResultType();
@@ -52,6 +56,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SubmitSearchIHIBatch }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchIHIBatch }
      */
     public SubmitSearchIHIBatch createSubmitSearchIHIBatch() {
         return new SubmitSearchIHIBatch();
@@ -60,6 +66,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SubmitSearchIHIBatchResponse }
      * 
+     * @return
+     *     the new instance of {@link SubmitSearchIHIBatchResponse }
      */
     public SubmitSearchIHIBatchResponse createSubmitSearchIHIBatchResponse() {
         return new SubmitSearchIHIBatchResponse();
@@ -68,6 +76,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RetrieveSearchIHIBatch }
      * 
+     * @return
+     *     the new instance of {@link RetrieveSearchIHIBatch }
      */
     public RetrieveSearchIHIBatch createRetrieveSearchIHIBatch() {
         return new RetrieveSearchIHIBatch();
@@ -76,6 +86,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RetrieveSearchIHIBatchResponse }
      * 
+     * @return
+     *     the new instance of {@link RetrieveSearchIHIBatchResponse }
      */
     public RetrieveSearchIHIBatchResponse createRetrieveSearchIHIBatchResponse() {
         return new RetrieveSearchIHIBatchResponse();
@@ -84,6 +96,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSearchIHIBatchStatus }
      * 
+     * @return
+     *     the new instance of {@link GetSearchIHIBatchStatus }
      */
     public GetSearchIHIBatchStatus createGetSearchIHIBatchStatus() {
         return new GetSearchIHIBatchStatus();
@@ -92,6 +106,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSearchIHIBatchStatusResponse }
      * 
+     * @return
+     *     the new instance of {@link GetSearchIHIBatchStatusResponse }
      */
     public GetSearchIHIBatchStatusResponse createGetSearchIHIBatchStatusResponse() {
         return new GetSearchIHIBatchStatusResponse();
@@ -100,6 +116,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchIHIBatchStatusType }
      * 
+     * @return
+     *     the new instance of {@link SearchIHIBatchStatusType }
      */
     public SearchIHIBatchStatusType createSearchIHIBatchStatusType() {
         return new SearchIHIBatchStatusType();
@@ -108,6 +126,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DeleteSearchIHIBatch }
      * 
+     * @return
+     *     the new instance of {@link DeleteSearchIHIBatch }
      */
     public DeleteSearchIHIBatch createDeleteSearchIHIBatch() {
         return new DeleteSearchIHIBatch();
@@ -116,6 +136,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DeleteSearchIHIBatchResponse }
      * 
+     * @return
+     *     the new instance of {@link DeleteSearchIHIBatchResponse }
      */
     public DeleteSearchIHIBatchResponse createDeleteSearchIHIBatchResponse() {
         return new DeleteSearchIHIBatchResponse();
@@ -124,6 +146,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchIHIBatchRetrieveRequestType }
      * 
+     * @return
+     *     the new instance of {@link SearchIHIBatchRetrieveRequestType }
      */
     public SearchIHIBatchRetrieveRequestType createSearchIHIBatchRetrieveRequestType() {
         return new SearchIHIBatchRetrieveRequestType();
@@ -139,7 +163,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumermessages/SearchIHIBatch/3.0", name = "batchIdentifier")
     public JAXBElement<String> createBatchIdentifier(String value) {
-        return new JAXBElement<String>(_BatchIdentifier_QNAME, String.class, null, value);
+        return new JAXBElement<>(_BatchIdentifier_QNAME, String.class, null, value);
     }
 
 }
