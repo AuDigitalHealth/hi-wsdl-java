@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ java-8 ]
+  pull_request:
+    branches: [ java-8 ]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "8"
+          cache: maven
+      - name: Maven verify
+        run: mvn -B "-Dgpg.skip=true" clean verify
