@@ -4,9 +4,10 @@ Rules: `.cursor/rules/*.mdc`. Do not duplicate in README or CONTRIBUTING.
 
 | Concern | Rule |
 |---------|------|
+| ASCII only in authored files | `ascii-source.mdc` |
 | Documentation and build scripts (implementor-first, Central, local, OS, paths, no secrets) | `documentation-standards.mdc` |
 | HI WSDL scope, build, version lines | `hi-wsdl-project.mdc` |
 | Worktrees local only; versions in integrator docs | `worktrees.mdc` |
-| Multi-branch edits in one repo — use worktree, not checkout/stash | `multi-branch-worktrees.mdc` |
+| Multi-branch edits in one repo - use worktree, not checkout/stash | `multi-branch-worktrees.mdc` |
 
 Contributors (humans): README, CONTRIBUTING, MAINTAINERS, SECURITY, CHANGELOG.

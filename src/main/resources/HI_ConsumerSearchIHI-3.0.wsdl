@@ -47,7 +47,7 @@
         <wsp:PolicyReference URI="#TlsPolicy"/>
         <wsoap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="searchIHI">
-            <wsoap12:operation soapAction="" style="document" />
+            <wsoap12:operation soapAction="http://ns.electronichealth.net.au/" style="document" />
             <wsdl:input>
                 <wsoap12:header message="tns:searchIHIInMsg" part="productHeader" use="literal"/>
                 <wsoap12:header message="tns:searchIHIInMsg" part="signatureHeader" use="literal"/>

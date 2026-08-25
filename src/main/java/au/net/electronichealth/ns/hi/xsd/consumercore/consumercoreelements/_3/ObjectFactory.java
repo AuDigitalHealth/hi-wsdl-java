@@ -1,23 +1,23 @@
 
 package au.net.electronichealth.ns.hi.xsd.consumercore.consumercoreelements._3;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoredatatypes._3.TrueFalseType;
 import au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3.IHIRecordStatusType;
 import au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3.IHIStatusType;
 import au.net.electronichealth.ns.hi.xsd.consumercore.consumercoredatatypes._3.SourceOfDeathNotificationType;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.consumercore.consumercoreelements._3 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -59,7 +59,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "ihiNumber")
     public JAXBElement<String> createIhiNumber(String value) {
-        return new JAXBElement<String>(_IhiNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_IhiNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -73,7 +73,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "medicareCardNumber")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     public JAXBElement<String> createMedicareCardNumber(String value) {
-        return new JAXBElement<String>(_MedicareCardNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_MedicareCardNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -86,7 +86,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "medicareIRN")
     public JAXBElement<Integer> createMedicareIRN(Integer value) {
-        return new JAXBElement<Integer>(_MedicareIRN_QNAME, Integer.class, null, value);
+        return new JAXBElement<>(_MedicareIRN_QNAME, Integer.class, null, value);
     }
 
     /**
@@ -100,7 +100,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "dvaFileNumber")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     public JAXBElement<String> createDvaFileNumber(String value) {
-        return new JAXBElement<String>(_DvaFileNumber_QNAME, String.class, null, value);
+        return new JAXBElement<>(_DvaFileNumber_QNAME, String.class, null, value);
     }
 
     /**
@@ -113,7 +113,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "history")
     public JAXBElement<TrueFalseType> createHistory(TrueFalseType value) {
-        return new JAXBElement<TrueFalseType>(_History_QNAME, TrueFalseType.class, null, value);
+        return new JAXBElement<>(_History_QNAME, TrueFalseType.class, null, value);
     }
 
     /**
@@ -126,7 +126,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "ihiRecordStatus")
     public JAXBElement<IHIRecordStatusType> createIhiRecordStatus(IHIRecordStatusType value) {
-        return new JAXBElement<IHIRecordStatusType>(_IhiRecordStatus_QNAME, IHIRecordStatusType.class, null, value);
+        return new JAXBElement<>(_IhiRecordStatus_QNAME, IHIRecordStatusType.class, null, value);
     }
 
     /**
@@ -139,7 +139,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "ihiStatus")
     public JAXBElement<IHIStatusType> createIhiStatus(IHIStatusType value) {
-        return new JAXBElement<IHIStatusType>(_IhiStatus_QNAME, IHIStatusType.class, null, value);
+        return new JAXBElement<>(_IhiStatus_QNAME, IHIStatusType.class, null, value);
     }
 
     /**
@@ -153,7 +153,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "birthPlurality")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     public JAXBElement<String> createBirthPlurality(String value) {
-        return new JAXBElement<String>(_BirthPlurality_QNAME, String.class, null, value);
+        return new JAXBElement<>(_BirthPlurality_QNAME, String.class, null, value);
     }
 
     /**
@@ -167,7 +167,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "birthOrder")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     public JAXBElement<String> createBirthOrder(String value) {
-        return new JAXBElement<String>(_BirthOrder_QNAME, String.class, null, value);
+        return new JAXBElement<>(_BirthOrder_QNAME, String.class, null, value);
     }
 
     /**
@@ -180,7 +180,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "sourceOfDeathNotification")
     public JAXBElement<SourceOfDeathNotificationType> createSourceOfDeathNotification(SourceOfDeathNotificationType value) {
-        return new JAXBElement<SourceOfDeathNotificationType>(_SourceOfDeathNotification_QNAME, SourceOfDeathNotificationType.class, null, value);
+        return new JAXBElement<>(_SourceOfDeathNotification_QNAME, SourceOfDeathNotificationType.class, null, value);
     }
 
     /**
@@ -193,7 +193,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0", name = "privacyNotification")
     public JAXBElement<Boolean> createPrivacyNotification(Boolean value) {
-        return new JAXBElement<Boolean>(_PrivacyNotification_QNAME, Boolean.class, null, value);
+        return new JAXBElement<>(_PrivacyNotification_QNAME, Boolean.class, null, value);
     }
 
 }
