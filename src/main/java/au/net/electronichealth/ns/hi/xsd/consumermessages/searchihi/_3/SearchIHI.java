@@ -91,6 +91,8 @@ public class SearchIHI {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String dvaFileNumber;
+    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0")
+    protected ElectronicCommunicationType electronicCommunication;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/common/CommonCoreElements/3.0", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfBirth;
@@ -109,8 +111,6 @@ public class SearchIHI {
     protected InternationalAddressType internationalAddress;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/Address/3.0")
     protected AustralianUnstructuredStreetAddressType australianUnstructuredStreetAddress;
-    @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ElectronicCommunication/3.0")
-    protected ElectronicCommunicationType electronicCommunication;
     @XmlElement(namespace = "http://ns.electronichealth.net.au/hi/xsd/consumercore/ConsumerCoreElements/3.0")
     @XmlSchemaType(name = "string")
     protected TrueFalseType history;
