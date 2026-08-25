@@ -10,8 +10,8 @@ The **first number** of **`<version>`** is the **Java SE** target of **this** ty
 
 | Maven version | Java SE |
 | ------------- | ------- |
-| **8.0.0.1** | **8** |
-| **11.0.0.1** | **11** |
+| **8.0.0** | **8** |
+| **11.0.0** | **11** |
 | **17.0.0.1** | **17** |
 | **21.0.0.1** | **21** |
 | **24.0.0.1** | **24** |
@@ -20,8 +20,8 @@ The **first number** of **`<version>`** is the **Java SE** target of **this** ty
 
 | Version | Java | XML APIs | `Service` stubs |
 | ------- | ---- | -------- | --------------- |
-| **8.0.0.1** | 8 | **`javax.xml.ws`**, **`javax.xml.bind`** | **14** (standard HI B2B) |
-| **11.0.0.1** | 11 | **Jakarta** XML WS / Bind | **26** (full MCA) |
+| **8.0.0** | 8 | **`javax.xml.ws`**, **`javax.xml.bind`** | **14** (standard HI B2B) |
+| **11.0.0** | 11 | **Jakarta** XML WS / Bind | **26** (full MCA) |
 | **17.0.0.1** | 17 | **Jakarta** XML WS / Bind | **26** (full MCA) |
 | **21.0.0.1** | 21 | **Jakarta** XML WS / Bind | **26** (full MCA) |
 | **24.0.0.1** | 24 | **Jakarta** XML WS / Bind | **26** (full MCA) |
@@ -30,17 +30,17 @@ The **first number** of **`<version>`** is the **Java SE** target of **this** ty
 
 | Version | Official Git branch |
 | ------- | ------------------- |
-| **8.0.0.1** | `java-8` |
-| **11.0.0.1** | `java-11` |
+| **8.0.0** | `java-8` |
+| **11.0.0** | `java-11` |
 | **17.0.0.1** | `java-17` |
 | **21.0.0.1** | `java-21` |
 | **24.0.0.1** | `java-24` |
 
 Artifact id stays **`hi-wsdl`**; the version distinguishes the Java SE line. Downstream projects that pin **`hi-wsdl`** to **`${project.version}`** (including **`hi-b2b-client`**) keep the **same** version and the **same** branch names on their matching line.
 
-On a given branch, **do not change the first number** of **`<version>`**. Next GA on **`java-11`** is **`11.0.0.2`** (then **`11.0.0.2-SNAPSHOT`**), not **`17.x`**. A new Java SE target is a **new branch**, not a bump on this one.
+On a given branch, **do not change the first number** of **`<version>`**. Next GA on **`java-11`** is **`11.0.0.2`** (then **`11.0.1-SNAPSHOT`**), not **`17.x`**. A new Java SE target is a **new branch**, not a bump on this one.
 
-**This checkout (`11.0.0.1-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **26** primary HI B2B **`@WebServiceClient`** services. Stack and **`.github/workflows/ci.yml`** (branch **`java-11`**, JDK **11**) below apply to **this line only**. Other branches keep their own **`pom.xml`**, CI branch filter, and JDK. Type regeneration uses **`-Pregenerate-sources`** and a local licensed **`wsdls/xml/`** tree.
+**This checkout (`11.0.0-SNAPSHOT`):** Java **11**, committed **Jakarta** generated types, **26** primary HI B2B **`@WebServiceClient`** services. Stack and **`.github/workflows/ci.yml`** (branch **`java-11`**, JDK **11**) below apply to **this line only**. Other branches keep their own **`pom.xml`**, CI branch filter, and JDK. Type regeneration uses **`-Pregenerate-sources`** and a local licensed **`wsdls/xml/`** tree.
 
 ## Artifact
 
@@ -56,15 +56,15 @@ On a given branch, **do not change the first number** of **`<version>`**. Next G
 | `src/test/java/au/gov/nehta/hiwsdl/` | Offline binding smoke tests |
 | `wsdls/readme.txt` | Licensed WSDL tree staging instructions (tracked) |
 | `wsdls/xml/` | Local licensed WSDL/XSD for regeneration (**gitignored**) |
-| `pom.xml` (`-Pregenerate-sources`) | **26** **`wsimport`** executions; align with **hi-b2b-client-java** **11.0.0.1** when adding services |
+| `pom.xml` (`-Pregenerate-sources`) | **26** **`wsimport`** executions; align with **hi-b2b-client-java** **11.0.0** when adding services |
 | `.github/workflows/ci.yml` | GitHub Actions **`mvn verify`** on **`java-11`**, JDK **11** |
 
-## Release scope (`11.0.0.1`)
+## Release scope (`11.0.0`)
 
 - **Goal:** Java **11** bytecode (`maven.compiler.release` **11**) with **Jakarta** generated types; **26** full MCA **`Service`** stubs.
 - The default lifecycle does **not** run **`wsimport`**. **`src/main/java`** and **`hi_override/`** are committed. Refresh with **`-Pregenerate-sources`**.
 
-## HI service coverage (`11.0.0.1`)
+## HI service coverage (`11.0.0`)
 
 **26** primary HI B2B interfaces (consumer 3.0-4.0, provider 3.2 / 5.0 / 5.1, TDS 5.1, batch async 5.1, etc.). Interface-only WSDL variants may also exist under **`src/main/resources`**.
 
@@ -72,7 +72,7 @@ On a given branch, **do not change the first number** of **`<version>`**. Next G
 
 ## Contributors vs release publisher (`pom.xml`)
 
-**Contributors (PRs, ordinary commits):** Do not change **`<version>`** (stay on **`-SNAPSHOT`** unless the maintainer requests a bump), **`<scm><tag>`**, or **`distributionManagement`**. If a maintainer requests a SNAPSHOT bump on this branch, change only the trailing numbers (**`11.0.0.2-SNAPSHOT`**), never the Java SE digit. Leave **`maven-gpg-plugin`** **`skip`** **`true`** so default **`mvn verify`** does not require a signing key. Record user-visible work under **`CHANGELOG.md`** in the **`= <pom-version> =`** block that matches **`pom.xml`** **`<version>`**.
+**Contributors (PRs, ordinary commits):** Do not change **`<version>`** (stay on **`-SNAPSHOT`** unless the maintainer requests a bump), **`<scm><tag>`**, or **`distributionManagement`**. If a maintainer requests a SNAPSHOT bump on this branch, change only the trailing numbers (**`11.0.1-SNAPSHOT`**), never the Java SE digit. Leave **`maven-gpg-plugin`** **`skip`** **`true`** so default **`mvn verify`** does not require a signing key. Record user-visible work under **`CHANGELOG.md`** in the **`= <pom-version> =`** block that matches **`pom.xml`** **`<version>`**.
 
 **Release publisher:** In the release change set: set **`<version>`** to the GA coordinate (no **`-SNAPSHOT`**); set **`<scm><tag>`** to the Git tag you will publish (match existing tag naming). Move **`CHANGELOG.md`** bullets from the snapshot section into a new **`= <GA-version> =`** section; add a fresh **`-SNAPSHOT`** block for the next development cycle. Deploy via Sonatype Central Portal (**`central-publishing-maven-plugin`**; copy **`settings.xml.example`** -> **`settings.xml`**, server id **`central`**). See **Release** below.
 
@@ -84,15 +84,15 @@ Publishing uses **`central-publishing-maven-plugin`** (Sonatype Central Portal).
 
 | Branch | Java | `hi-wsdl` | `Service` stubs |
 | ------ | ---- | --------- | --------------- |
-| **`java-8`** | 8 / javax | **8.0.0.1** | 14 |
-| **`java-11`** | 11 / Jakarta | **11.0.0.1** | 26 |
+| **`java-8`** | 8 / javax | **8.0.0** | 14 |
+| **`java-11`** | 11 / Jakarta | **11.0.0** | 26 |
 | **`java-17`** | 17 / Jakarta | **17.0.0.1** | 26 |
 | **`java-21`** | 21 / Jakarta | **21.0.0.1** | 26 |
 | **`java-24`** | 24 / Jakarta | **24.0.0.1** | 26 |
 
 **Order:** publish **this artifact** first. Any consumer that depends on **`hi-wsdl`** at the same GA (including **`hi-b2b-client`**) cannot complete **`verify`** / **`release:perform`** until this coordinate is on Central (or installed locally).
 
-**`-DdevelopmentVersion`:** keep the same first number as **`-DreleaseVersion`** (example on this line: **`11.0.0.1`** then **`11.0.0.2-SNAPSHOT`**).
+**`-DdevelopmentVersion`:** keep the same first number as **`-DreleaseVersion`** (example on this line: **`11.0.0`** then **`11.0.1-SNAPSHOT`**).
 
 ### SNAPSHOT or manual GA
 
@@ -100,14 +100,14 @@ Publishing uses **`central-publishing-maven-plugin`** (Sonatype Central Portal).
 2. **`mvn -B "-Prelease" clean verify`**
 3. **`mvn -B "-Prelease" deploy`**
 
-Git/SCM settings for **`maven-release-plugin`** live in **`pom.xml`** properties (**`scm.repo.url`**, **`release.*`**). Tags default to **`{artifactId}-{version}`** (e.g. **`hi-wsdl-11.0.0.1`**).
+Git/SCM settings for **`maven-release-plugin`** live in **`pom.xml`** properties (**`scm.repo.url`**, **`release.*`**). Tags default to **`{artifactId}-{version}`** (e.g. **`hi-wsdl-11.0.0`**).
 
 ### Automated GA (`maven-release-plugin`)
 
 Run on the **target branch** with a **clean** working tree. The plugin commits version bumps, creates the release tag, deploys from the tag checkout, bumps to the next **`-SNAPSHOT`**, and **pushes branch + tag** (**`pushChanges`** / **`remoteTagging`** in **`pom.xml`**). Git remote credentials (SSH or HTTPS) must work non-interactively.
 
 ```text
-mvn -B "-Prelease" release:prepare release:perform -DreleaseVersion=11.0.0.1 -DdevelopmentVersion=11.0.0.2-SNAPSHOT -Dtag=hi-wsdl-11.0.0.1
+mvn -B "-Prelease" release:prepare release:perform -DreleaseVersion=11.0.0 -DdevelopmentVersion=11.0.1-SNAPSHOT -Dtag=hi-wsdl-11.0.0
 ```
 
 Replace **`-DreleaseVersion`**, **`-DdevelopmentVersion`**, and **`-Dtag`** for the branch you are on (same first number). Omit **`-D...`** only if you accept interactive prompts.
@@ -128,14 +128,14 @@ When adding a line (e.g. Java **25**): create **`java-25`** in **this** reposito
 
 Consumers that pin **`hi-wsdl`** to **`${project.version}`** need a matching line of their own once this artifact exists.
 
-## Build (`11.0.0.1` line)
+## Build (`11.0.0` line)
 
 This subsection is **this `java-11` checkout**. Other lines document their stack in their own **MAINTAINERS** / **`pom.xml`**.
 
 - **`maven.compiler.release` 11**
 - Compile deps: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3** - no **`jaxws-rt`** in the published JAR (**`test`** scope only, for **`GeneratedWsdlBindingsTest`**)
-- **`jaxws-rt` 4.0.4** for **`-Pregenerate-sources`** only (via **`jaxws-tools`** on **`jaxws-maven-plugin`** classpath; not a compile/runtime dependency of the published JAR)
-- Consuming applications add **`com.sun.xml.ws:jaxws-rt` 4.0.4** at runtime
+- **`jaxws-rt` 4.0.5** for **`-Pregenerate-sources`** only (via **`jaxws-tools`** on **`jaxws-maven-plugin`** classpath; not a compile/runtime dependency of the published JAR)
+- Consuming applications add **`com.sun.xml.ws:jaxws-rt` 4.0.5** at runtime
 - Generated sources are **committed**; root POM has **no** default **`wsimport`** execution
 - **`maven-enforcer-plugin`:** bans legacy Metro **`webservices-*`** and **`javax.xml.ws` / `javax.xml.bind`**
 - **`maven-gpg-plugin`:** skipped unless **`-Dgpg.skip=false`**

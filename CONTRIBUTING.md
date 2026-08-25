@@ -12,7 +12,7 @@ Dependencies resolve from **[Maven Central](https://central.sonatype.com/)** unl
 
 ## Versioning
 
-The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** version that this types JAR targets. **8.0.0.1** is **`javax`** with **14** `Service` stubs; **11.0.0.1** and later are **Jakarta** with **26** stubs. See **`README.md`**.
+The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** version that this types JAR targets. **8.0.0** is **`javax`** with **14** `Service` stubs; **11.0.0** and later are **Jakarta** with **26** stubs. See **`README.md`**.
 
 Consumers that pin **`hi-wsdl`** to **`${project.version}`** (including **`hi-b2b-client`**) must use the **same** version as this **`pom.xml`**.
 
@@ -26,7 +26,7 @@ mvn -B "-Dgpg.skip=true" clean verify
 
 Or use **`build.ps1`**, **`build.sh`**, or **`build.bat`**. Set **`MVN_SETTINGS`** if you must pass **`-s`** to Maven.
 
-This line (**`11.0.0.1`**) compiles **committed** types. Regeneration is a maintainer profile only (below).
+This line (**`11.0.0`**) compiles **committed** types. Regeneration is a maintainer profile only (below).
 
 | Goal | Command |
 | ---- | ------- |
@@ -63,7 +63,7 @@ The **`regenerate-sources`** profile runs **26** **`wsimport`** executions with 
 ## Repository hygiene
 
 - **Do not commit** keystores, production HI URLs, populated **`settings.xml`** with release credentials, or the licensed ADHA MCA **`wsdls/xml`** download tree. See **SECURITY.md**.
-- **`11.0.0.1`:** generated Java under **`src/main/java`** is committed; use **`-Pregenerate-sources`** only when refreshing types from licensed WSDL.
+- **`11.0.0`:** generated Java under **`src/main/java`** is committed; use **`-Pregenerate-sources`** only when refreshing types from licensed WSDL.
 - **Line endings:** the repository uses **LF** (see **`.gitattributes`**). On **Windows**, run **`git config core.autocrlf false`** in your clone before committing.
 
 Maintainer notes: **MAINTAINERS.md**.

@@ -9,7 +9,7 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>11.0.0.1-SNAPSHOT</version>
+    <version>11.0.0-SNAPSHOT</version>
     <name>HI WSDL library</name>
     <description>Healthcare Identifiers B2B WSDL and Jakarta generated types (Java 11)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
@@ -17,7 +17,7 @@
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -27,8 +27,8 @@
             <name>Admin Open Source</name>
             <email>admin.opensource@digitalhealth.gov.au</email>
             <organization>Australian Digital Health Agency</organization>
-            <url>www.digitalhealth.gov.au</url>
-            <organizationUrl>www.digitalhealth.gov.au</organizationUrl>
+            <url>https://www.digitalhealth.gov.au/</url>
+            <organizationUrl>https://www.digitalhealth.gov.au/</organizationUrl>
             <roles>
                 <role>Admin</role>
             </roles>
@@ -75,14 +75,15 @@
         <!-- wsimport/XJC 4.0.7+ writes schema-fragment Javadoc that Maven Javadoc accepts. Pin jaxb-xjc on jaxws-maven-plugin (see regenerate-sources). -->
         <jaxb.xjc.version>4.0.9</jaxb.xjc.version>
         <!-- Eclipse EE4J XML Web Services (jaxws-tools). jaxws-maven-plugin 4.0.3+ requires JDK 17 to run wsimport - keep plugin at 4.0.2 on JDK 11. -->
-        <jaxws.rt.version>4.0.4</jaxws.rt.version>
+        <jaxws.rt.version>4.0.5</jaxws.rt.version>
         <jakarta.xml.bind.api.version>4.0.5</jakarta.xml.bind.api.version>
         <jakarta.xml.ws.api.version>4.0.3</jakarta.xml.ws.api.version>
         <junit.version>4.13.2</junit.version>
         <plugin.enforcer.version>3.6.2</plugin.enforcer.version>
         <plugin.deploy.version>3.1.4</plugin.deploy.version>
         <plugin.release.version>3.3.1</plugin.release.version>
-        <plugin.central.publishing.version>0.9.0</plugin.central.publishing.version>
+        <plugin.central.publishing.version>0.11.0</plugin.central.publishing.version>
+        <plugin.surefire.version>3.5.6</plugin.surefire.version>
     </properties>
 
     <!-- Java 11+: JAXB/JAX-WS are not on the JDK classpath. jakarta.xml.ws-api includes JWS annotations. -->
@@ -195,7 +196,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.5</version>
+                <version>${plugin.surefire.version}</version>
                 <configuration>
                     <skipTests>${skipTests}</skipTests>
                     <encoding>UTF-8</encoding>
@@ -204,8 +205,11 @@
                     <includes>
                         <include>**/GeneratedWsdlBindingsTest.java</include>
                         <include>**/HiWsdlArtifactTest.java</include>
+                        <include>**/WsdlStubContractTest.java</include>
                         <include>**/SearchIhiPropOrderTest.java</include>
                         <include>**/SearchForProviderIndividualPropOrderTest.java</include>
+                        <include>**/AustralianStreetAddressPropOrderTest.java</include>
+                        <include>**/InternationalAddressPropOrderTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -290,7 +294,7 @@
         <profile>
             <id>regenerate-sources</id>
             <properties>
-                <groovy.version>4.0.32</groovy.version>
+                <groovy.version>4.0.33</groovy.version>
                 <gmavenplus.plugin.version>4.3.1</gmavenplus.plugin.version>
                 <jaxws.maven.plugin.version>4.0.2</jaxws.maven.plugin.version>
                 <hi.wsdl.tree.root>${project.basedir}/wsdls/xml</hi.wsdl.tree.root>

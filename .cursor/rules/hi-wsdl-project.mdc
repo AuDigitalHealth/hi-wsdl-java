@@ -15,8 +15,8 @@ The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Do
 
 | Version | Java | XML stack | `Service` stubs |
 | ------- | ---- | --------- | --------------- |
-| **8.0.0.1** | 8 | **javax** | **14** (standard HI B2B) |
-| **11.0.0.1** | 11 | **Jakarta** | **26** (full MCA) |
+| **8.0.0** | 8 | **javax** | **14** (standard HI B2B) |
+| **11.0.0** | 11 | **Jakarta** | **26** (full MCA) |
 | **17.0.0.1** | 17 | **Jakarta** | **26** (full MCA) |
 | **21.0.0.1** | 21 | **Jakarta** | **26** (full MCA) |
 | **24.0.0.1** | 24 | **Jakarta** | **26** (full MCA) |
@@ -25,15 +25,15 @@ The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Do
 
 | Version | Official Git branch |
 | ------- | ------------------- |
-| **8.0.0.1** | `java-8` |
-| **11.0.0.1** | `java-11` |
+| **8.0.0** | `java-8` |
+| **11.0.0** | `java-11` |
 | **17.0.0.1** | `java-17` |
 | **21.0.0.1** | `java-21` |
 | **24.0.0.1** | `java-24` |
 
-## This 11.0.0.1 line
+## This 11.0.0 line
 
-**`11.0.0.1-SNAPSHOT`**: Java **11**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Default build compiles committed sources. Regen (**`-Pregenerate-sources`**) requires licensed **`wsdls/xml/`** locally. See **MAINTAINERS.md**.
+**`11.0.0-SNAPSHOT`**: Java **11**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Default build compiles committed sources. Regen (**`-Pregenerate-sources`**) requires licensed **`wsdls/xml/`** locally. See **MAINTAINERS.md**.
 
 ## Build
 
@@ -47,7 +47,7 @@ The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Do
 | Delivers | WSDL on classpath + generated types | Facade clients, TLS, signing |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 
-Publish **`hi-wsdl`** first. Consumers that pin **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate on each line (**8.0.0.1**, **11.0.0.1**, and so on).
+Publish **`hi-wsdl`** first. Consumers that pin **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate on each line (**8.0.0**, **11.0.0**, and so on).
 
 ## Doc split
 
