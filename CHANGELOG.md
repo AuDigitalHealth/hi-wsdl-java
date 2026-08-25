@@ -1,5 +1,13 @@
 # Change Log/Revision History
 
+= 17.0.0 =
+=======
+- Maven **`au.gov.nehta:hi-wsdl`** **17.0.0** (Java **17** / **Jakarta**, **26** `Service` stubs, full MCA). The first number of the Maven version is the targeted Java SE version. Consumers that pin **`hi-wsdl`** to **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate.
+- Compile: **`jakarta.xml.bind-api` 4.0.5**, **`jakarta.xml.ws-api` 4.0.3**. Runtime guidance: consumers add **`jaxws-rt` 4.0.5** (not packaged in this JAR). **`jaxws-maven-plugin` 4.0.5** for **`-Pregenerate-sources`** on JDK 17+.
+- Messages `searchIHI`: `electronicCommunication` before `dateOfBirth` (international address before unstructured) so Consumer Search IHI (including batch) request XML matches the HI Service message schema.
+- Interface `searchIHI`: optional `electronicCommunication` before `dateOfBirth` and `australianUnstructuredStreetAddress` before `internationalAddress` on **`HI_ConsumerSearchIHIInterface-3.0`**.
+- **Tests:** **`JakartaStackTest`**, **`SearchIhiPropOrderTest`**, **`SearchForProviderIndividualPropOrderTest`**, **`AustralianStreetAddressPropOrderTest`**, **`InternationalAddressPropOrderTest`**, **`WsdlStubContractTest`**, **`HiWsdlArtifactTest`**, **`GeneratedWsdlBindingsTest`**. Stub count remains **26**.
+
 = 11.0.0 =
 =======
 - Maven **`au.gov.nehta:hi-wsdl`** **11.0.0** (Java **11** / **Jakarta**, **26** `Service` stubs, full MCA). The first number of the Maven version is the targeted Java SE version. Consumers that pin **`hi-wsdl`** to **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate.

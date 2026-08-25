@@ -9,9 +9,9 @@
 
     <groupId>au.gov.nehta</groupId>
     <artifactId>hi-wsdl</artifactId>
-    <version>11.0.0-SNAPSHOT</version>
+    <version>17.0.0-SNAPSHOT</version>
     <name>HI WSDL library</name>
-    <description>Healthcare Identifiers B2B WSDL and Jakarta generated types (Java 11)</description>
+    <description>Healthcare Identifiers B2B WSDL and Jakarta generated types (Java 17)</description>
     <url>https://github.com/AuDigitalHealth/hi-wsdl-java</url>
 
     <licenses>
@@ -55,7 +55,7 @@
     </distributionManagement>
 
     <properties>
-        <maven.compiler.release>11</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
@@ -74,7 +74,7 @@
         <release.scmCommentPrefix>[maven-release-plugin] </release.scmCommentPrefix>
         <!-- wsimport/XJC 4.0.7+ writes schema-fragment Javadoc that Maven Javadoc accepts. Pin jaxb-xjc on jaxws-maven-plugin (see regenerate-sources). -->
         <jaxb.xjc.version>4.0.9</jaxb.xjc.version>
-        <!-- Eclipse EE4J XML Web Services (jaxws-tools). jaxws-maven-plugin 4.0.3+ requires JDK 17 to run wsimport - keep plugin at 4.0.2 on JDK 11. -->
+        <!-- Eclipse EE4J XML Web Services (jaxws-tools). jaxws-maven-plugin 4.0.3+ requires JDK 17+ to run wsimport. -->
         <jaxws.rt.version>4.0.5</jaxws.rt.version>
         <jakarta.xml.bind.api.version>4.0.5</jakarta.xml.bind.api.version>
         <jakarta.xml.ws.api.version>4.0.3</jakarta.xml.ws.api.version>
@@ -86,7 +86,7 @@
         <plugin.surefire.version>3.5.6</plugin.surefire.version>
     </properties>
 
-    <!-- Java 11+: JAXB/JAX-WS are not on the JDK classpath. jakarta.xml.ws-api includes JWS annotations. -->
+    <!-- Java 17+: JAXB/JAX-WS are not on the JDK classpath. jakarta.xml.ws-api includes JWS annotations. -->
     <dependencies>
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
@@ -205,6 +205,7 @@
                     <includes>
                         <include>**/GeneratedWsdlBindingsTest.java</include>
                         <include>**/HiWsdlArtifactTest.java</include>
+                        <include>**/JakartaStackTest.java</include>
                         <include>**/WsdlStubContractTest.java</include>
                         <include>**/SearchIhiPropOrderTest.java</include>
                         <include>**/SearchForProviderIndividualPropOrderTest.java</include>
@@ -296,7 +297,7 @@
             <properties>
                 <groovy.version>4.0.33</groovy.version>
                 <gmavenplus.plugin.version>4.3.1</gmavenplus.plugin.version>
-                <jaxws.maven.plugin.version>4.0.2</jaxws.maven.plugin.version>
+                <jaxws.maven.plugin.version>4.0.5</jaxws.maven.plugin.version>
                 <hi.wsdl.tree.root>${project.basedir}/wsdls/xml</hi.wsdl.tree.root>
             </properties>
             <build>
