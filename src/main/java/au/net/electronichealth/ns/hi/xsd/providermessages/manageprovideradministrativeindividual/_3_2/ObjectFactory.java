@@ -1,17 +1,17 @@
 
 package au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradministrativeindividual._3_2;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providermessages.manageprovideradministrativeindividual._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -36,6 +36,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ManageProviderAdministrativeIndividualResult }
      * 
+     * @return
+     *     the new instance of {@link ManageProviderAdministrativeIndividualResult }
      */
     public ManageProviderAdministrativeIndividualResult createManageProviderAdministrativeIndividualResult() {
         return new ManageProviderAdministrativeIndividualResult();
@@ -44,6 +46,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ManageProviderAdministrativeIndividual }
      * 
+     * @return
+     *     the new instance of {@link ManageProviderAdministrativeIndividual }
      */
     public ManageProviderAdministrativeIndividual createManageProviderAdministrativeIndividual() {
         return new ManageProviderAdministrativeIndividual();
@@ -59,7 +63,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/hi/xsd/providermessages/ManageProviderAdministrativeIndividual/3.2.0", name = "qualifiedIdentifier")
     public JAXBElement<String> createQualifiedIdentifier(String value) {
-        return new JAXBElement<String>(_QualifiedIdentifier_QNAME, String.class, null, value);
+        return new JAXBElement<>(_QualifiedIdentifier_QNAME, String.class, null, value);
     }
 
 }

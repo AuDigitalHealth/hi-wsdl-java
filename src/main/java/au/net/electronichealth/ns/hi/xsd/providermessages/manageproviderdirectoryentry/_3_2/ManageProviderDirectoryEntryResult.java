@@ -3,21 +3,21 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.manageproviderdirecto
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.common.commoncoreelements._3.ServiceMessagesType;
 import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsResponseType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type</p>.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -31,7 +31,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.elements._3_2.DetailsRespo
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -58,8 +58,8 @@ public class ManageProviderDirectoryEntryResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the individualEntryResponses property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the individualEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -80,7 +80,7 @@ public class ManageProviderDirectoryEntryResult {
      */
     public List<DetailsResponseType> getIndividualEntryResponses() {
         if (individualEntryResponses == null) {
-            individualEntryResponses = new ArrayList<DetailsResponseType>();
+            individualEntryResponses = new ArrayList<>();
         }
         return this.individualEntryResponses;
     }
@@ -90,8 +90,8 @@ public class ManageProviderDirectoryEntryResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationEntryResponses property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -112,7 +112,7 @@ public class ManageProviderDirectoryEntryResult {
      */
     public List<DetailsResponseType> getOrganisationEntryResponses() {
         if (organisationEntryResponses == null) {
-            organisationEntryResponses = new ArrayList<DetailsResponseType>();
+            organisationEntryResponses = new ArrayList<>();
         }
         return this.organisationEntryResponses;
     }
@@ -122,8 +122,8 @@ public class ManageProviderDirectoryEntryResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the deleteIndividualEntryResponses property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the deleteIndividualEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -144,7 +144,7 @@ public class ManageProviderDirectoryEntryResult {
      */
     public List<DetailsResponseType> getDeleteIndividualEntryResponses() {
         if (deleteIndividualEntryResponses == null) {
-            deleteIndividualEntryResponses = new ArrayList<DetailsResponseType>();
+            deleteIndividualEntryResponses = new ArrayList<>();
         }
         return this.deleteIndividualEntryResponses;
     }
@@ -154,8 +154,8 @@ public class ManageProviderDirectoryEntryResult {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the deleteOrganisationEntryResponses property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the deleteOrganisationEntryResponses property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -176,7 +176,7 @@ public class ManageProviderDirectoryEntryResult {
      */
     public List<DetailsResponseType> getDeleteOrganisationEntryResponses() {
         if (deleteOrganisationEntryResponses == null) {
-            deleteOrganisationEntryResponses = new ArrayList<DetailsResponseType>();
+            deleteOrganisationEntryResponses = new ArrayList<>();
         }
         return this.deleteOrganisationEntryResponses;
     }

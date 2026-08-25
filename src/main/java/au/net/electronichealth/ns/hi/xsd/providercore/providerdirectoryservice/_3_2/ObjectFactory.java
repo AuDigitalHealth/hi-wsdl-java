@@ -1,14 +1,14 @@
 
 package au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._3_2;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice._3_2 package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -30,8 +30,20 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ProviderDirectoryOrganisationEntryRecord }
+     * 
+     * @return
+     *     the new instance of {@link ProviderDirectoryOrganisationEntryRecord }
+     */
+    public ProviderDirectoryOrganisationEntryRecord createProviderDirectoryOrganisationEntryRecord() {
+        return new ProviderDirectoryOrganisationEntryRecord();
+    }
+
+    /**
      * Create an instance of {@link ProviderDirectoryIndividualEntryRecord }
      * 
+     * @return
+     *     the new instance of {@link ProviderDirectoryIndividualEntryRecord }
      */
     public ProviderDirectoryIndividualEntryRecord createProviderDirectoryIndividualEntryRecord() {
         return new ProviderDirectoryIndividualEntryRecord();
@@ -40,6 +52,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ProviderDirectoryIndividualEntry }
      * 
+     * @return
+     *     the new instance of {@link ProviderDirectoryIndividualEntry }
      */
     public ProviderDirectoryIndividualEntry createProviderDirectoryIndividualEntry() {
         return new ProviderDirectoryIndividualEntry();
@@ -48,17 +62,11 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ProviderDirectoryOrganisationEntry }
      * 
+     * @return
+     *     the new instance of {@link ProviderDirectoryOrganisationEntry }
      */
     public ProviderDirectoryOrganisationEntry createProviderDirectoryOrganisationEntry() {
         return new ProviderDirectoryOrganisationEntry();
-    }
-
-    /**
-     * Create an instance of {@link ProviderDirectoryOrganisationEntryRecord }
-     * 
-     */
-    public ProviderDirectoryOrganisationEntryRecord createProviderDirectoryOrganisationEntryRecord() {
-        return new ProviderDirectoryOrganisationEntryRecord();
     }
 
 }
