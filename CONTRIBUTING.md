@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- **JDK 21+** with **`JAVA_HOME`** set (see **`maven.compiler.release`** in **`pom.xml`**).
+- **JDK 24+** with **`JAVA_HOME`** set (see **`maven.compiler.release`** in **`pom.xml`**).
 - **Maven 3.6+** on **`PATH`**.
 - Licensed HI WSDL/XSD tree at **`wsdls/xml/`** only when **regenerating** Jakarta stubs from WSDL (not required for default **`mvn verify`**). See **`wsdls/readme.txt`**.
 
@@ -26,7 +26,7 @@ mvn -B "-Dgpg.skip=true" clean verify
 
 Or use **`build.ps1`**, **`build.sh`**, or **`build.bat`**. Set **`MVN_SETTINGS`** if you must pass **`-s`** to Maven.
 
-This line (**`21.0.0`**) compiles **committed** types. Regeneration is a maintainer profile only (below).
+This line (**`24.0.0`**) compiles **committed** types. Regeneration is a maintainer profile only (below).
 
 | Goal | Command |
 | ---- | ------- |
@@ -47,7 +47,7 @@ GPG signing is skipped by default (**`-Dgpg.skip=true`**). Release builds: **`-D
 Generated Java under **`src/main/java`** is **committed**. Regeneration is maintainer-only and requires:
 
 1. Licensed toolkit copied to **`wsdls/xml/`** (contains **`wsdl/`**, **`schema/`**, **`binding/`** - same layout as **hi-b2b-client-java**).
-2. Jakarta **`wsimport`** tooling aligned with **`MAINTAINERS.md`** (**`jaxws-rt`** 4.0.x, Java 21).
+2. Jakarta **`wsimport`** tooling aligned with **`MAINTAINERS.md`** (**`jaxws-rt`** 4.0.x, Java 24).
 
 Regenerate committed types:
 
@@ -63,7 +63,7 @@ The **`regenerate-sources`** profile runs **26** **`wsimport`** executions with 
 ## Repository hygiene
 
 - **Do not commit** keystores, production HI URLs, populated **`settings.xml`** with release credentials, or the licensed ADHA MCA **`wsdls/xml`** download tree. See **SECURITY.md**.
-- **`21.0.0`:** generated Java under **`src/main/java`** is committed; use **`-Pregenerate-sources`** only when refreshing types from licensed WSDL.
+- **`24.0.0`:** generated Java under **`src/main/java`** is committed; use **`-Pregenerate-sources`** only when refreshing types from licensed WSDL.
 - **Line endings:** the repository uses **LF** (see **`.gitattributes`**). On **Windows**, run **`git config core.autocrlf false`** in your clone before committing.
 
 Maintainer notes: **MAINTAINERS.md**.

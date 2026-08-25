@@ -12,11 +12,11 @@ Published releases are consumed from **[Maven Central](https://central.sonatype.
 <dependency>
   <groupId>au.gov.nehta</groupId>
   <artifactId>hi-wsdl</artifactId>
-  <version>21.0.0</version>
+  <version>24.0.0</version>
 </dependency>
 ```
 
-**This line (`21.0.0`):** Java **21**, **Jakarta** XML WS / Bind, **26** HI B2B **`Service`** stubs (full MCA), **committed** generated types (no **`wsimport`** in the default build). Compile dependencies: **`jakarta.xml.bind-api`** **4.0.5** and **`jakarta.xml.ws-api`** **4.0.3**. Add Eclipse EE4J **`com.sun.xml.ws:jaxws-rt`** **4.0.5** at runtime in your application when you invoke SOAP endpoints. This JAR does not bundle **`jaxws-rt`**.
+**This line (`24.0.0`):** Java **24**, **Jakarta** XML WS / Bind, **26** HI B2B **`Service`** stubs (full MCA), **committed** generated types (no **`wsimport`** in the default build). Compile dependencies: **`jakarta.xml.bind-api`** **4.0.5** and **`jakarta.xml.ws-api`** **4.0.3**. Add Eclipse EE4J **`com.sun.xml.ws:jaxws-rt`** **4.0.5** at runtime in your application when you invoke SOAP endpoints. This JAR does not bundle **`jaxws-rt`**.
 
 When **`hi-b2b-client`** is also on the classpath, use the **same** Maven version for both artifacts.
 
@@ -40,13 +40,13 @@ Pick the coordinate that matches your JDK. Do not mix **`hi-wsdl`** versions wit
 
 ## Note
 
-The **21.0.0** JAR ships **Jakarta** types and the full MCA binding set (**26** `Service` stubs). **8.0.0** is **`javax`** with **14** stubs (standard HI B2B only).
+The **24.0.0** JAR ships **Jakarta** types and the full MCA binding set (**26** `Service` stubs). **8.0.0** is **`javax`** with **14** stubs (standard HI B2B only).
 
 ---
 
 ## Local development (SNAPSHOT)
 
-This repository builds **`21.0.0-SNAPSHOT`**. The default lifecycle compiles **committed** types only. To make an unpublished JAR resolvable for other local projects:
+This repository builds **`24.0.0-SNAPSHOT`**. The default lifecycle compiles **committed** types only. To make an unpublished JAR resolvable for other local projects:
 
 ```text
 mvn -B "-Dgpg.skip=true" clean install
@@ -54,7 +54,7 @@ mvn -B "-Dgpg.skip=true" clean install
 
 Consumers that declare **`au.gov.nehta:hi-wsdl`** at **`${project.version}`** (including **`hi-b2b-client-java`**) need that install (or a Central GA) before their **`verify`**.
 
-If Maven warns that a **GA** POM is missing (for example **`21.0.0`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in this project does not clear the local repository cache.
+If Maven warns that a **GA** POM is missing (for example **`24.0.0`** before Central publish), clear stale **`au/gov/nehta/hi-wsdl`** entries in your **local Maven repository** (folders with only **`.lastUpdated`** files) and reinstall the SNAPSHOT. **`mvn clean`** in this project does not clear the local repository cache.
 
 ## What is in the JAR
 
@@ -81,7 +81,7 @@ Confirm your organisation's redistribution terms for HI WSDL before mirroring th
 
 **Audience:** contributors changing this repository - not integrators adding a Maven dependency.
 
-Prerequisites: **JDK 21+**, **Maven 3.6+**. Generated Java is **committed**; the default build does not run **`wsimport`**.
+Prerequisites: **JDK 24+**, **Maven 3.6+**. Generated Java is **committed**; the default build does not run **`wsimport`**.
 
 ```text
 mvn -B "-Dgpg.skip=true" clean verify
@@ -103,7 +103,7 @@ Or **`build.ps1`**, **`build.sh`**, **`build.bat`**. See **`CONTRIBUTING.md`** f
 | --- | --- | --- |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 | Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.hi.*`) |
-| Codegen | **26** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`21.0.0`**: in-repo **`wsimport`** (26 executions) by default; optional **`-Phi-wsdl-artifact`** uses matching **`hi-wsdl`** from Maven Central |
+| Codegen | **26** committed `Service` stubs; **`-Pregenerate-sources`** for maintainer refresh only | **`24.0.0`**: in-repo **`wsimport`** (26 executions) by default; optional **`-Phi-wsdl-artifact`** uses matching **`hi-wsdl`** from Maven Central |
 
 ## Documentation
 

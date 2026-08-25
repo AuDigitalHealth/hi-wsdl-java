@@ -14,7 +14,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import org.junit.Test;
 
 /**
- * Locks the Jakarta XML stack on this Java 21 line (no legacy javax JAX-WS/JAXB).
+ * Locks the Jakarta XML stack on this Java 24 line (no legacy javax JAX-WS/JAXB).
  */
 public class JakartaStackTest {
 

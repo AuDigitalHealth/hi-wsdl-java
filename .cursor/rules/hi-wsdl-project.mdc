@@ -31,13 +31,13 @@ The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Do
 | **21.0.0** | `java-21` |
 | **24.0.0** | `java-24` |
 
-## This 21.0.0 line
+## This 24.0.0 line
 
-**`21.0.0-SNAPSHOT`**: Java **21**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Default build compiles committed sources. Regen (**`-Pregenerate-sources`**) requires licensed **`wsdls/xml/`** locally. See **MAINTAINERS.md**.
+**`24.0.0-SNAPSHOT`**: Java **24**, **Jakarta** committed types, **26** services (full MCA), `src/main/resources/HI_*.wsdl`, `hi_override/` xmldsig package. Default build compiles committed sources. Regen (**`-Pregenerate-sources`**) requires licensed **`wsdls/xml/`** locally. See **MAINTAINERS.md**.
 
 ## Build
 
-- JDK **21**, from repo root: `mvn -B "-Dgpg.skip=true" clean verify` (quote `-D` on PowerShell).
+- JDK **24**, from repo root: `mvn -B "-Dgpg.skip=true" clean verify` (quote `-D` on PowerShell).
 - Default build uses **committed** `src/main/java` - no wsimport.
 
 ## vs hi-b2b-client-java
@@ -47,7 +47,7 @@ The **first number** of **`au.gov.nehta:hi-wsdl`** is the **Java SE** target. Do
 | Delivers | WSDL on classpath + generated types | Facade clients, TLS, signing |
 | Artifact | `hi-wsdl` | `hi-b2b-client` |
 
-Publish **`hi-wsdl`** first. Consumers that pin **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate on each line (**8.0.0**, **11.0.0**, **17.0.0**, **21.0.0**, and so on).
+Publish **`hi-wsdl`** first. Consumers that pin **`${project.version}`** (including **`hi-b2b-client`**) use the same coordinate on each line (**8.0.0**, **11.0.0**, **17.0.0**, **21.0.0**, **24.0.0**, and so on).
 
 ## Doc split
 
