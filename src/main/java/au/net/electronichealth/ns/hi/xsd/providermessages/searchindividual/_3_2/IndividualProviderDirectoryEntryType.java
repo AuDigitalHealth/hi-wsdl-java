@@ -3,25 +3,25 @@ package au.net.electronichealth.ns.hi.xsd.providermessages.searchindividual._3_2
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.hi.xsd.providercore.address._3_2.Address;
 import au.net.electronichealth.ns.hi.xsd.providercore.electroniccommunication._3_2.ElectronicCommunication;
 import au.net.electronichealth.ns.hi.xsd.providercore.individualname._3_2.IndividualName;
 import au.net.electronichealth.ns.hi.xsd.providercore.linkedtype._3_2.LinkedOrganisationType;
 import au.net.electronichealth.ns.hi.xsd.providercore.personaldetails._3_2.PersonalDetails;
 import au.net.electronichealth.ns.hi.xsd.providercore.providertype._3_2.ProviderType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for IndividualProviderDirectoryEntryType complex type</p>.
+ * &lt;p&gt;Java class for IndividualProviderDirectoryEntryType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="IndividualProviderDirectoryEntryType"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -39,7 +39,7 @@ import au.net.electronichealth.ns.hi.xsd.providercore.providertype._3_2.Provider
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -175,8 +175,8 @@ public class IndividualProviderDirectoryEntryType {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunication property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunication property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -197,7 +197,7 @@ public class IndividualProviderDirectoryEntryType {
      */
     public List<ElectronicCommunication> getElectronicCommunication() {
         if (electronicCommunication == null) {
-            electronicCommunication = new ArrayList<ElectronicCommunication>();
+            electronicCommunication = new ArrayList<>();
         }
         return this.electronicCommunication;
     }
@@ -207,8 +207,8 @@ public class IndividualProviderDirectoryEntryType {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the providerType property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the providerType property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -229,7 +229,7 @@ public class IndividualProviderDirectoryEntryType {
      */
     public List<ProviderType> getProviderType() {
         if (providerType == null) {
-            providerType = new ArrayList<ProviderType>();
+            providerType = new ArrayList<>();
         }
         return this.providerType;
     }
@@ -239,8 +239,8 @@ public class IndividualProviderDirectoryEntryType {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linkedOrganisations property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the linkedOrganisations property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -261,7 +261,7 @@ public class IndividualProviderDirectoryEntryType {
      */
     public List<LinkedOrganisationType> getLinkedOrganisations() {
         if (linkedOrganisations == null) {
-            linkedOrganisations = new ArrayList<LinkedOrganisationType>();
+            linkedOrganisations = new ArrayList<>();
         }
         return this.linkedOrganisations;
     }

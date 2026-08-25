@@ -1,37 +1,27 @@
-# Maven
 /target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-
-# Java
-*.class
-*.log
-hs_err_pid*
-
-# IDE / editor
 /.idea/
 *.iml
-*.ipr
-*.iws
-.vscode/
-.classpath
-.project
-.settings/
-bin/
 
-# OS
+# Local secrets (never commit populated copies)
+/local.properties
+local.properties
+/settings.xml
+settings.xml
+
+# Licensed HI WSDL/XSD tree for wsimport regeneration (see wsdls/readme.txt)
+/wsdls/*
+!/wsdls/readme.txt
+
+/certs/
+*.jks
+*.keystore
+*.p12
+
+# Editor / agent / OS noise (not part of the published tree)
 .DS_Store
 Thumbs.db
 *.swp
 *.orig
 *~
-
-# Local secrets / keystores
-local.properties
-/settings.xml
-*.jks
-*.keystore
-*.p12
+.vscode/
+hi-wsdl-java.code-workspace

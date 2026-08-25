@@ -3,19 +3,19 @@ package au.net.electronichealth.ns.hi.xsd.providercore.providerdirectoryservice.
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ProviderDirectoryOrganisationEntry complex type</p>.
+ * &lt;p&gt;Java class for ProviderDirectoryOrganisationEntry complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
+ * &lt;pre&gt;{&#064;code
  * &lt;complexType name="ProviderDirectoryOrganisationEntry"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
- * </pre>
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -104,8 +104,8 @@ public class ProviderDirectoryOrganisationEntry {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the electronicCommunicationExternalId property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the electronicCommunicationExternalId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -126,7 +126,7 @@ public class ProviderDirectoryOrganisationEntry {
      */
     public List<Integer> getElectronicCommunicationExternalId() {
         if (electronicCommunicationExternalId == null) {
-            electronicCommunicationExternalId = new ArrayList<Integer>();
+            electronicCommunicationExternalId = new ArrayList<>();
         }
         return this.electronicCommunicationExternalId;
     }
@@ -136,8 +136,8 @@ public class ProviderDirectoryOrganisationEntry {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationServiceExternalId property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationServiceExternalId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -158,7 +158,7 @@ public class ProviderDirectoryOrganisationEntry {
      */
     public List<Integer> getOrganisationServiceExternalId() {
         if (organisationServiceExternalId == null) {
-            organisationServiceExternalId = new ArrayList<Integer>();
+            organisationServiceExternalId = new ArrayList<>();
         }
         return this.organisationServiceExternalId;
     }
@@ -168,8 +168,8 @@ public class ProviderDirectoryOrganisationEntry {
      * 
      * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the endpointLocatorServiceExternalId property.</p>
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the endpointLocatorServiceExternalId property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -190,7 +190,7 @@ public class ProviderDirectoryOrganisationEntry {
      */
     public List<Integer> getEndpointLocatorServiceExternalId() {
         if (endpointLocatorServiceExternalId == null) {
-            endpointLocatorServiceExternalId = new ArrayList<Integer>();
+            endpointLocatorServiceExternalId = new ArrayList<>();
         }
         return this.endpointLocatorServiceExternalId;
     }
