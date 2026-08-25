@@ -11,29 +11,27 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.net.URL;
 import java.net.URLDecoder;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Enumeration;
 import java.util.List;
-import javax.jws.WebMethod;
-import javax.xml.bind.JAXBElement;
+import jakarta.jws.WebMethod;
+import jakarta.xml.bind.JAXBElement;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
-import javax.xml.ws.WebEndpoint;
-import javax.xml.ws.WebServiceClient;
-import javax.xml.ws.WebServiceFeature;
+import jakarta.xml.ws.Service;
+import jakarta.xml.ws.WebEndpoint;
+import jakarta.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceFeature;
 import org.junit.Test;
 
 public class GeneratedWsdlBindingsTest {
 
-    private static final List<String> GENERATED_PACKAGE_ROOTS = Arrays.asList(
-        "au.net.electronichealth",
-        "hi_override.org.w3.xmldsig"
-    );
+    private static final List<String> GENERATED_PACKAGE_ROOTS = List.of(
+            "au.net.electronichealth",
+            "hi_override.org.w3.xmldsig");
 
     @Test
     public void generatedPublicMethodsAreInvocableOrDeclaredOnPortInterfaces() throws Exception {
@@ -67,7 +65,7 @@ public class GeneratedWsdlBindingsTest {
     }
 
     private static List<Class<?>> generatedClasses() throws Exception {
-        List<Class<?>> classes = new ArrayList<Class<?>>();
+        List<Class<?>> classes = new ArrayList<>();
         for (String packageRoot : GENERATED_PACKAGE_ROOTS) {
             classes.addAll(classesInPackage(packageRoot));
         }
@@ -77,17 +75,14 @@ public class GeneratedWsdlBindingsTest {
 
     private static List<Class<?>> classesInPackage(String packageName) throws Exception {
         String path = packageName.replace('.', '/');
-        Enumeration<URL> resources = Thread.currentThread().getContextClassLoader().getResources(path);
-        List<Class<?>> classes = new ArrayList<Class<?>>();
-
-        while (resources.hasMoreElements()) {
-            URL resource = resources.nextElement();
+        List<Class<?>> classes = new ArrayList<>();
+        for (URL resource : Collections.list(
+                Thread.currentThread().getContextClassLoader().getResources(path))) {
             if ("file".equals(resource.getProtocol())) {
-                File directory = new File(URLDecoder.decode(resource.getFile(), "UTF-8"));
+                File directory = new File(URLDecoder.decode(resource.getFile(), StandardCharsets.UTF_8));
                 addClasses(directory, packageName, classes);
             }
         }
-
         return classes;
     }
 
@@ -100,15 +95,17 @@ public class GeneratedWsdlBindingsTest {
         for (File file : files) {
             if (file.isDirectory()) {
                 addClasses(file, packageName + "." + file.getName(), classes);
-            } else if (file.getName().endsWith(".class") && !file.getName().contains("$") && !"package-info.class".equals(file.getName())) {
-                String className = packageName + "." + file.getName().substring(0, file.getName().length() - ".class".length());
+            } else if (file.getName().endsWith(".class") && !file.getName().contains("$")
+                    && !"package-info.class".equals(file.getName())) {
+                String className = packageName + "."
+                        + file.getName().substring(0, file.getName().length() - ".class".length());
                 classes.add(Class.forName(className));
             }
         }
     }
 
     private static List<Method> publicDeclaredMethods(Class<?> type) {
-        List<Method> methods = new ArrayList<Method>();
+        List<Method> methods = new ArrayList<>();
         for (Method method : type.getDeclaredMethods()) {
             if (Modifier.isPublic(method.getModifiers()) && !method.isSynthetic() && !method.isBridge()) {
                 methods.add(method);
@@ -139,7 +136,7 @@ public class GeneratedWsdlBindingsTest {
         return 0;
     }
 
-    private static int exerciseServiceMethod(Class<?> type, Method method) {
+    private static int exerciseServiceMethod(Class<?> type, Method method) throws Exception {
         if (!method.getName().startsWith("get") || method.getAnnotation(WebEndpoint.class) == null) {
             return 0;
         }
@@ -151,9 +148,11 @@ public class GeneratedWsdlBindingsTest {
             wsdl = Thread.currentThread().getContextClassLoader().getResource(client.wsdlLocation());
         }
         assertNotNull(client.wsdlLocation(), wsdl);
-        assertFalse(client.targetNamespace().isEmpty());
-        assertFalse(client.name().isEmpty());
-        assertFalse(method.getAnnotation(WebEndpoint.class).name().isEmpty());
+
+        Constructor<?> constructor = type.getConstructor(URL.class, QName.class);
+        Object service = constructor.newInstance(wsdl, new QName(client.targetNamespace(), client.name()));
+        Object result = method.invoke(service, sampleArguments(method.getParameterTypes()));
+        assertNotNull(type.getName() + "." + method.getName(), result);
         return 1;
     }
 
