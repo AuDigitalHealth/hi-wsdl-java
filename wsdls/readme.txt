@@ -11,4 +11,4 @@ When HI interfaces change, copy flat HI_*.wsdl from the licensed tree into src/m
 For Messages schema SearchIHIMessages.xsd, keep electronicCommunication immediately after identity
 fields and before dateOfBirth (and internationalAddress before australianUnstructuredStreetAddress)
 
-The 26 wsimport executions in pom.xml (-Pregenerate-sources) align with hi-b2b-client-java 17.0.0.
+The 26 wsimport executions in pom.xml (-Pregenerate-sources) align with hi-b2b-client-java 21.0.0.

@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ java-17 ]
+    branches: [ java-21 ]
   pull_request:
-    branches: [ java-17 ]
+    branches: [ java-21 ]
 
 permissions:
   contents: read
@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"
           cache: maven
       - name: Maven verify
         run: mvn -B "-Dgpg.skip=true" clean verify
